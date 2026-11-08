@@ -1,0 +1,13 @@
+{
+  "version": "2026.11.08.1553-61841f3",
+  "released": "2026-11-08T15:53Z",
+  "addon_commit": "61841f3",
+  "site_commit": "61841f3",
+  "zip": "UW_Guild.zip",
+  "zip_bytes": 642673,
+  "zip_sha256": "ddfb85fe47542de0b4fbc4434ef5bcaeae56cb36991fa62270fa72b59fa4ea5b",
+  "interface": [
+    16001
+  ],
+  "site": "98cb59c01b596905"
+}

@@ -23,18 +23,31 @@
     <h1 id="addon-h" class="center">The UW Guild addon</h1>
     <p class="center">Find guildmates near your level, see raid nights, and get a guild buddy. Everything works in game.</p>
     <p class="center get"><a class="btn btn-primary btn-lg" href="UW_Guild.zip" download>Download UW_Guild.zip</a></p>
+    <p class="center release">Latest version <code class="ver">2026.11.08.1553-61841f3</code><br><span class="muted small">Released 8 Nov 2026 <span aria-hidden="true">·</span> 628 KB <span aria-hidden="true">·</span> free</span></p>
 
     <h2 id="install-h">Install it in about two minutes</h2>
     <ol class="steps" aria-labelledby="install-h">
-      <li><h3>Find your AddOns folder</h3><p>Close WoW. In the Battle.net app, pick World of Warcraft, click the cog next to Play, then <strong>Show in Explorer</strong>. Open <span class="nowrap">_forever_ › Interface › AddOns</span>. A folder missing? Right-click, New, Folder, and name it.</p></li>
+      <li><h3>Find your AddOns folder</h3><p>Close WoW. In the Battle.net app, pick World of Warcraft, click the cog next to Play, then <strong>Show in Explorer</strong> (<strong>Show in Finder</strong> on a Mac). Open <span class="nowrap">_forever_ › Interface › AddOns</span>. A folder missing? Make it: right-click, New, Folder.</p></li>
       <li><h3>Drop it in</h3><p>Open the zip and drag the <strong>UW_Guild</strong> folder into AddOns, replacing any old one. Used Extract All? Move the inner UW_Guild folder in, not the outer one.</p></li>
       <li><h3>Tick it in game</h3><p>Start WoW. On the character screen, click <strong>AddOns</strong> and tick <strong>UW Guild</strong>. Says out of date? Tick <strong>Load out of date AddOns</strong>. A welcome window opens when you log in.</p></li>
     </ol>
-    <p class="center muted small">New versions come out often. In game, UW Guild tells you when guildmates run a newer one: download it here again.</p>
+
+    <h2 id="update-h">Already have it? Check for updates</h2>
+    <p>In game, type <code>/uw version</code>. If it shows the version above, you're up to date. If not, download it again and replace the old UW_Guild folder. Your settings and progress stay: WoW keeps them in its WTF folder, not in the addon.</p>
+    <p class="muted small">UW Guild also tells you in game, once a session, when guildmates run a newer one.</p>
+
+    <h2 id="help-h">Stuck?</h2>
+    <div class="faq">
+      <details><summary>UW Guild isn't in the AddOns list</summary><p>The folder is one level too deep. Open AddOns: you should see <span class="nowrap">UW_Guild › UW_Guild.toc</span>, not <span class="nowrap">UW_Guild › UW_Guild › UW_Guild.toc</span>. Move the inner folder up, then restart WoW (a /reload doesn't find new addons).</p></details>
+      <details><summary>It says "out of date"</summary><p>That's normal for addons on WoW Forever. On the character screen, click <strong>AddOns</strong> and tick <strong>Load out of date AddOns</strong>.</p></details>
+      <details><summary>Red error text, or something looks wrong</summary><p>Type <code>/uw selftest</code>. It checks the addon and tells you what's off. Still stuck? Whisper any officer in game.</p></details>
+      <details><summary>Check the download is ours (optional)</summary><p>The zip's SHA-256 is <code class="hash">ddfb85fe47542de0b4fbc4434ef5bcaeae56cb36991fa62270fa72b59fa4ea5b</code>. On Windows, in PowerShell: <code>Get-FileHash UW_Guild.zip</code>. On a Mac, in Terminal: <code>shasum -a 256 UW_Guild.zip</code>. The two should match.</p></details>
+    </div>
   </section>
 </main>
 <footer>
   <p class="small"><a href="index.html">About the guild</a> <span aria-hidden="true">·</span> Questions? Whisper any officer in game.</p>
+  <p class="small muted">Build 61841f3 <span aria-hidden="true">·</span> <a href="version.json">version.json</a></p>
   <p class="small muted">Fan-run guild site, not affiliated with Blizzard Entertainment. World of Warcraft is a trademark of Blizzard Entertainment. No cookies, trackers or scripts.</p>
 </footer>
 </body>
