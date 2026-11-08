@@ -26,7 +26,7 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="hero">
+<header class="hero" id="top">
   <picture class="hero-bg">
     <source type="image/webp" srcset="img/banner-640.webp 640w, img/banner-960.webp 960w, img/banner-1920.webp 1920w, img/banner-2560.webp 2560w" sizes="(orientation: portrait) 190vh, 100vw">
     <img src="img/banner-960.jpg" width="960" height="536" fetchpriority="high" alt="">
@@ -40,14 +40,21 @@
     <p class="eyebrow"><span class="nowrap">Horde</span> <span aria-hidden="true">✦</span> <span class="nowrap">Normal ruleset</span> <span aria-hidden="true">✦</span> <span class="nowrap">WoW Forever</span></p>
     <h1>Unbothered <span>Warlords</span></h1>
     <p class="lead">A cozy Horde guild with a seat by the fire for everyone. Level with friends, run dungeons, raid when you're ready. No sweat, no gatekeeping.</p>
-    <div class="actions">
-      <a class="btn btn-primary" href="https://discord.gg/D5EZm3gAcZ" rel="noopener">Join our Discord</a>
-      <a class="btn btn-ghost" href="addon.html">Get the guild addon</a>
-    </div>
     <p class="addon-cta">The addon is free and works without Discord. <a href="#join">How joining works</a></p>
   </div>
   <a class="scroll-cue" href="#why" aria-label="Why join"><span aria-hidden="true"></span></a>
 </header>
+
+<!-- The page's only two buttons. They sit under the hero, then stick to the top as a slim banner (style.css, "Banner"). -->
+<nav class="bar" aria-label="Join the guild">
+  <div class="bar-inner">
+    <a class="bar-brand" href="#top"><img src="img/crest-320.webp" width="36" height="36" alt=""><span>Unbothered Warlords</span></a>
+    <div class="bar-actions">
+      <a class="btn btn-primary" href="https://discord.gg/D5EZm3gAcZ" rel="noopener">Join our Discord</a>
+      <a class="btn btn-ghost" href="addon.html">Get the guild addon</a>
+    </div>
+  </div>
+</nav>
 
 <main id="main">
   <section class="section" id="why" aria-labelledby="paths-h">
@@ -85,11 +92,9 @@
       <li><h3>Click <em>Get started</em></h3><p>Link your character, or pick <strong>Apply to join</strong> if you're not in the guild yet. An officer sends your in-game invite within 48 hours.</p></li>
       <li><h3>Meet your people</h3><p>Say hi, meet your buddy, hop into voice. You're one of us now. Stay unbothered.</p></li>
     </ol>
-    <p class="center"><a class="btn btn-primary" href="https://discord.gg/D5EZm3gAcZ" rel="noopener">Join our Discord</a></p>
     <div class="alt-path">
-      <h3 id="alt-h">Rather skip Discord?</h3>
-      <p>Ask any Unbothered Warlords member in game for an invite. Then grab the guild addon: buddies, raid nights and guildmates near your level, all in game.</p>
-      <a class="btn btn-ghost" href="addon.html">Get the guild addon</a>
+      <h3>Rather skip Discord?</h3>
+      <p>Ask any Unbothered Warlords member in game for an invite. Then grab the guild addon from the bar up top: buddies, raid nights and guildmates near your level, all in game.</p>
     </div>
     <p class="center muted small promise">No drama in public. Fair, open loot. All ages and levels welcome.</p>
   </section>
@@ -99,15 +104,10 @@
   <div class="final-inner">
     <h2 id="final-h">Pull up a log.</h2>
     <p>No sweat. No corpse camps. Just zug.</p>
-    <div class="actions">
-      <a class="btn btn-primary btn-lg" href="https://discord.gg/D5EZm3gAcZ" rel="noopener">Join our Discord</a>
-      <a class="btn btn-ghost btn-lg" href="addon.html">Get the guild addon</a>
-    </div>
   </div>
 </section>
 
 <footer>
-  <p class="small"><a href="addon.html">The guild addon</a>: free, no Discord needed.</p>
   <p class="small">Rather talk first? Add the Guild Master on Battle.net: <span class="btag">Storm#110232</span> <span aria-hidden="true">·</span> <a href="https://steamcommunity.com/profiles/76561198031386428/" rel="noopener">Steam</a></p>
   <p class="small muted">Fan-run guild site, not affiliated with Blizzard Entertainment. World of Warcraft is a trademark of Blizzard Entertainment. No cookies, trackers or scripts.</p>
 </footer>

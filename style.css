@@ -6,6 +6,7 @@
 @font-face { font-family: "Alegreya Sans"; src: url("fonts/alegreya-sans-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
 
 :root {
+  --bar-h: 3.9rem;   /* the banner's height: the hero leaves room for it so both fit the first screen */
   --bg: #120d0b;
   --bg-2: #1b1411;
   --card: #221915;
@@ -28,7 +29,8 @@
 /* Wide screens: everything is sized in rem, and the root grows from 16px at 1440px wide to 24px at 2560px (fluid
    type, 0.714vw slope), so the page keeps its proportions on 1920, 2560 and ultrawide monitors instead of shrinking
    into a strip. Percentages keep the visitor's own browser font setting as the base. scripts/check_site.py checks it. */
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; font-size: clamp(100%, 35.7% + .714vw, 150%); }
+/* scroll-padding keeps anchors and keyboard focus clear of the sticky banner, top or bottom (WCAG 2.4.11). */
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-block: 4.75rem; font-size: clamp(100%, 35.7% + .714vw, 150%); }
 body {
   margin: 0; color: var(--text); font: 1.125rem/1.6 var(--sans);
   background: var(--bg) url("img/grain.png");   /* film grain: texture without weight */
@@ -62,8 +64,8 @@ code { font-size: .92em; background: var(--bg); border: 1px solid var(--line); b
 .btn-lg { min-height: 3.625rem; padding: 1rem 2.2rem; font-size: 1.2rem; }
 
 /* Hero */
-.hero { position: relative; isolation: isolate; display: flex; align-items: flex-end; min-height: min(100svh, 50rem);
-  padding: 7rem 1.25rem 5rem; overflow: hidden; }
+.hero { position: relative; isolation: isolate; display: flex; align-items: flex-end; min-height: min(calc(100svh - var(--bar-h)), 50rem);
+  padding: 6rem 1.25rem 3rem; overflow: hidden; }
 .hero-bg, .hero-bg img { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -3; }
 .hero-bg img { object-fit: cover; object-position: 38% 50%; }
 .hero::before { content: ""; position: absolute; inset: 0; z-index: -2;
@@ -79,13 +81,12 @@ h1 { font-weight: 900; font-size: clamp(2.6rem, 9vw, 5.2rem); line-height: 1; le
   text-shadow: 0 3px 0 rgba(0,0,0,.6), 0 0 40px rgba(240,138,72,.25); }
 h1 span { display: block; color: var(--gold); }
 .lead { font-size: clamp(1.15rem, 2.3vw, 1.35rem); color: #f1e5d6; margin-bottom: 1.75rem; }
-.actions { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; }
-.scroll-cue { position: absolute; left: 50%; bottom: 3.6rem; width: 44px; height: 44px; margin-left: -22px; display: none; place-items: center; }
+.scroll-cue { position: absolute; left: 50%; bottom: .75rem; width: 44px; height: 44px; margin-left: -22px; display: none; place-items: center; }
 .scroll-cue span { width: 14px; height: 14px; border-right: 2px solid var(--gold); border-bottom: 2px solid var(--gold); transform: rotate(45deg); opacity: .8; }
 @media (min-width: 56rem) {
   /* The hero text lines up with the page column below it (74rem) on wide screens. */
-  .hero { align-items: center; min-height: min(100svh, 56.25vw, 56rem);
-    padding: 5rem clamp(2rem, 7vw, 7rem) 6rem max(clamp(2rem, 7vw, 7rem), calc((100% - 74rem) / 2 + 1.25rem)); }
+  .hero { align-items: center; min-height: min(calc(100svh - var(--bar-h)), 56.25vw, 56rem);
+    padding: 5rem clamp(2rem, 7vw, 7rem) 4rem max(clamp(2rem, 7vw, 7rem), calc((100% - 74rem) / 2 + 1.25rem)); }
   .hero-bg img { object-position: 50% 50%; }
   .hero::before { background:
       radial-gradient(ellipse at 30% 70%, rgba(240,138,72,.16), transparent 50%),
@@ -93,7 +94,6 @@ h1 span { display: block; color: var(--gold); }
       linear-gradient(180deg, rgba(18,13,11,0) 70%, var(--bg) 100%); }
   .hero-content { margin: 0; max-width: 36rem; text-align: left; }
   .crest { margin: 0 0 1.25rem; }
-  .actions { justify-content: flex-start; }
   .scroll-cue { display: grid; }
 }
 
@@ -169,10 +169,10 @@ main { max-width: 74rem; margin: 0 auto; padding: 0 1.25rem; }
 .steps p { color: var(--muted); }
 
 /* Final call: a firelit band */
-.final { margin-top: 5rem; padding: 5rem 1.25rem; text-align: center; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+.final { margin-top: 4rem; padding: 3.5rem 1.25rem; text-align: center; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
   background: radial-gradient(ellipse at 50% 120%, rgba(240,138,72,.35), transparent 60%), var(--bg-2) url("img/grain.png"); }
 .final h2 { font-weight: 900; font-size: clamp(2.2rem, 6vw, 3.6rem); margin-bottom: .6rem; }
-.final p { color: var(--muted); font-size: 1.25rem; margin-bottom: 1.8rem; }
+.final p { color: var(--muted); font-size: 1.25rem; }
 
 footer { max-width: 74rem; margin: 0 auto; padding: 2rem 1.25rem 2.75rem; text-align: center; }
 footer p + p { margin-top: .4rem; }
@@ -182,8 +182,7 @@ footer p + p { margin-top: .4rem; }
 /* Long titles never push the page sideways on small phones */
 .path, .steps li { min-width: 0; overflow-wrap: anywhere; }
 
-/* addon.html: the download page (no hero, so the crest centres and the button gets room). */
-.page-addon .crest { margin: 0 auto 1rem; }
+/* addon.html: the download page (no hero; the crest lives in its top bar, so the button gets room). */
 .page-addon .get { margin: 1.75rem 0 .9rem; }
 .page-addon .release { margin-bottom: 3rem; line-height: 1.8; }
 .page-addon h2 { margin: 2.6rem 0 1rem; }
@@ -203,16 +202,45 @@ footer p + p { margin-top: .4rem; }
 .alt-path { max-width: 40rem; margin: 2rem auto 0; padding: 1.4rem 1.5rem; border: 1px solid var(--line-hi); border-radius: var(--radius);
   background: var(--card); display: grid; gap: .6rem; justify-items: start; }
 .alt-path p { color: var(--muted); }
-.alt-path .btn { margin-top: .3rem; }
-.final .actions { justify-content: center; }
 
 /* Footer and inline links get room to tap (WCAG 2.5.8 spacing) without changing how the text looks. */
 footer { line-height: 1.9; }
 footer a, .addon-cta a, .other-os a { padding-block: .35rem; }
 
-/* addon.html: a way back to the guild page, top left (site ID first: Krug, Don't Make Me Think). */
-.topbar { max-width: 74rem; margin: 0 auto; padding: 1rem 1.25rem 0; }
-.topbar a { display: inline-flex; align-items: center; gap: .4rem; min-height: 2.75rem; color: var(--muted);
-  font: 700 .95rem/1 var(--sans); text-decoration: none; }
-.topbar a:hover { color: var(--text); text-decoration: underline; }
+/* Banner: the page's only Join and addon buttons (Louis, 8 Nov: one of each, no duplicates). They sit under the
+   hero's pitch, then stick to the top as a slim bar while you scroll. No script: position: sticky does the work.
+   bottom: 0 as well, so on a short phone, where the hero is taller than the screen, the bar waits at the bottom edge
+   instead of below it: the buttons are always in view. Where the browser can tell the bar is stuck (scroll-state
+   container queries: Chrome and Edge), the guild name joins it at the left and the buttons move right, the usual
+   site-bar layout. Elsewhere the bar stays as it starts. Nothing animates, so reduced motion needs no rule.
+   addon.html uses the same bar, not sticky, as its way back to the guild page (.bar-static). */
+.bar { position: sticky; top: 0; bottom: 0; z-index: 10; container-type: scroll-state; }
+.bar-static { position: static; }
+.bar-inner { display: flex; align-items: center; gap: .6rem; padding: .55rem max(1.25rem, calc((100% - 74rem) / 2 + 1.25rem));
+  background: rgba(18,13,11,.94); }
+.bar-static .bar-inner { background: transparent; }
+.bar-brand { display: inline-flex; align-items: center; gap: .6rem; min-height: 2.75rem; margin-right: auto;
+  color: var(--text); text-decoration: none; font: 700 1rem/1.1 var(--display); letter-spacing: .04em; }
+.bar-brand img { width: 2.25rem; height: 2.25rem; border-radius: 50%; }
+.bar-brand:hover span { text-decoration: underline; text-underline-offset: .2em; }
+.bar-actions { display: flex; gap: .6rem; }
+.bar .btn { min-height: 2.75rem; padding: .55rem 1.1rem; font-size: 1rem; white-space: nowrap; }
+.bar:not(.bar-static) .bar-brand { display: none; }   /* the hero already shows the name */
+@media (min-width: 56rem) {   /* wide: the buttons line up under the hero text, like a hero's own buttons */
+  .bar:not(.bar-static) .bar-inner { padding-left: max(clamp(2rem, 7vw, 7rem), calc((100% - 74rem) / 2 + 1.25rem)); }
+}
+@container scroll-state(stuck: top) {
+  .bar:not(.bar-static) .bar-inner { padding-inline: max(1.25rem, calc((100% - 74rem) / 2 + 1.25rem));
+    border-bottom: 1px solid var(--line); box-shadow: 0 6px 18px rgba(0,0,0,.45); }
+}
+@media (min-width: 46rem) {
+  @container scroll-state(stuck: top) { .bar:not(.bar-static) .bar-brand { display: inline-flex; } }
+}
+@media (max-width: 45.99rem) {   /* phones: the two buttons share the width */
+  .bar .bar-inner, .bar:not(.bar-static) .bar-inner { padding-inline: .75rem; }
+  .bar-actions { flex: 1; }
+  .bar-actions .btn { flex: 1 1 0; min-width: 0; padding-inline: .5rem; font-size: .95rem;
+    white-space: normal; line-height: 1.15; text-align: center; }   /* 320px: a label may take two lines, never overflow */
+}
 .page-addon .other-os { color: var(--muted); margin-bottom: 1.1rem; }
+@media (max-width: 22rem) { h1 { font-size: 2.3rem; } }   /* 320px phones: the name fits with room to spare */
