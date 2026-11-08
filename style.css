@@ -171,3 +171,7 @@ footer p + p { margin-top: .4rem; }
 
 /* Long titles never push the page sideways on small phones */
 .path, .steps li { min-width: 0; overflow-wrap: anywhere; }
+
+/* addon.html: the download page (no hero, so the crest centres and the button gets room). */
+.page-addon .crest { margin: 0 auto 1rem; }
+.page-addon .get { margin: 1.75rem 0 3rem; }
