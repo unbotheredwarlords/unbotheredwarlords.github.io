@@ -72,9 +72,7 @@ code { font-size: .92em; background: var(--bg); border: 1px solid var(--line); b
   background: radial-gradient(ellipse at 40% 75%, rgba(240,138,72,.18), transparent 55%),
               linear-gradient(180deg, rgba(18,13,11,.15) 5%, rgba(18,13,11,.8) 50%, var(--bg) 97%); }
 .hero-content { width: 100%; max-width: 40rem; margin: 0 auto; text-align: center; text-shadow: 0 2px 6px rgba(0,0,0,.9); }
-/* The crest's one-time toast (img/crest-toast.avif, scripts/make_crest_toast.py) has square black corners: the
-   circle clip matches the still crest's own round edge. */
-.crest { width: 8.25rem; height: 8.25rem; display: block; margin: 0 auto 1rem; border-radius: 50%;
+.crest { width: 8.25rem; height: 8.25rem; display: block; margin: 0 auto 1rem;
   filter: drop-shadow(0 8px 22px rgba(0,0,0,.8)) drop-shadow(0 0 18px rgba(240,138,72,.25)); }
 .eyebrow { font: 700 .875rem/1.4 var(--display); letter-spacing: .22em; text-transform: uppercase; color: var(--gold); margin-bottom: .75rem; }
 h1 { font-weight: 900; font-size: clamp(2.6rem, 9vw, 5.2rem); line-height: 1; letter-spacing: .03em; margin-bottom: 1.1rem;
