@@ -1,14 +1,14 @@
 {
-  "version": "2026.11.09.0255-e39f338",
-  "released": "2026-11-09T02:55Z",
-  "addon_commit": "e39f338",
-  "site_commit": "e39f338",
+  "version": "2026.11.09.0348-b739385",
+  "released": "2026-11-09T03:48Z",
+  "addon_commit": "b739385",
+  "site_commit": "b739385",
   "zip": "UW_Guild.zip",
-  "zip_bytes": 694366,
-  "zip_sha256": "098c089bca8f0861b2b17c16adad43ee0a34644b86fcb902e9f5d2f8ce58b3e3",
-  "files": "1772af63bcccbb73",
+  "zip_bytes": 698681,
+  "zip_sha256": "bd50af6c05a14e1537cba3b1543f5d8d24f68a49fde65e9e17af312ca196d564",
+  "files": "11925294dea4d04f",
   "interface": [
     16001
   ],
-  "site": "e4f7bc3edf10d4ea"
+  "site": "fcd79c5bf5618b66"
 }
