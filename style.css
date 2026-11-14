@@ -75,9 +75,10 @@ a { color: var(--ember-200); text-underline-offset: .18em; }
    (.cmd): one box to read or copy, wrapping inside it only where it must. */
 code { font: .92em/1.5 var(--mono); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: .05rem .4rem;
   overflow-wrap: normal; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
-code.cmd { display: block; width: fit-content; max-width: 100%; margin: var(--s-2) 0; padding: var(--s-2) var(--s-3); white-space: pre-wrap; overflow-wrap: anywhere; }
+code.cmd { display: block; width: fit-content; max-width: 100%; margin: var(--s-2) 0; padding: var(--s-2) var(--s-3); white-space: pre-wrap; overflow-wrap: anywhere;
+  text-wrap: balance; }   /* a wrapped command splits into even lines, never one word alone */
 .nowrap { white-space: nowrap; }
-@media (max-width: 30rem) { .faq .nowrap, .steps .nowrap { white-space: normal; } }   /* a folder path may wrap at
+@media (max-width: 30rem) { .faq .nowrap, .steps .nowrap, .way .nowrap { white-space: normal; } }   /* a folder path may wrap at
    its spaces on a phone (at large text it would push the page sideways) */
 .muted { color: var(--muted); }
 .small { font-size: var(--fs-small); }
@@ -256,19 +257,36 @@ footer p + p { margin-top: .4rem; }
 .faq summary:focus-visible { border-radius: var(--radius-sm); }
 .faq details[open] summary { color: var(--gold); }
 .faq details p { color: var(--muted); padding-bottom: .9rem; }
-.addon-cta { margin-top: 1.1rem; font-size: var(--fs-small); color: var(--muted); text-shadow: 0 1px 6px var(--shade-3); }
-.addon-cta a { font-weight: 700; }
-/* The in-game way in: most members aren't on Discord, so it gets its own card, not a footnote. */
-.alt-path { max-width: 40rem; margin: 2rem auto 0; padding: 1.4rem 1.5rem; border: 1px solid var(--line-hi); border-radius: var(--radius);
-  background: var(--card); display: grid; gap: .6rem; justify-items: start; }
-.alt-path p { color: var(--muted); max-width: var(--measure); }
+.hero-help { margin-top: 1.1rem; font-size: var(--fs-small); color: var(--muted); text-shadow: 0 1px 6px var(--shade-3); }
+.hero-help a { font-weight: 700; }
+/* Two ways in, the same weight: in game first, since most members never join Discord. Side by side from 48rem. */
+.ways { display: grid; gap: 1rem; margin-top: var(--s-6); grid-template-columns: 1fr; }
+@media (min-width: 48rem) { .ways { grid-template-columns: 1fr 1fr; } }
+.way { padding: 1.5rem; border: 1px solid var(--line); border-radius: var(--radius); min-width: 0; overflow-wrap: anywhere;
+  background: linear-gradient(180deg, var(--card-2), var(--card)); }
+.way h3 { font-size: var(--fs-h3); margin-bottom: var(--s-4); }
+.way ol { list-style: none; padding: 0; margin: 0; counter-reset: step; display: grid; gap: var(--s-4); }
+.way li { counter-increment: step; position: relative; padding-left: 2.75rem; min-height: 1.9rem; color: var(--muted);
+  max-width: var(--measure); }
+.way li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 1.9rem; height: 1.9rem; border-radius: 50%;
+  display: grid; place-items: center; font: 900 .95rem/1 var(--display); color: var(--ember-ink);
+  background: radial-gradient(circle at 35% 30%, var(--ember-100), var(--ember) 60%, var(--ember-700)); }
+@media (max-width: 45.99rem) {   /* phones and large text: a slimmer card edge and number, so a word fits its line */
+  .way { padding: 1.2rem 1rem; }
+  .way li { padding-left: 2.2rem; min-height: 1.6rem; }
+  .way li::before { width: 1.6rem; height: 1.6rem; font-size: .85rem; top: .1rem; }
+}
+/* A jump to #join, #in-game or #discord lands below the sticky bar. */
+.section, .way { scroll-margin-top: var(--s-8); }
+.final .final-ask { margin-top: var(--s-3); font-size: var(--fs-body); }
 .zip-size { display: block; margin-top: var(--s-2); }
 
 /* Footer and inline links get room to tap (WCAG 2.5.8 spacing) without changing how the text looks. */
 footer { line-height: 1.9; }
 footer a { padding-block: .35rem; }
 /* A link that is a route (another section or install path) gets a 44 px target (WCAG 2.5.5). */
-.addon-cta a, .other-os a { display: inline-block; padding-block: .6rem; }
+.hero-help a, .other-os a { display: inline-block; padding-block: .6rem; margin-block: -.6rem; }   /* the margin gives the
+   padding back, so a wrapped line keeps plain-text spacing (render pass 4, 14 Nov) */
 
 /* Banner: the page's only Join and addon buttons (Louis, 8 Nov: one of each, no duplicates). They sit under the
    hero, then stick to the top as a slim bar while you scroll. No script: position: sticky does the work.
