@@ -7,7 +7,7 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>UW Guild addon · Unbothered Warlords</title>
 <meta name="description" content="The Unbothered Warlords guild addon for WoW Forever: free, no Discord needed. One click installs it, and it keeps itself up to date.">
-<meta name="theme-color" content="#1a1310">
+<meta name="theme-color" content="#1b1411">
 <link rel="canonical" href="https://unbotheredwarlords.github.io/addon">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://unbotheredwarlords.github.io/addon">
@@ -22,6 +22,7 @@
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preload" href="fonts/cinzel-900.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/alegreya-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/alegreya-sans-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="page-addon">
@@ -38,7 +39,7 @@
     <p class="center">Find guildmates near your level, get a guild buddy and see who's up for a group. Everything works in game.</p>
     <p class="center get"><a class="btn btn-primary btn-lg" href="UW-Guild-Setup.cmd" download>Install for Windows</a></p>
     <p class="center small other-os">On Linux? <a href="#linux-h">Install for Linux</a>. On a Mac, or rather do it yourself? <a href="#manual-h">Install by hand</a></p>
-    <p class="center release">Latest version <code class="ver">2026.11.13.2006-8129cc2</code><br><span class="muted small">Released 13 Nov 2026 <span aria-hidden="true">·</span> free <span aria-hidden="true">·</span> updates itself</span></p>
+    <p class="center release">Latest version <code class="ver">2026.11.14.0016-4d0f2ee</code><br><span class="muted small">Released 14 Nov 2026 <span aria-hidden="true">·</span> free <span aria-hidden="true">·</span> updates itself</span></p>
 
     <h2 id="install-h">Install it in one minute</h2>
     <ol class="steps" aria-labelledby="install-h">
@@ -52,7 +53,7 @@
     <p>For WoW Forever in Lutris, Steam (Proton), Bottles or Wine, on Mint, Ubuntu and the like.</p>
     <ol class="steps" aria-labelledby="linux-h">
       <li><h3>Download</h3><p>Save <a href="UW-Guild-Setup-Linux.py" download>UW-Guild-Setup-Linux.py</a> in your Downloads folder.</p></li>
-      <li><h3>Run it</h3><p>Close WoW. Open a terminal (Ctrl+Alt+T on Mint), type <code>python3 -I ~/Downloads/UW-Guild-Setup-Linux.py</code> and press Enter.</p></li>
+      <li><h3>Run it</h3><p>Close WoW. Open a terminal (Ctrl+Alt+T on Mint), type <code class="cmd">python3 -I ~/Downloads/UW-Guild-Setup-Linux.py</code> and press Enter.</p></li>
       <li><h3>That's it</h3><p>It finds WoW Forever in your Wine prefix, installs the addon and turns on updates. No sudo. Start WoW: a welcome window opens.</p></li>
     </ol>
     <p class="muted small">It's plain Python: open it in a text editor to read every line. Can't find WoW? It asks you to drag your World of Warcraft folder into the terminal.</p>
@@ -63,9 +64,9 @@
     <p class="muted small">UW Guild also tells you in game, once a session, when guildmates run a newer one.</p>
 
     <h2 id="manual-h">On a Mac, or rather by hand?</h2>
-    <p class="center"><a class="btn btn-ghost" href="UW_Guild.zip" download>Download UW_Guild.zip</a> <span class="muted small">730 KB</span></p>
+    <p class="center"><a class="btn btn-ghost" href="UW_Guild.zip" download>Download UW_Guild.zip</a> <span class="muted small zip-size">743 KB</span></p>
     <ol class="steps" aria-labelledby="manual-h">
-      <li><h3>Find your AddOns folder</h3><p>Close WoW. In the Battle.net app, pick World of Warcraft, click the cog next to Play, then <strong>Show in Explorer</strong> (<strong>Show in Finder</strong> on a Mac). Open <span class="nowrap">_forever_ › Interface › AddOns</span>. A folder missing? Make it: right-click, New, Folder. On Linux, WoW lives in your Wine prefix: for Lutris, usually <code>~/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft</code>.</p></li>
+      <li><h3>Find your AddOns folder</h3><p>Close WoW. In the Battle.net app, pick World of Warcraft, click the cog next to Play, then <strong>Show in Explorer</strong> (<strong>Show in Finder</strong> on a Mac). Open <span class="nowrap">_forever_ › Interface › AddOns</span>. A folder missing? Make it: right-click, New, Folder. On Linux, WoW lives in your Wine prefix: for Lutris, usually <code class="cmd">~/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft</code>.</p></li>
       <li><h3>Drop it in</h3><p>Open the zip and drag the <strong>UW_Guild</strong> folder into AddOns, replacing any old one. Used Extract All? Move the inner UW_Guild folder in, not the outer one.</p></li>
       <li><h3>Tick it in game</h3><p>Start WoW. On the character screen, click <strong>AddOns</strong> and tick <strong>UW Guild</strong>. Says out of date? Tick <strong>Load out of date AddOns</strong>. A welcome window opens when you log in.</p></li>
     </ol>
@@ -77,13 +78,13 @@
       <details id="errors"><summary>Red error text, or something looks wrong</summary><p>Type <code class="nowrap">/uw selftest</code>. It checks the addon and tells you what's off. Still stuck? Whisper any officer in game.</p></details>
       <details id="remove"><summary>Stop automatic updates, or remove the addon</summary><p>Start menu, <strong>UW Guild addon</strong>, <strong>Stop automatic updates</strong>. The addon stays. Or in a command prompt: <code>schtasks /Delete /TN "UW_Guild updater" /F</code>. On Linux: app menu, <strong>Stop UW Guild addon automatic updates</strong>. To remove the addon too, delete the <strong>UW_Guild</strong> folder in AddOns.</p></details>
       <details id="start-fresh"><summary>Start fresh</summary><p>Close WoW, open the <span class="nowrap">_forever_ › WTF</span> folder and search it for <strong>UW_Guild.lua</strong>. Delete every one it finds. UW Guild then starts like a first install on this PC. Your guild rank and Discord link aren't in that file, so they stay. Officers: your copy may hold guild records, so ask in #officer-chat first.</p></details>
-      <details id="verify"><summary>Check the download is ours (optional)</summary><p>The zip's SHA-256 is <code class="hash">873c29ba44183b950cd1e4c92c866f8d742b82b82afcef2d6a716859139ba8b4</code>. On Windows, in PowerShell: <code>Get-FileHash UW_Guild.zip</code>. On a Mac, in Terminal: <code>shasum -a 256 UW_Guild.zip</code>. On Linux: <code>sha256sum UW_Guild.zip</code>. The two should match.</p></details>
+      <details id="verify"><summary>Check the download is ours (optional)</summary><p>The zip's SHA-256 is <code class="hash">7fa55ea1297b2c18fe6d34f59483ce65bab4be8e4ee4b8a28deebeae42f4d33f</code>. On Windows, in PowerShell: <code>Get-FileHash UW_Guild.zip</code>. On a Mac, in Terminal: <code>shasum -a 256 UW_Guild.zip</code>. On Linux: <code>sha256sum UW_Guild.zip</code>. The two should match.</p></details>
     </div>
   </section>
 </main>
 <footer>
   <p class="small">Questions? Whisper any officer in game.</p>
-  <p class="small muted">Build 8129cc2 <span aria-hidden="true">·</span> <a href="version.json">version.json</a></p>
+  <p class="small muted">Build 4d0f2ee <span aria-hidden="true">·</span> <a href="version.json">version.json</a></p>
   <p class="small muted">Fan-run guild site, not affiliated with Blizzard Entertainment. World of Warcraft is a trademark of Blizzard Entertainment. No cookies, trackers or scripts.</p>
 </footer>
 </body>
