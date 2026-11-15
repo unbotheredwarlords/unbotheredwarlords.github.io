@@ -245,6 +245,7 @@ footer p + p { margin-top: .4rem; }
 .page-addon h2 + .steps { margin-top: 0; }
 .page-addon .section > p, .faq { max-width: var(--measure); margin-left: auto; margin-right: auto; }
 .page-addon .section > p + p { margin-top: .75rem; }   /* paragraphs read as separate thoughts */
+.page-addon .paths + p { margin-top: var(--s-5); }   /* ranks.html: the line under a row of cards */
 .ver { font-size: var(--fs-small); color: var(--text); }
 .hash { overflow-wrap: anywhere; font-size: .82em; }
 .faq { display: grid; gap: .6rem; }
