@@ -472,6 +472,9 @@ footer a { padding-block: .35rem; }
   color: var(--ember-100); font-size: var(--fs-label); font-weight: 700; }
 .guide-end { max-width: 48rem; margin-top: var(--s-6); }
 @media (max-width: 22rem) { .feature { flex-direction: column; gap: .6rem; padding-inline: 0; } }
+/* A window picture links to its own file: on a phone its words are small, and the file opens to zoom. */
+.shot-link { display: block; max-width: 48rem; margin-bottom: var(--s-3); }
+.shot-link .guide-shot { margin-bottom: 0; }
 /* A picture of the window on other pages (addon.html), centred in the reading column. */
 .shot-center { margin: 0 auto var(--s-6); max-width: 44rem; }
 /* ranks.html ends by pointing on: one line on the addon, the guide and the download. */
