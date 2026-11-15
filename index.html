@@ -27,6 +27,16 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<nav class="site-nav site-nav-over" aria-label="Site">
+  <div class="site-nav-inner">
+    <ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="ranks.html">Ranks</a></li>
+      <li><a href="guide.html">Addon guide</a></li>
+      <li><a href="addon.html">Get the addon</a></li>
+    </ul>
+  </div>
+</nav>
 <header class="hero" id="top">
   <picture class="hero-bg">
     <source type="image/webp" srcset="img/banner-640.webp 640w, img/banner-960.webp 960w, img/banner-1920.webp 1920w, img/banner-2560.webp 2560w" sizes="(orientation: portrait) 190vh, 100vw">
@@ -61,22 +71,22 @@
     <h2 id="paths-h">Find your place by the fire</h2>
     <ul class="paths">
       <li class="path">
-        <span class="path-icon" aria-hidden="true">🔥</span>
+        <span class="path-icon" aria-hidden="true"><svg class="icon" data-icon="newcomer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2c1 3 2.5 3.5 3.5 4.5A5 5 0 0 1 17 10a5 5 0 1 1-10 0c0-.3 0-.6.1-.9a2 2 0 1 0 3.3-2C8 4.5 11 2 12 2Z"/><path d="m5 22 14-4"/><path d="m5 18 14 4"/></svg></span>
         <h3>New here, or back after years</h3>
         <p>Ask guild chat anything. No question is too small. New to WoW? Say so in our Discord and we'll look for a guildmate to buddy you.</p>
       </li>
       <li class="path">
-        <span class="path-icon" aria-hidden="true">🍺</span>
+        <span class="path-icon" aria-hidden="true"><svg class="icon" data-icon="social" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 11h1a3 3 0 0 1 0 6h-1"/><path d="M9 12v6"/><path d="M13 12v6"/><path d="M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5S9.44 2 11 2s2 1.5 3 1.5 1.72-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-.78 0-1.5-.5-2.5-.5Z"/><path d="M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8"/></svg></span>
         <h3>Chill and social</h3>
         <p>Campfires in game, hangouts in voice, and matches with people who play when you do. Real life comes first.</p>
       </li>
       <li class="path">
-        <span class="path-icon" aria-hidden="true">🗡️</span>
+        <span class="path-icon" aria-hidden="true"><svg class="icon" data-icon="dungeon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 5V3"/><path d="M14 5V3"/><path d="M15 21v-3a3 3 0 0 0-6 0v3"/><path d="M18 3v8"/><path d="M18 5H6"/><path d="M22 11H2"/><path d="M22 9v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9"/><path d="M6 3v8"/></svg></span>
         <h3>Dungeon crews</h3>
         <p>Anyone can start one, no rank needed. In game, type <code class="cmd">/g anyone up for WC? type inv</code> and invite who answers. In Discord, <code>/lfg</code> pings the right people.</p>
       </li>
       <li class="path">
-        <span class="path-icon" aria-hidden="true">🛡️</span>
+        <span class="path-icon" aria-hidden="true"><svg class="icon" data-icon="raid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m13 19 6-6"/><path d="M14.5 17.5 3.586 6.586A2 2 0 013 5.172V3h2.172a2 2 0 011.414.586L17.5 14.5"/><path d="m14.828 6.172 2.586-2.586A2 2 0 0118.828 3H21v2.172a2 2 0 01-.586 1.414l-2.586 2.586"/><path d="m16 16 4 4"/><path d="m19 21 2-2"/><path d="m5 14 4 4"/><path d="m5 21-2-2"/><path d="M7.5 16.5 4 20"/></svg></span>
         <h3>Raids, now and then</h3>
         <p>Raid groups when enough of us want one. Main spec before off spec, every award logged, no GDKP.</p>
       </li>
@@ -119,6 +129,14 @@
 </section>
 
 <footer>
+  <nav class="foot-nav" aria-label="Footer">
+    <ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="ranks.html">Ranks</a></li>
+      <li><a href="guide.html">Addon guide</a></li>
+      <li><a href="addon.html">Get the addon</a></li>
+    </ul>
+  </nav>
   <p class="small">Rather talk first? Add the Guild Master on Battle.net: <span class="btag">Storm#110232</span></p>
   <p class="small muted">Fan-run guild site, not affiliated with Blizzard Entertainment. World of Warcraft is a trademark of Blizzard Entertainment. No cookies, trackers or scripts.</p>
 </footer>

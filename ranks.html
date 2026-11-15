@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>Ranks and the addon · Unbothered Warlords</title>
-<meta name="description" content="How ranks work in Unbothered Warlords, and what the guild addon does.">
+<title>Ranks · Unbothered Warlords</title>
+<meta name="description" content="How ranks work in Unbothered Warlords.">
 <meta name="theme-color" content="#1b1411">
 <link rel="canonical" href="https://unbotheredwarlords.github.io/ranks">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://unbotheredwarlords.github.io/ranks">
 <meta property="og:site_name" content="Unbothered Warlords">
-<meta property="og:title" content="Ranks and the addon · Unbothered Warlords">
-<meta property="og:description" content="How ranks work in Unbothered Warlords, and what the guild addon does.">
+<meta property="og:title" content="Ranks · Unbothered Warlords">
+<meta property="og:description" content="How ranks work in Unbothered Warlords.">
 <meta property="og:image" content="https://unbotheredwarlords.github.io/img/og-1200x630.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -27,72 +27,81 @@
 </head>
 <body class="page-addon">
 <a class="skip" href="#main">Skip to content</a>
-<nav class="bar bar-static" aria-label="Site">
-  <div class="bar-inner">
+<nav class="site-nav" aria-label="Site">
+  <div class="site-nav-inner">
     <a class="bar-brand" href="index.html"><img src="img/mark-96.webp" width="36" height="36" alt=""><span>Unbothered Warlords</span></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ranks.html" aria-current="page">Ranks</a></li>
+      <li><a href="guide.html">Addon guide</a></li>
+      <li><a href="addon.html">Get the addon</a></li>
+    </ul>
   </div>
 </nav>
 <main id="main">
   <section class="section" aria-labelledby="ranks-h">
     <p class="kicker">For every guildmate</p>
-    <h1 id="ranks-h" class="center">Ranks and the addon</h1>
-    <p class="center">How moving up works here, and what our addon does.</p>
+    <h1 id="ranks-h" class="center">Ranks</h1>
+    <p class="center page-lead">How moving up works here.</p>
 
-    <h2 id="ladder-h">Ranks</h2>
-    <ul class="paths" aria-labelledby="ladder-h">
-      <li class="path">
-        <span class="path-icon" aria-hidden="true">🌱</span>
-        <h3>Trial</h3>
-        <p>Everyone starts here.</p>
+    <!-- The path as docs/ownership.md has it: Trial, then Member; from Member, Raider for those who'd like to raid
+         and Officer, raiding or not. The four rank lines are Louis's approved text (15 Nov 2026), word for word. -->
+    <ol class="ladder" aria-labelledby="ranks-h">
+      <li class="rank">
+        <span class="path-icon" aria-hidden="true"><svg class="icon" data-icon="trial" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3"/><path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4"/><path d="M5 21h14"/></svg></span>
+        <div>
+          <h3>Trial</h3>
+          <p>Everyone starts here.</p>
+        </div>
       </li>
-      <li class="path">
-        <span class="path-icon" aria-hidden="true">🔥</span>
-        <h3>Member</h3>
-        <p>Seven days in the guild and one group with guildmates. Then an officer promotes you.</p>
+      <li class="rank">
+        <span class="path-icon" aria-hidden="true"><svg class="icon" data-icon="member" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 21 14 3"/><path d="M20.5 21 10 3"/><path d="M15.5 21 12 15l-3.5 6"/><path d="M2 21h20"/></svg></span>
+        <div>
+          <h3>Member</h3>
+          <p>Seven days in the guild and one group with guildmates. Then an officer promotes you.</p>
+        </div>
       </li>
-      <li class="path">
-        <span class="path-icon" aria-hidden="true">⚔️</span>
-        <h3>Raider</h3>
-        <p>Want to raid? Tell any officer and you're a Raider. Nobody has to. Before we raid together, Raiders join our Discord and link their character.</p>
+      <li class="ladder-fork">
+        <ul>
+          <li class="rank">
+            <span class="path-icon" aria-hidden="true"><svg class="icon" data-icon="raid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m13 19 6-6"/><path d="M14.5 17.5 3.586 6.586A2 2 0 013 5.172V3h2.172a2 2 0 011.414.586L17.5 14.5"/><path d="m14.828 6.172 2.586-2.586A2 2 0 0118.828 3H21v2.172a2 2 0 01-.586 1.414l-2.586 2.586"/><path d="m16 16 4 4"/><path d="m19 21 2-2"/><path d="m5 14 4 4"/><path d="m5 21-2-2"/><path d="M7.5 16.5 4 20"/></svg></span>
+            <div>
+              <h3>Raider</h3>
+              <p>Want to raid? Tell any officer and you're a Raider. Nobody has to. Before we raid together, Raiders join our Discord and link their character.</p>
+            </div>
+          </li>
+          <li class="rank">
+            <span class="path-icon" aria-hidden="true"><svg class="icon" data-icon="officer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span>
+            <div>
+              <h3>Officer</h3>
+              <p>For people who help guildmates or lead groups well. After 30 days in the guild, it's a chat with the Guild Master. No raiding needed.</p>
+            </div>
+          </li>
+        </ul>
       </li>
-      <li class="path">
-        <span class="path-icon" aria-hidden="true">🛡️</span>
-        <h3>Officer</h3>
-        <p>For people who help guildmates or lead groups well. After 30 days in the guild, it's a chat with the Guild Master. No raiding needed.</p>
-      </li>
-    </ul>
-    <p class="center">Been here a week and grouped with guildmates? Whisper any officer in game for your promotion.</p>
-    <p class="center">Invited by an officer as a friend? They can make you a Member right away.</p>
+    </ol>
+    <div class="note">
+      <span class="path-icon" aria-hidden="true"><svg class="icon" data-icon="whisper" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg></span>
+      <div>
+        <p>Been here a week and grouped with guildmates? Whisper any officer in game for your promotion.</p>
+        <p>Invited by an officer as a friend? They can make you a Member right away.</p>
+      </div>
+    </div>
 
-    <h2 id="addon-h">What the addon does</h2>
-    <p class="center">UW Guild is our free addon.</p>
-    <ul class="paths" aria-labelledby="addon-h">
-      <li class="path">
-        <span class="path-icon" aria-hidden="true">👥</span>
-        <h3>Guildmates near your level</h3>
-        <p>Shows who's online within a few levels of you.</p>
-      </li>
-      <li class="path">
-        <span class="path-icon" aria-hidden="true">📣</span>
-        <h3>Call a group</h3>
-        <p>Once you're a Member, one click asks guild chat for the dungeon at your level.</p>
-      </li>
-      <li class="path">
-        <span class="path-icon" aria-hidden="true">🧭</span>
-        <h3>Help while you level</h3>
-        <p>Tells you when a dungeon opens at your level, marks your quest's next step and puts on clear gear upgrades. Each helper has an off switch.</p>
-      </li>
-      <li class="path">
-        <span class="path-icon" aria-hidden="true">🍺</span>
-        <h3>Crafting and thanks</h3>
-        <p>See what guildmates can craft. Thank someone you grouped with.</p>
-      </li>
-    </ul>
+    <p class="center page-next">UW Guild is our free addon: guildmates online near your level, a one-click group call once you're a Member, a heads-up when a dungeon opens at your level, and what guildmates can craft. <a href="guide.html">See everything it does</a></p>
     <p class="center get"><a class="btn btn-primary btn-lg" href="addon.html">Get the addon</a></p>
     <p class="center small muted">One click on Windows. Mac and Linux steps are on the same page.</p>
   </section>
 </main>
 <footer>
+  <nav class="foot-nav" aria-label="Footer">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ranks.html" aria-current="page">Ranks</a></li>
+      <li><a href="guide.html">Addon guide</a></li>
+      <li><a href="addon.html">Get the addon</a></li>
+    </ul>
+  </nav>
   <p class="small">Questions? Whisper any officer in game.</p>
   <p class="small muted">Fan-run guild site, not affiliated with Blizzard Entertainment. World of Warcraft is a trademark of Blizzard Entertainment. No cookies, trackers or scripts.</p>
 </footer>

@@ -187,6 +187,7 @@ main { max-width: 74rem; margin: 0 auto; padding: 0 1.25rem; }
 .section > h2, .kicker { text-align: center; }
 .kicker { font: 700 var(--fs-label)/1.2 var(--display); letter-spacing: .22em; text-transform: uppercase; color: var(--gold); margin-bottom: .7rem; }
 .kicker::before, .kicker::after { content: "—"; margin: 0 .6em; color: var(--line-hi); }
+@media (max-width: 22rem) { .kicker::before, .kicker::after { content: none; } }   /* text at 200% on a phone: it wraps */
 
 /* Paths */
 .paths { list-style: none; padding: 0; margin: var(--s-6) 0 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(15.5rem, 100%), 1fr)); }
@@ -341,3 +342,137 @@ footer a { padding-block: .35rem; }
 .page-addon .other-os { color: var(--muted); margin-bottom: 1.1rem; }
 @media (max-width: 22rem) { h1 { font-size: min(2.3rem, (100vw - 2.5rem) * .135); } .eyebrow { letter-spacing: .12em; } }   /* 320px phones, and any phone at
    large text (this rem query matches there too): the name fits with room to spare */
+
+/* Site navigation: the same header and footer on every page, every page linked from both, the current one marked
+   (Louis, 15 Nov 2026: "/ranks and any other pages don't have a way to navigate to them"). scripts/check_site.py
+   fails when a page in site/ is missing from either list. The links wrap under the guild's name on a phone.
+   On the landing page the header lies over the top of the hero picture, without the name the hero already shows. */
+.site-nav-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--s-5); max-width: 74rem; margin: 0 auto; padding: .55rem 1.25rem; }
+.site-nav ul, .foot-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
+.site-nav ul { margin-inline: -.7rem; }   /* the first link's words line up with the page's edge, its tap area reaches past it */
+.site-nav li a, .foot-nav li a { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0 .7rem;
+  font: 700 var(--fs-small)/1.1 var(--sans); letter-spacing: .01em; text-decoration: none; color: var(--text); border-radius: var(--radius-sm); }
+.site-nav li a:hover, .foot-nav li a:hover { color: var(--ember-200); }
+.site-nav li a[aria-current="page"], .foot-nav li a[aria-current="page"] { color: var(--gold);
+  background: linear-gradient(var(--ember), var(--ember)) no-repeat .7rem calc(100% - .45rem) / calc(100% - 1.4rem) 2px; }
+.site-nav-over { position: absolute; inset: 0 0 auto; z-index: 3; text-shadow: 0 1px 4px var(--shade-3);
+  background: linear-gradient(180deg, var(--shade-2), transparent); }
+.site-nav-over .site-nav-inner { justify-content: center; max-width: none; padding-bottom: 1.5rem; }
+.site-nav-over ul { justify-content: center; }
+/* Text at 200% on a phone: the links wrap to three rows, more than the sky above the crest holds, so the header
+   takes its own strip above the picture. */
+@media (max-width: 22rem) { .site-nav-over { position: static; background: var(--bg); text-shadow: none; }
+  .site-nav-over .site-nav-inner { padding-bottom: 0; } }
+@media (min-width: 56rem) {   /* the hero's words are on the left: the links sit over the sky on the right */
+  .site-nav-over .site-nav-inner { justify-content: flex-end; padding-inline: clamp(2rem, 7vw, 7rem); }
+}
+.foot-nav { margin-bottom: var(--s-4); padding-bottom: var(--s-4); border-bottom: 1px solid var(--line); }
+.foot-nav ul { justify-content: center; }
+.foot-nav li a { color: var(--muted); }
+
+/* Icons: one family, drawn from scripts/site_icons.py (Lucide), gold on the tile; the stylesheet gives the size. */
+.icon { display: block; width: 1.5rem; height: 1.5rem; }
+.path-icon { color: var(--gold); flex: none; }
+@media (max-width: 45.99rem) { .path-icon .icon { width: 1.25rem; height: 1.25rem; } }
+
+/* Inner pages: the line under the title. */
+.page-lead { font-size: var(--fs-h3); color: var(--muted); margin-top: var(--s-3); }
+
+/* ranks.html: the ranks as the path they are. Trial, then Member; from Member two ways on, side by side, since
+   neither Raider nor Officer leads to the other (docs/ownership.md). One column on a phone, the fork drawn as a
+   branch; three columns from 60rem, the fork's two cards the same height so the branch meets each at its middle. */
+.ladder, .ladder-fork ul { list-style: none; padding: 0; margin: 0; display: grid; --gap: 1.5rem; gap: var(--gap); }
+.ladder { margin-top: var(--s-6); --rail: var(--line-hi); }
+.ladder-fork ul { grid-auto-rows: 1fr; gap: 1rem; position: relative; padding-left: 1.75rem; }
+.rank { position: relative; display: flex; gap: 1rem; align-items: flex-start; padding: 1.25rem; min-width: 0; overflow-wrap: anywhere;
+  border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(160deg, var(--card-2), var(--bg-2)); }
+.rank .path-icon { margin: 0; float: none; }
+.rank h3 { margin: .1rem 0 .35rem; }
+.rank p { color: var(--muted); }
+/* The rail. Phone: a short drop from Trial to Member under the icons, then a branch down Member's left edge. */
+.ladder > .rank + .rank::before { content: ""; position: absolute; left: 2.45rem; bottom: 100%; height: var(--gap); border-left: 2px solid var(--rail); }
+.ladder-fork { position: relative; }
+.ladder-fork ul::before { content: ""; position: absolute; left: .75rem; top: calc(var(--gap) * -1); bottom: calc(25% - .25rem); border-left: 2px solid var(--rail); }
+.ladder-fork .rank::before { content: ""; position: absolute; right: 100%; top: 50%; width: 1rem; border-top: 2px solid var(--rail); }
+/* Each stretch of rail ends in a small arrowhead at the card it leads to. */
+.ladder > .rank + .rank::after, .ladder-fork .rank::after { content: ""; position: absolute; width: .5rem; height: .5rem;
+  border-top: 2px solid var(--rail); border-right: 2px solid var(--rail); }
+.ladder > .rank + .rank::after { left: calc(2.45rem + 1px - .25rem); bottom: calc(100% + .1rem); transform: rotate(135deg); }
+.ladder-fork .rank::after { right: calc(100% + .1rem); top: calc(50% + 1px - .25rem); transform: rotate(45deg); }
+@media (min-width: 60rem) {
+  .ladder > .rank + .rank::after { left: auto; bottom: auto; right: calc(100% + .1rem); top: calc(50% + 1px - .25rem); transform: rotate(45deg); }
+  .ladder { grid-template-columns: minmax(0, .95fr) minmax(0, 1.1fr) minmax(0, 1.45fr); --gap: 3rem; gap: 0 var(--gap); align-items: center; }
+  .rank { padding: 1.5rem; }
+  .ladder > .rank + .rank::before { left: auto; right: 100%; bottom: auto; top: 50%; height: 0; width: var(--gap); border-left: 0; border-top: 2px solid var(--rail); }
+  .ladder-fork ul { padding-left: 0; }
+  .ladder-fork::before { content: ""; position: absolute; right: 100%; top: 50%; width: calc(var(--gap) / 2); border-top: 2px solid var(--rail); }
+  .ladder-fork ul::before { left: calc(var(--gap) / -2); top: calc(25% - .25rem); }
+  .ladder-fork .rank::before { width: calc(var(--gap) / 2); }
+}
+/* What to do next, where it can't be missed: a marked panel, not small print between two sections. */
+.note { display: flex; gap: 1rem; align-items: flex-start; max-width: 46rem; margin: var(--s-6) auto 0; padding: 1.25rem 1.5rem;
+  border: 1px solid var(--line-hi); border-left: 3px solid var(--ember); border-radius: var(--radius-md); background: var(--card); }
+.note .path-icon { margin: 0; float: none; }
+.note p:first-child { font-weight: 700; }
+.note p + p { margin-top: var(--s-2); color: var(--muted); }
+/* Four short cards read better two by two with the icon beside the words than as four tall, mostly empty boxes. */
+@media (min-width: 46rem) {
+  .paths-wide { grid-template-columns: 1fr 1fr; }
+  .paths-wide .path { display: flex; gap: 1rem; align-items: flex-start; }
+  .paths-wide .path-icon { margin: 0; }
+}
+/* Large text on a phone (200% makes a 390px screen 12rem wide; a 320px phone is 20rem): the icon goes above the
+   words instead of beside them, and the branch hugs the edge, so no word is squeezed into a sliver. */
+@media (max-width: 22rem) {
+  .rank, .note { flex-direction: column; gap: .6rem; padding: 1rem; }
+  .ladder > .rank + .rank::before { left: 1.6rem; }
+  .ladder > .rank + .rank::after { left: calc(1.6rem + 1px - .25rem); }
+  .ladder-fork ul { padding-left: 1rem; }
+  .ladder-fork ul::before { left: .3rem; }
+  .ladder-fork .rank::before { width: .7rem; }
+  .ladder-fork .rank::after { display: none; }
+}
+
+/* guide.html: the addon guide, the in-game window's twin. Its pages in its order: a rail on the left that stays in
+   view on wide screens (chips above the pages on a phone), each page's real picture, then a row a feature under the
+   name the window gives it. A row's id is its key in the addon, so one feature can be linked (guide#call), and the
+   row a link lands on is marked. */
+.guide { display: grid; gap: var(--s-6); margin-top: var(--s-7); }
+.guide-rail ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s-2); }
+.guide-rail a { display: flex; align-items: center; gap: var(--s-2); min-height: 2.75rem; padding: .3rem .9rem .3rem .4rem;
+  border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--card);
+  color: var(--text); font: 700 var(--fs-small)/1.2 var(--sans); text-decoration: none; }
+.guide-rail a:hover { border-color: var(--line-hi); color: var(--ember-200); }
+.guide-rail .path-icon { width: 2rem; height: 2rem; margin: 0; float: none; font-size: 1rem; }
+.guide-rail .icon { width: 1.125rem; height: 1.125rem; }
+@media (min-width: 64rem) {
+  .guide { grid-template-columns: 14.5rem minmax(0, 1fr); gap: var(--s-7); align-items: start; }
+  .guide-rail { position: sticky; top: var(--s-5); }
+  .guide-rail ul { flex-direction: column; flex-wrap: nowrap; gap: var(--s-1); padding: var(--s-2);
+    border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-2); }
+  .guide-rail a { border-color: transparent; background: none; }
+  .guide-rail a:hover { border-color: transparent; background: var(--card-2); }
+}
+.guide-page { scroll-margin-top: var(--s-5); }
+.guide-page + .guide-page { margin-top: var(--s-7); }
+.page-guide .guide-page h2 { margin: 0 0 var(--s-4); font-size: clamp(1.5rem, 3.2vw, 2rem); }
+.guide-intro { color: var(--muted); margin: calc(var(--s-2) * -1) 0 var(--s-4); }
+.guide-shot { display: block; width: 100%; max-width: 48rem; height: auto; margin-bottom: var(--s-3); }
+.features { list-style: none; margin: 0; padding: 0; max-width: 48rem; border-top: 1px solid var(--line); }
+.feature { display: flex; gap: 1rem; align-items: flex-start; padding: 1rem var(--s-3); border-bottom: 1px solid var(--line);
+  scroll-margin-top: var(--s-5); min-width: 0; overflow-wrap: anywhere; }
+.feature .path-icon { margin: 0; float: none; }
+.feature h3 { margin: .15rem 0 .3rem; color: var(--gold); }
+.feature h3 a { color: inherit; text-decoration: none; }
+.feature h3 a:hover { text-decoration: underline; }
+.feature p { color: var(--muted); }
+.feature:target { background: var(--card); box-shadow: inset 3px 0 0 var(--ember); }
+.tags { margin-top: var(--s-2); }
+.tag { display: inline-block; padding: .1rem .65rem; border: 1px solid var(--glow-3); border-radius: 999px; background: var(--glow-1);
+  color: var(--ember-100); font-size: var(--fs-label); font-weight: 700; }
+.guide-end { max-width: 48rem; margin-top: var(--s-6); }
+@media (max-width: 22rem) { .feature { flex-direction: column; gap: .6rem; padding-inline: 0; } }
+/* A picture of the window on other pages (addon.html), centred in the reading column. */
+.shot-center { margin: 0 auto var(--s-6); max-width: 44rem; }
+/* ranks.html ends by pointing on: one line on the addon, the guide and the download. */
+.page-next { max-width: var(--measure); margin: var(--s-7) auto 0; padding-top: var(--s-6); border-top: 1px solid var(--line); }
