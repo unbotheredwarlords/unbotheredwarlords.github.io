@@ -280,7 +280,6 @@ footer p + p { margin-top: .4rem; }
 }
 /* A jump to #join, #in-game or #discord lands below the sticky bar. */
 .section, .way { scroll-margin-top: var(--s-8); }
-.final .final-ask { margin-top: var(--s-3); font-size: var(--fs-body); }
 .zip-size { display: block; margin-top: var(--s-2); }
 
 /* Footer and inline links get room to tap (WCAG 2.5.8 spacing) without changing how the text looks. */
