@@ -501,3 +501,78 @@ footer a { padding-block: .35rem; }
 .shot-center { margin: 0 auto var(--s-6); max-width: 44rem; }
 /* ranks.html ends by pointing on: one line on the addon, the guide and the download. */
 .page-next { max-width: var(--measure); margin: var(--s-7) auto 0; padding-top: var(--s-6); border-top: 1px solid var(--line); }
+
+/* The UW Guild window to click through on /addon (scripts/site_window.py builds it from the addon's Handbook; no
+   script: a radio button a page, a popover a card). Dark like the game's own frame, in the site's gold and ember. */
+.sim-lead { margin: var(--s-6) auto var(--s-3); }
+.sim { max-width: 56rem; margin: 0 auto var(--s-6); }
+.sim-radio { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.sim-win { border: 1px solid var(--line-hi); border-radius: var(--radius); background: #0f0b09;
+  box-shadow: 0 18px 50px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.04); overflow: hidden; }
+.sim-bar { display: flex; align-items: center; justify-content: center; gap: .5rem; margin: 0; padding: .45rem 1rem;
+  background: linear-gradient(#1d1512, #120d0b); border-bottom: 1px solid var(--line);
+  font: 700 var(--fs-small)/1.2 var(--sans); color: var(--text); letter-spacing: .02em; }
+.sim-bar img { width: 1.5rem; height: 1.5rem; border-radius: 50%; }
+.sim-body { display: grid; grid-template-columns: 12.5rem minmax(0, 1fr); min-height: 26rem; }
+.sim-nav { display: flex; flex-direction: column; gap: .15rem; padding: .6rem; border-right: 1px solid var(--line); background: #140f0c; }
+.sim-nav label { display: flex; align-items: center; gap: .55rem; min-height: 2.75rem; padding: .25rem .6rem .25rem .35rem;
+  border-radius: var(--radius-sm); border-left: 3px solid transparent; cursor: pointer;
+  color: var(--gold); font: 700 var(--fs-small)/1.15 var(--sans); }
+.sim-nav label:hover { background: var(--card); }
+.sim-icon { display: grid; place-items: center; flex: none; width: 2rem; height: 2rem; border-radius: var(--radius-sm);
+  border: 1px solid var(--glow-3); background: var(--glow-1); color: var(--gold); }
+.sim-icon .icon { width: 1.1rem; height: 1.1rem; }
+.sim-pages { min-width: 0; padding: .75rem 1rem 1rem; }
+.sim-page { display: none; }
+.sim-page-h { margin: 0 0 .5rem; padding-bottom: .45rem; border-bottom: 1px solid var(--line); color: var(--gold);
+  font: 700 1.15rem/1.2 var(--sans); }
+.sim-rows { list-style: none; margin: 0; padding: 0; }
+.sim-row { display: flex; align-items: center; gap: .7rem; padding: .5rem 0; border-bottom: 1px solid rgba(122,85,55,.35); }
+.sim-text { flex: 1; min-width: 0; }
+.sim-name { padding: 0; border: 0; background: none; cursor: pointer; text-align: left;
+  color: var(--gold); font: 700 1rem/1.25 var(--sans); }
+.sim-name:hover { text-decoration: underline; text-underline-offset: .2em; }
+.sim-line { display: block; color: var(--text); font-size: var(--fs-small); line-height: 1.35; }
+.sim-tag { display: inline-block; margin-left: .35rem; padding: 0 .5rem; border: 1px solid var(--glow-3); border-radius: 999px;
+  color: var(--ember-200); font-size: .8rem; line-height: 1.5; vertical-align: .1em; }
+.sim-acts { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: .4rem; flex: none; max-width: 50%; }
+.sim-btn { min-height: 2.25rem; padding: .3rem .8rem; border: 1px solid var(--line-hi); border-radius: var(--radius-sm);
+  background: linear-gradient(#2a1f1a, #1a1310); color: var(--text); font: 700 .9rem/1.1 var(--sans); cursor: pointer; }
+.sim-btn:hover { border-color: var(--ember); color: var(--ember-200); }
+.sim-switch { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; cursor: pointer; }
+.sim-switch input { width: 1.3rem; height: 1.3rem; margin: 0; accent-color: var(--ember); cursor: pointer; }
+.sim-name:focus-visible, .sim-btn:focus-visible, .sim-switch input:focus-visible { outline: 3px solid var(--ember); outline-offset: 2px; }
+.sim-card { width: min(30rem, calc(100% - 2rem)); max-height: calc(100% - 2rem); margin: auto; padding: 1.1rem 1.25rem;
+  border: 1px solid var(--line-hi); border-radius: var(--radius); background: var(--bg-2); color: var(--text);
+  box-shadow: 0 18px 50px rgba(0,0,0,.6); overflow: auto; }
+.sim-card::backdrop { background: rgba(10,7,6,.7); }
+.sim-card-h { display: flex; align-items: center; gap: .6rem; margin: 0 0 .6rem; color: var(--gold); font: 700 1.1rem/1.2 var(--sans); }
+.sim-card q { color: var(--gold); }
+.sim-card-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; margin: 1rem 0 0; }
+.sim-card-foot .btn { min-height: 2.75rem; }
+
+#sim-play:checked ~ .sim-win .sim-p-play { display: block; }
+#sim-play:checked ~ .sim-win label[for="sim-play"] { background: var(--card-2); border-left-color: var(--ember); border-bottom-color: var(--ember); color: var(--text); }
+#sim-play:focus-visible ~ .sim-win label[for="sim-play"] { outline: 3px solid var(--ember); outline-offset: -3px; }
+#sim-level:checked ~ .sim-win .sim-p-level { display: block; }
+#sim-level:checked ~ .sim-win label[for="sim-level"] { background: var(--card-2); border-left-color: var(--ember); border-bottom-color: var(--ember); color: var(--text); }
+#sim-level:focus-visible ~ .sim-win label[for="sim-level"] { outline: 3px solid var(--ember); outline-offset: -3px; }
+#sim-guild:checked ~ .sim-win .sim-p-guild { display: block; }
+#sim-guild:checked ~ .sim-win label[for="sim-guild"] { background: var(--card-2); border-left-color: var(--ember); border-bottom-color: var(--ember); color: var(--text); }
+#sim-guild:focus-visible ~ .sim-win label[for="sim-guild"] { outline: 3px solid var(--ember); outline-offset: -3px; }
+#sim-addons:checked ~ .sim-win .sim-p-addons { display: block; }
+#sim-addons:checked ~ .sim-win label[for="sim-addons"] { background: var(--card-2); border-left-color: var(--ember); border-bottom-color: var(--ember); color: var(--text); }
+#sim-addons:focus-visible ~ .sim-win label[for="sim-addons"] { outline: 3px solid var(--ember); outline-offset: -3px; }
+#sim-raids:checked ~ .sim-win .sim-p-raids { display: block; }
+#sim-raids:checked ~ .sim-win label[for="sim-raids"] { background: var(--card-2); border-left-color: var(--ember); border-bottom-color: var(--ember); color: var(--text); }
+#sim-raids:focus-visible ~ .sim-win label[for="sim-raids"] { outline: 3px solid var(--ember); outline-offset: -3px; }
+@media (max-width: 47.99rem) {   /* phones: the pages become one row over the window; buttons go under their row */
+  .sim-body { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+  .sim-nav { flex-direction: row; overflow-x: auto; scrollbar-width: none; border-right: 0; border-bottom: 1px solid var(--line); }
+  .sim-nav::-webkit-scrollbar { display: none; }
+  .sim-nav label { flex: none; border-left: 0; border-bottom: 3px solid transparent; }
+  .sim-row { flex-wrap: wrap; }
+  .sim-acts { max-width: none; }
+  .sim-acts:has(.sim-btn) { width: 100%; justify-content: flex-start; padding-left: 2.7rem; }
+}
