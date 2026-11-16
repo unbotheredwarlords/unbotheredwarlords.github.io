@@ -1,12 +1,12 @@
 {
-  "version": "2026.11.16.1259-cac2003",
-  "released": "2026-11-16T12:59Z",
-  "addon_commit": "cac2003",
-  "site_commit": "0cc1a30",
+  "version": "2026.11.16.1724-6eda575",
+  "released": "2026-11-16T17:24Z",
+  "addon_commit": "6eda575",
+  "site_commit": "6eda575",
   "zip": "UW_Guild.zip",
-  "zip_bytes": 915397,
-  "zip_sha256": "c2421d0baa3f493976ba9fa53650d32dbdcafb8cb2dee9705d341772cdd5a182",
-  "files": "459c6e259deb62d4",
+  "zip_bytes": 915391,
+  "zip_sha256": "3d2380f737d69453a23c5a72cb2f5820b5b477345d0cd418f6cc7e47ddbb20c9",
+  "files": "f146c15edfe5dbc4",
   "interface": [
     16001
   ]
