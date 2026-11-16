@@ -64,13 +64,15 @@
     <div class="guide-pages">
       <section class="guide-page" id="play" aria-labelledby="play-h">
         <h2 id="play-h">Play together</h2>
-        <a class="shot-link" href="img/guide-play.webp"><img class="guide-shot" src="img/guide-play.webp" width="1224" height="470" loading="lazy" decoding="async" alt="The UW Guild window on its Play together page: Guildmates near my level, Call a group, Dungeon quests, Meet point and Thank a guildmate, each with its button."></a>
+        <button class="shot-link" type="button" popovertarget="zoom-play" aria-label="Show larger: The UW Guild window on its Play together page: Guildmates near my level, Call a group, Dungeon quests, Meet point and Thank a guildmate, each with its button."><img class="guide-shot" src="img/guide-play.webp" width="1224" height="470" loading="lazy" decoding="async" alt="The UW Guild window on its Play together page: Guildmates near my level, Call a group, Dungeon quests, Meet point and Thank a guildmate, each with its button."><span class="zoom-badge" aria-hidden="true"><svg class="icon" data-icon="zoom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6"/><path d="M8 11h6"/></svg></span></button>
+        <div class="zoom" id="zoom-play" popover role="dialog" aria-label="The UW Guild window on its Play together page: Guildmates near my level, Call a group, Dungeon quests, Meet point and Thank a guildmate, each with its button."><button class="zoom-hit" type="button" popovertarget="zoom-play" popovertargetaction="hide" aria-label="Close the larger picture"><span class="zoom-close" aria-hidden="true"><svg class="icon" data-icon="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span><span class="zoom-pan"><img loading="lazy" decoding="async" class="zoom-img" src="img/guide-play.webp" width="1224" height="470" alt="The UW Guild window on its Play together page: Guildmates near my level, Call a group, Dungeon quests, Meet point and Thank a guildmate, each with its button."></span></button></div>
         <ul class="features">
           <li class="feature" id="near">
             <span class="path-icon" aria-hidden="true"><svg class="icon" data-icon="near" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></span>
             <div>
               <h3><a href="#near">Guildmates near my level</a></h3>
               <p>Who's online within a few levels of you, free ones first. Click a name in chat to whisper or invite.</p>
+              <dl class="how"><div><dt>When</dt><dd>You want company for a quest or a dungeon and don't know who's around.</dd></div><div><dt>Try it</dt><dd>Press <b>Find guildmates</b>. Chat lists up to 15 guildmates within 3 levels of you, nearest first: level, name in class colour, and zone. Anyone away, busy or inside a dungeon is greyed at the end of the list.</dd></div><div><dt>Tip</dt><dd>Nobody close? It says so. A line in guild chat reaches everyone, addon or not.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="call">
@@ -79,6 +81,7 @@
               <h3><a href="#call">Call a group</a></h3>
               <p>Writes a line in guild chat for the dungeon at your level, then you invite whoever types inv. Anyone can also just ask in guild chat.</p>
               <p class="tags"><span class="tag">Members and up</span></p>
+              <dl class="how"><div><dt>When</dt><dd>You're free for a dungeon and want guildmates along.</dd></div><div><dt>Try it</dt><dd>Press <b>Call a group</b>. The tab already holds the dungeon for your level. Click once to see the line, again within 6 seconds to send it. Guild chat reads: <q>Getting a group going for Wailing Caverns (15-24), who's in? Type inv here when you're free.</q></dd></div><div><dt>Tip</dt><dd>Everyone who types inv in the next 15 minutes is listed. <b>Invite next</b> invites them one per click, skipping anyone already grouped.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="prep">
@@ -87,6 +90,7 @@
               <h3><a href="#prep">Dungeon quests</a></h3>
               <p>Before a dungeon, an arrow walks you to each of its quests you can take now, then to the entrance. Pick one near your level.</p>
               <p class="tags"><span class="tag">Needs Questie</span></p>
+              <dl class="how"><div><dt>When</dt><dd>Before a dungeon run. Its quests are often the best XP of the night.</dd></div><div><dt>Try it</dt><dd>Pick the dungeon (the one for your level comes first). Chat says how many quests are left to grab, names their givers in order, and an arrow walks the shortest way to each, then to the entrance.</dd></div><div><dt>Tip</dt><dd>It plans again as you go and leaves out quests you've done, already hold, or are too low for. In a group, it names who can share one you're missing.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="meet">
@@ -94,6 +98,7 @@
             <div>
               <h3><a href="#meet">Meet point</a></h3>
               <p>In a group, your spot becomes the group's meet point: their markers point at you until you clear it.</p>
+              <dl class="how"><div><dt>When</dt><dd>Your group is spread over the zone and you want everyone in one spot.</dd></div><div><dt>Try it</dt><dd>In a group, press <b>Share my spot</b>. Each groupmate with the addon gets a line saying you set a meet point, and their marker turns toward you. <b>Clear it</b> when you've met.</dd></div><div><dt>Tip</dt><dd>A map pin you've placed is shared instead of where you stand. Groupmates see it with the addon and Questie. In a raid, the leader or an assist sets it.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="thanks">
@@ -101,6 +106,7 @@
             <div>
               <h3><a href="#thanks">Thank a guildmate</a></h3>
               <p>Thank someone you grouped with in the last 3 hours. It counts toward their Officer path. Once a day each.</p>
+              <dl class="how"><div><dt>When</dt><dd>Someone carried a pull, shared a quest, or just made the run fun.</dd></div><div><dt>Try it</dt><dd>Target them, then press <b>Thank my target</b>. Chat confirms: <q>Thanks sent to Name. It counts toward their Officer path.</q></dd></div><div><dt>Tip</dt><dd>It works for anyone you grouped with in the last 3 hours, once a day each.</dd></div></dl>
             </div>
           </li>
         </ul>
@@ -108,13 +114,15 @@
       <section class="guide-page" id="level" aria-labelledby="level-h">
         <h2 id="level-h">Leveling helpers</h2>
         <p class="guide-intro">Each helper has an off switch.</p>
-        <a class="shot-link" href="img/guide-level.webp"><img class="guide-shot" src="img/guide-level.webp" width="1224" height="745" loading="lazy" decoding="async" alt="The UW Guild window on its Leveling helpers page: nine helpers, each with a tick box to switch it off."></a>
+        <button class="shot-link" type="button" popovertarget="zoom-level" aria-label="Show larger: The UW Guild window on its Leveling helpers page: nine helpers, each with a tick box to switch it off."><img class="guide-shot" src="img/guide-level.webp" width="1224" height="745" loading="lazy" decoding="async" alt="The UW Guild window on its Leveling helpers page: nine helpers, each with a tick box to switch it off."><span class="zoom-badge" aria-hidden="true"><svg class="icon" data-icon="zoom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6"/><path d="M8 11h6"/></svg></span></button>
+        <div class="zoom" id="zoom-level" popover role="dialog" aria-label="The UW Guild window on its Leveling helpers page: nine helpers, each with a tick box to switch it off."><button class="zoom-hit" type="button" popovertarget="zoom-level" popovertargetaction="hide" aria-label="Close the larger picture"><span class="zoom-close" aria-hidden="true"><svg class="icon" data-icon="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span><span class="zoom-pan"><img loading="lazy" decoding="async" class="zoom-img" src="img/guide-level.webp" width="1224" height="745" alt="The UW Guild window on its Leveling helpers page: nine helpers, each with a tick box to switch it off."></span></button></div>
         <ul class="features">
           <li class="feature" id="gear">
             <span class="path-icon" aria-hidden="true"><svg class="icon" data-icon="gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg></span>
             <div>
               <h3><a href="#gear">Wear clear gear upgrades</a></h3>
               <p>Only when it's clear: same slot and armor type, higher item level, no stat lower. Bind on Equip and close calls always ask. Never in combat or a loot roll. Off: upgrades stay in your bags until you put them on.</p>
+              <dl class="how"><div><dt>When</dt><dd>Always on while you level. Nothing to press.</dd></div><div><dt>You'll see</dt><dd>A clear upgrade goes on by itself, with a line in chat and in the middle of the screen: <q>Put on [new item] (ilvl 22), was [old item] (18).</q> A close call or a Bind on Equip piece asks first: <q>Upgrade? … Put it on?</q></dd></div><div><dt>Tip</dt><dd>Changed your mind? <b>Undo last swap</b> puts the old piece back within 10 minutes, and the new one won't go on by itself again.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="bars">
@@ -122,6 +130,7 @@
             <div>
               <h3><a href="#bars">New spells onto my bars</a></h3>
               <p>A new rank replaces the old one on your bars; a new spell takes the first empty slot. Never macros or items. Off: new spells and ranks wait in your spellbook.</p>
+              <dl class="how"><div><dt>When</dt><dd>Every time you train.</dd></div><div><dt>You'll see</dt><dd><q>Frost Armor (Rank 2) replaces the old rank on your bars.</q> A brand-new spell lands in the first empty slot: <q>… is on your bars.</q></dd></div><div><dt>Tip</dt><dd>No empty slot? It tells you, and the spell waits in your spellbook (P) for you to drag.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="space">
@@ -129,6 +138,7 @@
             <div>
               <h3><a href="#space">Space uses quest items</a></h3>
               <p>When your target is part of a quest you carry an item for, and it's in range, Space uses the item. Shift+Space uses it in fights too. Off: Space only jumps.</p>
+              <dl class="how"><div><dt>When</dt><dd>Quests that have you use an item on something: a sample, a totem, a fallen creature.</dd></div><div><dt>You'll see</dt><dd>Target the quest creature, step into range, and Space uses the item instead of jumping. Out of range, Space jumps as usual.</dd></div><div><dt>Tip</dt><dd>Shift+Space uses the item during a fight too.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="bags">
@@ -136,6 +146,7 @@
             <div>
               <h3><a href="#bags">Delete and Make room in bags</a></h3>
               <p>Delete on your bags drops the cheapest junk; with full bags, Make room swaps junk for better loot. Junk worth less than anything in full bags stays on the corpse. Shift-click Delete keeps an item. Off: no Delete or Make room buttons; you clear bags by hand.</p>
+              <dl class="how"><div><dt>When</dt><dd>Your bags are full, mid-quest, far from a vendor.</dd></div><div><dt>You'll see</dt><dd>A <b>Delete</b> button above your bags names your cheapest junk; hover for its value. With full bags at a corpse, the loot window offers <b>Make room</b> to drop junk for the better item. At a vendor, a <b>Sell</b> button gathers items worth more sold than disenchanted.</dd></div><div><dt>Tip</dt><dd>A delete worth 1 gold or more asks first. Shift-click Delete to keep an item for good.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="guide">
@@ -144,6 +155,7 @@
               <h3><a href="#guide">Quest guide marker</a></h3>
               <p>The map pin and on-screen marker point at your tracked quest's next step. Wandering NPCs: along their route, and a line once in sight. Your own pin always wins. Off: no map pin or marker for your next step.</p>
               <p class="tags"><span class="tag">Needs Questie</span></p>
+              <dl class="how"><div><dt>When</dt><dd>Questing, when you'd rather not open the map every minute.</dd></div><div><dt>You'll see</dt><dd>Track a quest and an on-screen marker points at its next step, with a pin on the map.</dd></div><div><dt>Tip</dt><dd>Your own map pin always wins: the marker steps aside until you turn it back on.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="chain">
@@ -152,6 +164,7 @@
               <h3><a href="#chain">Quest chain tags</a></h3>
               <p>Questie's tracker shows each quest's step in its chain (3/7); hover for every step. Off: Questie's tracker shows quest names only.</p>
               <p class="tags"><span class="tag">Needs Questie</span></p>
+              <dl class="how"><div><dt>When</dt><dd>A quest that leads somewhere bigger, and you want to know how far along you are.</dd></div><div><dt>You'll see</dt><dd>Beside a quest in Questie's tracker, its step in the chain in grey, like 3/7. <b>List my chains</b> prints every chain in your log in chat.</dd></div><div><dt>Tip</dt><dd>Hover a quest title in the tracker for every step of its chain.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="hold">
@@ -160,6 +173,7 @@
               <h3><a href="#hold">Keep the quest window open</a></h3>
               <p>After a turn-in, DialogueUI waits a moment for the next quest. Off: it closes as it normally would.</p>
               <p class="tags"><span class="tag">Needs DialogueUI</span></p>
+              <dl class="how"><div><dt>When</dt><dd>Quest hubs where one turn-in opens the next quest.</dd></div><div><dt>You'll see</dt><dd>After a turn-in, DialogueUI stays open about 4 seconds, so the follow-up shows without talking to the NPC again.</dd></div><div><dt>Tip</dt><dd>If the next quest or the NPC's menu appears, it simply carries on.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="mail">
@@ -167,6 +181,7 @@
             <div>
               <h3><a href="#mail">Send mats to my alts</a></h3>
               <p>One click mails crafting materials to your own alt whose professions use them. Off: no Send mats button; mail by hand.</p>
+              <dl class="how"><div><dt>When</dt><dd>At a mailbox, with herbs, ore or cloth one of your alts can use.</dd></div><div><dt>You'll see</dt><dd>A button like <b>Send mats to Name (3)</b> next to the mailbox. One click mails them. Hover first to see what goes.</dd></div><div><dt>Tip</dt><dd>Log in to each alt once with the addon on so it knows them. <b>What would go</b> lists it ahead of time, and anything worth less than the postage stays.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="dungeons">
@@ -174,19 +189,22 @@
             <div>
               <h3><a href="#dungeons">Name dungeons as I level</a></h3>
               <p>At a level where a dungeon opens, one line in your chat names it. Off: no line when you level.</p>
+              <dl class="how"><div><dt>When</dt><dd>Each time you level.</dd></div><div><dt>You'll see</dt><dd>At a level where a dungeon opens, one line: <q>Level 15: Ruins of Lordaeron and Wailing Caverns are in range now. Ask guild chat for a group.</q></dd></div><div><dt>Tip</dt><dd>Once per level on each character, never repeated.</dd></div></dl>
             </div>
           </li>
         </ul>
       </section>
       <section class="guide-page" id="guild" aria-labelledby="guild-h">
         <h2 id="guild-h">Guild</h2>
-        <a class="shot-link" href="img/guide-guild.webp"><img class="guide-shot" src="img/guide-guild.webp" width="1224" height="745" loading="lazy" decoding="async" alt="The UW Guild window on its Guild page: nine rows from the Welcome window to Discord, each with its button."></a>
+        <button class="shot-link" type="button" popovertarget="zoom-guild" aria-label="Show larger: The UW Guild window on its Guild page: nine rows from the Welcome window to Discord, each with its button."><img class="guide-shot" src="img/guide-guild.webp" width="1224" height="745" loading="lazy" decoding="async" alt="The UW Guild window on its Guild page: nine rows from the Welcome window to Discord, each with its button."><span class="zoom-badge" aria-hidden="true"><svg class="icon" data-icon="zoom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6"/><path d="M8 11h6"/></svg></span></button>
+        <div class="zoom" id="zoom-guild" popover role="dialog" aria-label="The UW Guild window on its Guild page: nine rows from the Welcome window to Discord, each with its button."><button class="zoom-hit" type="button" popovertarget="zoom-guild" popovertargetaction="hide" aria-label="Close the larger picture"><span class="zoom-close" aria-hidden="true"><svg class="icon" data-icon="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span><span class="zoom-pan"><img loading="lazy" decoding="async" class="zoom-img" src="img/guide-guild.webp" width="1224" height="745" alt="The UW Guild window on its Guild page: nine rows from the Welcome window to Discord, each with its button."></span></button></div>
         <ul class="features">
           <li class="feature" id="welcome">
             <span class="path-icon" aria-hidden="true"><svg class="icon" data-icon="welcome" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>
             <div>
               <h3><a href="#welcome">Welcome window</a></h3>
               <p>Our norms and how to get started.</p>
+              <dl class="how"><div><dt>When</dt><dd>Your first day, or any time you want the norms again.</dd></div><div><dt>Try it</dt><dd>Press <b>Open it</b>. The window shows the helpers already at work for you, our norms, and who to ask for help.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="craft">
@@ -194,6 +212,7 @@
             <div>
               <h3><a href="#craft">Crafting</a></h3>
               <p>Guildmates see what you can craft, and you see theirs. Open each profession window once to add recipes. Off: nothing is shared, and online guildmates forget what they had.</p>
+              <dl class="how"><div><dt>When</dt><dd>You need something made, or want guildmates to know what you can make.</dd></div><div><dt>Try it</dt><dd>Press <b>Who crafts what</b>. Chat shows your own professions with how many recipes are shared, and how many guildmates are in the directory.</dd></div><div><dt>Tip</dt><dd>Open each profession window once so its recipes are added. Training a new one? Open its window once more.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="events">
@@ -201,6 +220,7 @@
             <div>
               <h3><a href="#events">Rallies and group nights</a></h3>
               <p>A login line and a heads-up 10 minutes before each Rally or group night. Off: no login line or 10-minute heads-ups.</p>
+              <dl class="how"><div><dt>When</dt><dd>You'd like to know when a Rally or group night is on without checking Discord.</dd></div><div><dt>Try it</dt><dd>Press <b>What's on</b> for the list, like <q>Rally today 20:00 (6 going)</q>. At login you get one line for the next day, and a heads-up 10 minutes before each event starts.</dd></div><div><dt>Tip</dt><dd>Event details are on each event's Discord card.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="loot">
@@ -208,6 +228,7 @@
             <div>
               <h3><a href="#loot">Loot rules</a></h3>
               <p>Main spec before off spec, with rolls only. <code>/roll</code> for main spec, <code>/roll 99</code> for off spec.</p>
+              <dl class="how"><div><dt>When</dt><dd>Any time a drop is rolled for in a guild group.</dd></div><div><dt>Try it</dt><dd>Press <b>How rolls work</b>. In game, type <code>/roll</code> for main spec or <code>/roll 99</code> for off spec. When a roll starts in a guild group, chat reminds you: Need only for your main spec, Greed for off spec, alts and selling.</dd></div><div><dt>Tip</dt><dd>When a leader runs the roll, main spec goes first, then regular raiders, then whoever has fewer main-spec wins this week, then the highest roll.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="jobs">
@@ -215,6 +236,7 @@
             <div>
               <h3><a href="#jobs">Guild jobs</a></h3>
               <p>Who holds each guild job, read from guild notes, and how to take one on.</p>
+              <dl class="how"><div><dt>When</dt><dd>You'd like to help the guild in a small, steady way.</dd></div><div><dt>Try it</dt><dd>Press <b>Show jobs</b>. Chat lists Welcome buddy, Recruiter and Event host, who holds each, and how many more each wants.</dd></div><div><dt>Tip</dt><dd>Want one? Whisper an officer and they'll add it to your guild note.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="likes">
@@ -222,6 +244,7 @@
             <div>
               <h3><a href="#likes">What you like</a></h3>
               <p>Pick what you enjoy: leveling, dungeons, raids, PvP, professions, social, exploring, RP. Linked on Discord, these show as your roles there.</p>
+              <dl class="how"><div><dt>When</dt><dd>Right after you join, so guildmates who enjoy the same things can find you.</dd></div><div><dt>Try it</dt><dd>Press <b>Pick</b>. Tick any of eight tiles: leveling, dungeons, raids, PvP, professions, social, exploring, RP. Then <b>Save</b>.</dd></div><div><dt>Tip</dt><dd>Change them whenever you like. Linked on Discord, they become your roles there.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="rate">
@@ -229,6 +252,7 @@
             <div>
               <h3><a href="#rate">Rate a leader</a></h3>
               <p>After a guild group's boss kill, one private ask, at most once a day. Off: no asks.</p>
+              <dl class="how"><div><dt>When</dt><dd>After a guild dungeon or raid leader takes your group through a boss.</dd></div><div><dt>Try it</dt><dd>Once the group ends and you're out of combat, you may get one private ask. Give a score from 1 to 5, and if you like any of: trust, care, integrity, leadership, patience.</dd></div><div><dt>Tip</dt><dd>Your rating is private: it's only ever added into totals from 5 or more guildmates. At most one ask a day.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="contact">
@@ -236,6 +260,7 @@
             <div>
               <h3><a href="#contact">Contact the Guild Master</a></h3>
               <p>The Guild Master's BattleTag, for anything you'd rather not post in guild chat.</p>
+              <dl class="how"><div><dt>When</dt><dd>Something you'd rather not post in guild chat.</dd></div><div><dt>Try it</dt><dd>Press <b>Show</b>. Chat gives the Guild Master's BattleTag to add as a Battle.net friend.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="discord">
@@ -243,19 +268,22 @@
             <div>
               <h3><a href="#discord">Discord</a></h3>
               <p>Optional. The invite link, ready to copy. Needed only for raid signups and raid nights. To link this character there, type <code>/link</code>, press Enter, then your character's name in the box.</p>
+              <dl class="how"><div><dt>When</dt><dd>You'd like to raid with us, or just hang out in voice.</dd></div><div><dt>Try it</dt><dd>Press <b>Copy invite</b>. A small box opens with the link selected. Press Ctrl+C (Cmd+C on a Mac) and paste it into your browser.</dd></div></dl>
             </div>
           </li>
         </ul>
       </section>
       <section class="guide-page" id="addons" aria-labelledby="addons-h">
         <h2 id="addons-h">Your addons</h2>
-        <a class="shot-link" href="img/guide-addons.webp"><img class="guide-shot" src="img/guide-addons.webp" width="1224" height="384" loading="lazy" decoding="async" alt="The UW Guild window on its Your addons page: Addon kit, Guild layout, Class macros and Something broken?"></a>
+        <button class="shot-link" type="button" popovertarget="zoom-addons" aria-label="Show larger: The UW Guild window on its Your addons page: Addon kit, Guild layout, Class macros and Something broken?"><img class="guide-shot" src="img/guide-addons.webp" width="1224" height="384" loading="lazy" decoding="async" alt="The UW Guild window on its Your addons page: Addon kit, Guild layout, Class macros and Something broken?"><span class="zoom-badge" aria-hidden="true"><svg class="icon" data-icon="zoom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6"/><path d="M8 11h6"/></svg></span></button>
+        <div class="zoom" id="zoom-addons" popover role="dialog" aria-label="The UW Guild window on its Your addons page: Addon kit, Guild layout, Class macros and Something broken?"><button class="zoom-hit" type="button" popovertarget="zoom-addons" popovertargetaction="hide" aria-label="Close the larger picture"><span class="zoom-close" aria-hidden="true"><svg class="icon" data-icon="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span><span class="zoom-pan"><img loading="lazy" decoding="async" class="zoom-img" src="img/guide-addons.webp" width="1224" height="384" alt="The UW Guild window on its Your addons page: Addon kit, Guild layout, Class macros and Something broken?"></span></button></div>
         <ul class="features">
           <li class="feature" id="kit">
             <span class="path-icon" aria-hidden="true"><svg class="icon" data-icon="kit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg></span>
             <div>
               <h3><a href="#kit">Addon kit</a></h3>
               <p>The few addons the guild plays with. Shows what's missing or doubled up; Fix turns duplicates off and kit addons on.</p>
+              <dl class="how"><div><dt>When</dt><dd>After you install, after a break, or when something looks off.</dd></div><div><dt>Try it</dt><dd>Press <b>Check my kit</b>. Chat lists what's missing and what's doubled up. Everyone's kit is EllesmereUI and Questie; raiders add Deadly Boss Mods or BigWigs. <b>Fix my kit</b> turns the duplicates off and the kit on. <b>Optional extras</b> lists thirteen more, each with what it's for.</dd></div><div><dt>Tip</dt><dd>Fix never installs anything; it names what's still to add.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="layout">
@@ -264,6 +292,7 @@
               <h3><a href="#layout">Guild layout</a></h3>
               <p>Imports the raid frames, bars and meter the officers shared, through each addon's own import.</p>
               <p class="tags"><span class="tag">Needs EllesmereUI</span></p>
+              <dl class="how"><div><dt>When</dt><dd>You'd like raid frames, bars and a meter that match the group's.</dd></div><div><dt>Try it</dt><dd>Press <b>Use it</b>. Each addon's own import opens in turn, and your current layout stays saved. <b>DialogueUI look</b> does the same for quest windows.</dd></div><div><dt>Tip</dt><dd>Do it out of combat. An addon you don't have switched on is skipped.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="macros">
@@ -271,6 +300,7 @@
             <div>
               <h3><a href="#macros">Class macros</a></h3>
               <p>The guild's tested macros for your class, added in one click. Your own macro slots are left free.</p>
+              <dl class="how"><div><dt>When</dt><dd>You want macros other players of your class trust, without writing your own.</dd></div><div><dt>Try it</dt><dd>Press <b>Show mine</b>. Chat lists your class's guild macros, best first, each with when it helps. Adding one puts it on your cursor; click an action bar slot to place it.</dd></div><div><dt>Tip</dt><dd>A one-click add leaves some of your macro slots free for your own.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="report">
@@ -278,6 +308,7 @@
             <div>
               <h3><a href="#report">Something broken?</a></h3>
               <p>A short report for the officers, a self-test of UW Guild, and your version against the newest.</p>
+              <dl class="how"><div><dt>When</dt><dd>Something errors, or an addon stops working.</dd></div><div><dt>Try it</dt><dd>Press <b>Report</b>. A box opens with a one-line report already selected: copy it and paste it where the box says. <b>Self-test</b> checks the addon and prints a short result. <b>Version</b> tells you whether a newer one is out.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="fish">
@@ -285,6 +316,7 @@
             <div>
               <h3><a href="#fish">Fishing sound</a></h3>
               <p>Music and ambience off, effects up, sound on in the background, so you hear the splash. Again to undo.</p>
+              <dl class="how"><div><dt>When</dt><dd>A long fishing session where you keep missing the splash.</dd></div><div><dt>Try it</dt><dd>Press <b>Fishing sound</b>: music and ambience go off, effects go up, and sound keeps playing in the background. Press it again to undo.</dd></div><div><dt>Tip</dt><dd>Forgot to switch it back? Your sound settings return at your next login.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="settings">
@@ -292,6 +324,7 @@
             <div>
               <h3><a href="#settings">All switches</a></h3>
               <p>Every automatic helper with its on and off, in the game's own Settings window. Turning one off never changes your rank or progress.</p>
+              <dl class="how"><div><dt>When</dt><dd>You'd like one helper on and another off.</dd></div><div><dt>Try it</dt><dd>Press <b>Open settings</b>, or go to Esc, Options, AddOns, UW Guild. Each helper has a tick box and a line on what you lose without it.</dd></div></dl>
             </div>
           </li>
         </ul>
@@ -304,6 +337,7 @@
             <div>
               <h3><a href="#plan">Raid plan</a></h3>
               <p>Your own job in each step of the raid leader's plan. The leader pastes the plan code; you see your lines.</p>
+              <dl class="how"><div><dt>When</dt><dd>Raid night, before a boss.</dd></div><div><dt>Try it</dt><dd>When the raid leader sends the plan, press <b>Show my plan</b>. You see the boss's name and only your own numbered steps. If the plan doesn't name you, it says so: ask the leader where they want you.</dd></div></dl>
             </div>
           </li>
           <li class="feature" id="raidrec">
@@ -311,6 +345,7 @@
             <div>
               <h3><a href="#raidrec">Raid records</a></h3>
               <p>Guild kills, attendance and loot awards, shared live from the raid. Want to raid? Tell any officer.</p>
+              <dl class="how"><div><dt>When</dt><dd>Nothing to do: it runs during guild raids.</dd></div><div><dt>You'll see</dt><dd>Kills, who attended and who won what are shared with the guild as they happen, even when the Guild Master isn't in the raid.</dd></div><div><dt>Tip</dt><dd>Attended raid nights count toward the Raider rank, and awards show in the loot log in our Discord.</dd></div></dl>
             </div>
           </li>
         </ul>

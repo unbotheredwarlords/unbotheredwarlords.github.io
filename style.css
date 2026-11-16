@@ -293,47 +293,35 @@ footer a { padding-block: .35rem; }
    hero, then stick to the top as a slim bar while you scroll. No script: position: sticky does the work.
    bottom: 0 as well, so on a short phone, where the hero is taller than the screen, the bar waits at the bottom edge
    instead of below it: the buttons are always in view.
-   Nothing moves when it sticks (Louis, 8 Nov 23:50: the buttons jumped across the screen). The buttons keep one
-   place: on wide screens they start where the hero's text starts, straight under it (people read down the left edge,
-   so a button far right under the art was easy to miss), and the guild name's space at the far end is always
-   reserved; while the hero is centred, so are they. When the bar sticks (scroll-state container query: Chrome and
-   Edge), only the name fades in and the shadow appears: opacity, a few pixels of transform and colour, no layout
-   change. Reduced motion: the same change, instant.
+   Nothing moves or appears when it sticks (Louis, 8 Nov 23:50: the buttons jumped across the screen; 15 Nov: no
+   one-use crest showing up at the right). The buttons keep one place: on wide screens they start where the hero's text
+   starts, straight under it; while the hero is centred, so are they. The bar is opaque, so nothing reads through it,
+   and only its shadow and edge show once it sticks (scroll-state container query: Chrome and Edge).
    With large text on a short screen (200% text on a phone) a stuck bar would cover a fifth of it, so there it scrolls
-   with the page (max-height in em follows the reader's text size).
-   addon.html uses the same bar, not sticky, as its way back to the guild page (.bar-static). */
+   with the page (max-height in em follows the reader's text size). */
 .bar { position: sticky; top: 0; bottom: 0; z-index: 10; container-type: scroll-state; }
 .bar-static { position: static; }
 .bar-inner { display: flex; align-items: center; gap: .6rem; padding: .55rem max(1.25rem, calc((100% - 74rem) / 2 + 1.25rem));
-  background: rgba(18,13,11,.94); border-bottom: 1px solid transparent; box-shadow: 0 6px 18px rgba(0,0,0,0);
+  background: var(--bg) url("img/grain.png"); border-bottom: 1px solid transparent; box-shadow: 0 6px 18px rgba(0,0,0,0);
   transition: box-shadow .3s ease, border-color .3s ease; }
-.bar-static .bar-inner { background: transparent; }
 .bar-brand { display: inline-flex; align-items: center; gap: .6rem; min-height: 2.75rem; margin-right: auto;
   color: var(--text); text-decoration: none; font: 700 1rem/1.1 var(--display); letter-spacing: .04em; }
 .bar-brand img { width: 2.25rem; height: 2.25rem; border-radius: 50%; }
 .bar-brand:hover span { text-decoration: underline; text-underline-offset: .2em; }
 .bar-actions { display: flex; gap: .6rem; }
-@media (min-width: 56rem) {   /* hero text on the left: the buttons line up under it, the name waits at the far end */
-  .bar:not(.bar-static) .bar-inner { padding-inline-start: max(clamp(2rem, 7vw, 7rem), calc((100% - 74rem) / 2 + 1.25rem)); }
-  .bar:not(.bar-static) .bar-brand { order: 1; margin-right: 0; margin-left: auto; }
+@media (min-width: 56rem) {   /* hero text on the left: the buttons line up under it */
+  .bar .bar-inner { padding-inline-start: max(clamp(2rem, 7vw, 7rem), calc((100% - 74rem) / 2 + 1.25rem)); }
 }
 @media (min-width: 46rem) and (max-width: 55.99rem) {   /* hero centred: so are the buttons */
-  .bar:not(.bar-static) .bar-inner { justify-content: center; }
-  .bar:not(.bar-static) .bar-brand { display: none; }
+  .bar .bar-inner { justify-content: center; }
 }
 @media (max-height: 34em) { .bar { position: static; } }
 .bar .btn { min-height: 2.75rem; padding: .55rem 1.1rem; font-size: 1rem; white-space: nowrap; }
-/* The hero already shows the name: in the sticky bar it waits, invisible and out of the tab order, in its own space. */
-.bar:not(.bar-static) .bar-brand { opacity: 0; transform: translateX(-.5rem); visibility: hidden;
-  transition: opacity .3s ease, transform .3s ease, visibility 0s linear .3s; }
 @container scroll-state(stuck: top) {
-  .bar:not(.bar-static) .bar-inner { border-bottom-color: var(--line); box-shadow: 0 6px 18px var(--shade-1); }
-  .bar:not(.bar-static) .bar-brand { opacity: 1; transform: none; visibility: visible;
-    transition: opacity .3s ease, transform .3s ease, visibility 0s; }
+  .bar .bar-inner { border-bottom-color: var(--line); box-shadow: 0 6px 18px var(--shade-1); }
 }
 @media (max-width: 45.99rem) {   /* phones: the two buttons share the width */
-  .bar:not(.bar-static) .bar-brand { display: none; }
-  .bar .bar-inner, .bar:not(.bar-static) .bar-inner { padding-inline: .75rem; }
+  .bar .bar-inner { padding-inline: .75rem; }
   .bar-actions { flex: 1; }
   .bar-actions .btn { flex: 1 1 0; min-width: 0; padding-inline: .5rem; font-size: .95rem;
     white-space: normal; line-height: 1.15; text-align: center; }   /* 320px: a label may take two lines, never overflow */
@@ -436,7 +424,8 @@ footer a { padding-block: .35rem; }
    view on wide screens (chips above the pages on a phone), each page's real picture, then a row a feature under the
    name the window gives it. A row's id is its key in the addon, so one feature can be linked (guide#call), and the
    row a link lands on is marked. */
-.guide { display: grid; gap: var(--s-6); margin-top: var(--s-7); }
+.guide { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-6); margin-top: var(--s-7); }
+.guide-rail, .guide-pages { min-width: 0; }
 .guide-rail ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s-2); }
 .guide-rail a { display: flex; align-items: center; gap: var(--s-2); min-height: 2.75rem; padding: .3rem .9rem .3rem .4rem;
   border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--card);
@@ -444,6 +433,15 @@ footer a { padding-block: .35rem; }
 .guide-rail a:hover { border-color: var(--line-hi); color: var(--ember-200); }
 .guide-rail .path-icon { width: 2rem; height: 2rem; margin: 0; float: none; font-size: 1rem; }
 .guide-rail .icon { width: 1.125rem; height: 1.125rem; }
+@media (max-width: 63.99rem) {   /* phones and tablets: the page list is one row that stays at the top while you read */
+  .guide-rail { position: sticky; top: 0; z-index: 5; margin-inline: -1.25rem; padding: .5rem 1.25rem;
+    background: var(--bg) url("img/grain.png"); border-bottom: 1px solid var(--line); }
+  .guide-rail ul { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none;
+    scroll-snap-type: x proximity; overscroll-behavior-x: contain; }
+  .guide-rail ul::-webkit-scrollbar { display: none; }
+  .guide-rail li { flex: none; scroll-snap-align: start; }
+  .guide-page, .feature { scroll-margin-top: 4.5rem; }
+}
 @media (min-width: 64rem) {
   .guide { grid-template-columns: 14.5rem minmax(0, 1fr); gap: var(--s-7); align-items: start; }
   .guide-rail { position: sticky; top: var(--s-5); }
@@ -466,14 +464,39 @@ footer a { padding-block: .35rem; }
 .feature h3 a:hover { text-decoration: underline; }
 .feature p { color: var(--muted); }
 .feature:target { background: var(--card); box-shadow: inset 3px 0 0 var(--ember); }
+.how { display: grid; gap: .45rem; margin: .7rem 0 0; font-size: var(--fs-small); }
+.how > div { display: grid; grid-template-columns: 6.75rem minmax(0, 1fr); gap: .75rem; }
+.how dt { color: var(--ember-200); font-weight: 700; }
+.how dd { margin: 0; color: var(--text); }
+.how q { color: var(--gold); quotes: "\201C" "\201D"; }
+@media (max-width: 35rem) { .how > div { grid-template-columns: 1fr; gap: .1rem; } }
 .tags { margin-top: var(--s-2); }
 .tag { display: inline-block; padding: .1rem .65rem; border: 1px solid var(--glow-3); border-radius: 999px; background: var(--glow-1);
   color: var(--ember-100); font-size: var(--fs-label); font-weight: 700; }
 .guide-end { max-width: 48rem; margin-top: var(--s-6); }
 @media (max-width: 22rem) { .feature { flex-direction: column; gap: .6rem; padding-inline: 0; } }
 /* A window picture links to its own file: on a phone its words are small, and the file opens to zoom. */
-.shot-link { display: block; max-width: 48rem; margin-bottom: var(--s-3); }
-.shot-link .guide-shot { margin-bottom: 0; }
+/* A picture of the window opens larger in place (Louis, 15 Nov 2026: it opened a new page). No script: the browser's
+   own popover. Click or tap anywhere, or Esc, closes it; on a narrow screen the picture keeps a readable size and
+   pans. Where popover isn't supported the button does nothing and the picture stays as it is. */
+.shot-link { position: relative; display: block; width: 100%; max-width: 48rem; margin: 0 0 var(--s-3); padding: 0;
+  border: 0; background: none; cursor: zoom-in; border-radius: var(--radius-sm); }
+.shot-link .guide-shot { margin-bottom: 0; transition: filter .2s ease; }
+.shot-link:hover .guide-shot { filter: brightness(1.08); }
+.zoom-badge { position: absolute; right: .5rem; bottom: .5rem; display: grid; place-items: center; width: 2.25rem; height: 2.25rem;
+  border-radius: 50%; background: rgba(18,13,11,.85); border: 1px solid var(--line-hi); color: var(--gold); }
+.zoom-badge .icon, .zoom-close .icon { width: 1.125rem; height: 1.125rem; }
+.zoom { inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; padding: 0; border: 0;
+  background: rgba(10,7,6,.95); color: var(--text); }
+.zoom::backdrop { background: transparent; }
+.zoom-hit { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: none; cursor: zoom-out;
+  overflow: auto; overscroll-behavior: contain; }
+.zoom-pan { display: grid; place-items: center; min-width: 100%; min-height: 100%; padding: 3.5rem 1rem 1rem; box-sizing: border-box; }
+.zoom-img { display: block; width: min(76.5rem, 100%); height: auto; border-radius: var(--radius-sm); box-shadow: 0 12px 40px rgba(0,0,0,.6); }
+@media (max-width: 47.99rem) { .zoom-img { width: 56rem; max-width: none; } .zoom-pan { place-items: center start; } }
+.zoom-close { position: fixed; top: .75rem; right: .75rem; display: grid; place-items: center; width: 2.75rem; height: 2.75rem;
+  border-radius: 50%; background: var(--card); border: 1px solid var(--line-hi); color: var(--text); }
+.shot-link:focus-visible, .zoom-hit:focus-visible { outline: 3px solid var(--ember); outline-offset: 3px; }
 /* A picture of the window on other pages (addon.html), centred in the reading column. */
 .shot-center { margin: 0 auto var(--s-6); max-width: 44rem; }
 /* ranks.html ends by pointing on: one line on the addon, the guide and the download. */
