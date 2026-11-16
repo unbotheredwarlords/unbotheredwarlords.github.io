@@ -11,7 +11,8 @@
 #     it is a WoW addon file inside UW_Guild/, then swaps the new UW_Guild folder in (the old one comes back if
 #     anything fails);
 #   - turns on a systemd timer for your user (no sudo) that checks once an hour, and installs an update only while
-#     WoW Forever is closed, so the game never loads half an update.
+#     WoW Forever is closed, so the game never loads half an update;
+#   - lists the guild kit's main addons missing from AddOns, with their CurseForge pages.
 # It never touches WTF (your settings and progress), never downgrades, never downloads or runs any program, and never
 # updates itself: a new version of this setup is a new download. Its own files live in ~/.local/share/uw-guild (copy of
 # this script, settings, log). Remove it with your app menu's "Stop UW Guild addon automatic updates", or run this file
@@ -88,6 +89,19 @@ def log(text: str) -> None:
         LOG.write_text("\n".join(old + [line]) + "\n", encoding="utf-8")
     except OSError:
         pass
+
+
+# The kit's two Everyone addons and its highly recommended extra (ns.KIT; the Windows setup's $KIT_PAGES), by AddOns
+# folder. Here they are only listed: most terminals open an address on a click, and the setup starts no browser.
+KIT_PAGES = {
+    "EllesmereUI": ("the whole interface", "https://www.curseforge.com/wow/addons/ellesmereui"),
+    "Questie": ("quests on the map", "https://www.curseforge.com/wow/addons/questie"),
+    "DialogueUI": ("quest text", "https://www.curseforge.com/wow/addons/dialogueui"),
+}
+
+
+def missing_kit(addons: Path) -> list[str]:
+    return [name for name in KIT_PAGES if not (addons / name).is_dir()]
 
 
 def done(code: int) -> None:
@@ -727,6 +741,13 @@ def main(argv: list[str] | None = None) -> None:
         say()
         say("Next: start WoW. A welcome window opens when you log in.")
         say("Not there? On the character screen, click AddOns, tick UW Guild (and Load out of date AddOns if it asks).")
+    if not args.quiet and result != "newer":
+        missing = missing_kit(addons)
+        if missing:
+            say()
+            say("Also recommended for the guild's kit (pick the Forever file on each page):")
+            for name in missing:
+                say("  " + name + ", " + KIT_PAGES[name][0] + ": " + KIT_PAGES[name][1])
     done(0)
 
 

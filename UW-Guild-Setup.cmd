@@ -16,6 +16,8 @@ exit /b %errorlevel%
 #     new UW_Guild folder in (the old one comes back if anything fails);
 #   - registers a task for this Windows user (no admin) that checks once an hour, and installs an update only while
 #     WoW Forever is closed, so the game never loads half an update.
+#   - names the guild kit's main addons missing from AddOns, and opens their CurseForge pages in your browser only if
+#     you press O (fixed https addresses written below, never one from the network).
 # It never touches WTF (your settings and progress), never downgrades, never downloads or runs any program, and
 # never updates itself: a new version of this setup is a new download. Its own files live in
 # %LOCALAPPDATA%\UW-Guild (copy of this script, settings, log). Remove it with the Start menu's
@@ -54,6 +56,16 @@ $MAX_UNPACKED = 60MB
 # the zip's SHA-256, so a push to the site repo without that key can't reach any install (red team, 8 Nov 2026).
 # Made 8 Nov 2026 on the officer PC (scripts/New-SiteKey.ps1, 3072-bit). Empty would mean hash checks only, and no task.
 $PUBKEY = "<RSAKeyValue><Modulus>rdpU9GcizmAFLkbZiYf8LTWWr1iXzL34zIRT87jyFd+g6NXY7kQz9PjahF8QLdiHOUSa/YH0XOFAD8BF5+1zLSulYsPelTTK8Cxyl4uq37mQI6vCma6tP0sNvoD2i1u+bvmzGq38yOkCojdZby+kumuOCitjWZn20QPJYcW5ftIUS4YUKe8hW5M6KD6EmeZLEH7sVTM96YDG3ynJmJslXS4dJA31GBXE3NcOH22abLHcTqefPRmrZxMGTxB5MOtffVOnGihVyHShVdIAwdyDOgse0D+ZIIfOvnir1NfmuDYFQ38sgNATVCnQSn9pn2V8VrbXGgzbP8cNqO63bYzhfe58DBM/+pNwR6xBLRkNo/8W1+Lmh6yQmHOjRyiFfT0AvN3tcqrhyUxw4Keq3VTWedwJ4b1cap5A8HDkVBtoqpd7ULmLz+tR8b5SF3xsLarweodbtZ6t61WRSsYDjM6D8/hBkMeNH0QafpjWKjVK/vzq6sGKPkLs3udm7Mo9Kb55</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>"
+# The kit's two Everyone addons and its highly recommended extra (ns.KIT, UW_Guild/Core.lua; bot/uwbot/layout.py), by
+# AddOns folder: what each is for, and its CurseForge page. The only addresses this setup ever opens, and only on a key
+# press (coordinator, 16 Nov 2026: a narrow exception to "no Start-Process", hardening's to sign off). The rest of the
+# kit is /uw kit's in game, so a newcomer isn't swamped.
+$KIT_PAGES = [ordered]@{
+  "EllesmereUI" = @("the whole interface", "https://www.curseforge.com/wow/addons/ellesmereui")
+  "Questie"     = @("quests on the map", "https://www.curseforge.com/wow/addons/questie")
+  "DialogueUI"  = @("quest text", "https://www.curseforge.com/wow/addons/dialogueui")
+}
+$script:KitMissing = @()
 $VERSION_RX = '^(\d{4})\.(\d{2})\.(\d{2})(?:\.(\d{4}))?-([0-9a-f]{7})$'
 
 if ($TestRun) {
@@ -86,10 +98,48 @@ function Done([int]$code) {
   # Success closes by itself (one click in all: the download); a problem waits, so it can be read.
   if (-not $Quiet) {
     Write-Host ""
-    if ($code -eq 0) { Write-Host "This window closes in 20 seconds."; Start-Sleep -Seconds 20 }
+    if ($code -eq 0 -and $script:KitMissing.Count -gt 0) { OfferKitPages }
+    elseif ($code -eq 0) { Write-Host "This window closes in 20 seconds."; Start-Sleep -Seconds 20 }
     else { Read-Host "Press Enter to close" | Out-Null }
   }
   exit $code
+}
+
+# The same 20 seconds, but a press of O in them opens the missing addons' pages. No key needed: it closes anyway.
+# Hardening's conditions (16 Nov 2026): keys typed before the line shows are drained first, so only a press after it
+# counts (O or o, read without echo); one press opens each missing page once, at most the three; a page that won't open
+# prints its address instead. Never with -Quiet or under the task (Done skips all of this there).
+function OfferKitPages {
+  try { while ([Console]::KeyAvailable) { [void][Console]::ReadKey($true) } } catch { Start-Sleep -Seconds 20; return }
+  Write-Host "Press O in the next 20 seconds to open these pages. This window closes by itself."
+  $until = [DateTime]::UtcNow.AddSeconds(20)
+  while ([DateTime]::UtcNow -lt $until) {
+    $key = $null
+    try { if ([Console]::KeyAvailable) { $key = [Console]::ReadKey($true) } } catch { Start-Sleep -Seconds 20; return }
+    if ($key -and $key.Key -eq [ConsoleKey]::O) {
+      $opened = @{}
+      foreach ($name in @($script:KitMissing | Select-Object -First 3)) {
+        if ($opened.ContainsKey($name) -or -not $KIT_PAGES.Contains($name)) { continue }
+        $opened[$name] = $true
+        $page = $KIT_PAGES[$name][1]
+        try {
+          if ($page -match '^https://www\.curseforge\.com/wow/addons/[a-z0-9-]+$') { Start-Process -FilePath $page }
+        } catch { Write-Host ("Couldn't open it: " + $page) }
+      }
+      Write-Host "Opened. On each page, pick the Forever file."
+      Start-Sleep -Seconds 5
+      return
+    }
+    Start-Sleep -Milliseconds 200
+  }
+}
+
+function MissingKit([string]$addonsDir) {
+  $out = @()
+  foreach ($name in $KIT_PAGES.Keys) {
+    if (-not (Test-Path -LiteralPath (Join-Path $addonsDir $name) -PathType Container)) { $out += $name }
+  }
+  return ,$out
 }
 
 function Fail([string]$text) {
@@ -512,5 +562,13 @@ if ($result -eq "updated" -and -not $Quiet) {
   Say ""
   Say "Next: start WoW. A welcome window opens when you log in."
   Say "Not there? On the character screen, click AddOns, tick UW Guild (and Load out of date AddOns if it asks)."
+}
+if (-not $Quiet -and $result -ne "newer") {
+  $script:KitMissing = @(MissingKit $dir)
+  if ($script:KitMissing.Count -gt 0) {
+    Say ""
+    Say "Also recommended for the guild's kit:"
+    foreach ($name in $script:KitMissing) { Say ("  " + $name + ", " + $KIT_PAGES[$name][0] + ": " + $KIT_PAGES[$name][1]) }
+  }
 }
 Done 0
