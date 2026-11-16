@@ -1,0 +1,13 @@
+{
+  "version": "2026.11.16.0531-5af14c5",
+  "released": "2026-11-16T05:31Z",
+  "addon_commit": "5af14c5",
+  "site_commit": "4adf36f",
+  "zip": "UW_Guild.zip",
+  "zip_bytes": 910687,
+  "zip_sha256": "6a158595ae6908bbed8566dbe0a4c525e67a8b6400965562b7b0789b855f4377",
+  "files": "dbc177a0505b02ed",
+  "interface": [
+    16001
+  ]
+}
