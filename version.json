@@ -2,7 +2,7 @@
   "version": "2026.11.16.0325-e4d384d",
   "released": "2026-11-16T03:25Z",
   "addon_commit": "e4d384d",
-  "site_commit": "6f07ecc",
+  "site_commit": "086152c",
   "zip": "UW_Guild.zip",
   "zip_bytes": 904634,
   "zip_sha256": "680c2645f3795a76e06da2f5083a3955d4ac04b3821b1a4ae4e23521f4ae37a8",
@@ -10,5 +10,5 @@
   "interface": [
     16001
   ],
-  "site": "1306248006eac9a7"
+  "site": "ca816cec01fd54ab"
 }
