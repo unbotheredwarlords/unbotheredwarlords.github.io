@@ -741,6 +741,7 @@ def main(argv: list[str] | None = None) -> None:
         say()
         say("Next: start WoW. A welcome window opens when you log in.")
         say("Not there? On the character screen, click AddOns, tick UW Guild (and Load out of date AddOns if it asks).")
+        say("Groups and events: our Discord, https://discord.gg/D5EZm3gAcZ")
     if not args.quiet and result != "newer":
         missing = missing_kit(addons)
         if missing:

@@ -562,6 +562,7 @@ if ($result -eq "updated" -and -not $Quiet) {
   Say ""
   Say "Next: start WoW. A welcome window opens when you log in."
   Say "Not there? On the character screen, click AddOns, tick UW Guild (and Load out of date AddOns if it asks)."
+  Say "Groups and events: our Discord, https://discord.gg/D5EZm3gAcZ"
 }
 if (-not $Quiet -and $result -ne "newer") {
   $script:KitMissing = @(MissingKit $dir)
