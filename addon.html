@@ -13,13 +13,14 @@
 <meta property="og:url" content="https://unbotheredwarlords.github.io/addon">
 <meta property="og:site_name" content="Unbothered Warlords">
 <meta property="og:title" content="UW Guild addon · free, no Discord needed">
-<meta property="og:description" content="The Unbothered Warlords guild addon for WoW Forever: see which guildmates are online near your level, and call a group for your level once you're a Member. One click installs it on Windows, one command on Linux.">
+<meta property="og:description" content="The Unbothered Warlords guild addon for WoW Forever. See which guildmates are online near your level, and call a group in one click once you're a Member.">
 <meta property="og:image" content="https://unbotheredwarlords.github.io/img/og-addon-1200x630.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="The guild crest beside a camp table at dusk: an open journal, a map, a foaming tankard and gold coins by the fire">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preload" href="fonts/cinzel-900.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/alegreya-sans-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/alegreya-sans-700.woff2" as="font" type="font/woff2" crossorigin>
@@ -42,7 +43,7 @@
   <section class="section" aria-labelledby="addon-h">
     <p class="kicker">Free, no Discord needed</p>
     <h1 id="addon-h" class="center">The UW Guild addon</h1>
-    <p class="center">See which guildmates are online near your level. Members and up can also call a group for their level in one click. Everything works in game. <a href="guide.html">See everything it does</a></p>
+    <p class="center"><!-- pitch -->See which guildmates are online near your level, and call a group in one click once you're a Member.<!-- /pitch --> Everything works in game. <a href="guide.html">See everything it does</a></p>
     <p class="center get"><a class="btn btn-primary btn-lg" href="UW-Guild-Setup.cmd" download>Install for Windows</a></p>
     <p class="center small other-os">Another computer? <a href="#mac-h">Mac</a> <span aria-hidden="true">·</span> <a href="#linux-h">Linux</a> <span aria-hidden="true">·</span> <a href="#manual-h">Windows, by hand</a></p>
     <p class="center release">Latest version <code class="ver">2026.11.16.1724-6eda575</code><br><span class="muted small">Released 16 Nov 2026 <span aria-hidden="true">·</span> free <span aria-hidden="true">·</span> updates itself</span></p>
@@ -200,7 +201,7 @@
       <details id="errors"><summary>Red error text, or something looks wrong</summary><p>Type <code class="nowrap">/uw selftest</code>. It checks the addon and tells you what's off. Still stuck? Whisper any officer in game.</p></details>
       <details id="remove"><summary>Stop automatic updates, or remove the addon</summary><p>Start menu, <strong>UW Guild addon</strong>, <strong>Stop automatic updates</strong>. The addon stays. Or in a command prompt: <code>schtasks /Delete /TN "UW_Guild updater" /F</code>. On Linux: app menu, <strong>Stop UW Guild addon automatic updates</strong>. To remove the addon too, delete the <strong>UW_Guild</strong> folder in AddOns.</p></details>
       <details id="start-fresh"><summary>Start fresh</summary><p>Close WoW, open the <span class="nowrap">_forever_ › WTF</span> folder and search it for <strong>UW_Guild.lua</strong>. Delete every one it finds. UW Guild then starts like a first install on this PC. Your guild rank and Discord link aren't in that file, so they stay. Officers: your copy may hold guild records, so ask in #officer-chat first.</p></details>
-      <details id="verify"><summary>Check the download is ours (optional)</summary><p>The zip's SHA-256 is <code class="hash">7e9069821acca0f1f2a25a2d299f5122253e8787a1f7e075cb0508765e6ec85c</code>. On Windows, in PowerShell: <code>Get-FileHash UW_Guild.zip</code>. On a Mac, in Terminal: <code>shasum -a 256 UW_Guild.zip</code>. On Linux: <code>sha256sum UW_Guild.zip</code>. The two should match.</p></details>
+      <details id="verify"><summary>Check the download is ours (optional)</summary><p>The zip's SHA-256 is <code class="hash">7e9069821acca0f1f2a25a2d299f5122253e8787a1f7e075cb0508765e6ec85c</code>. On Windows, in PowerShell: <code>Get-FileHash UW_Guild.zip</code>. On a Mac, in Terminal: <code>shasum -a 256 UW_Guild.zip</code>. On Linux: <code>sha256sum UW_Guild.zip</code>. The two should match. This page's build is 1924703 (<a href="version.json">version.json</a>).</p></details>
     </div>
   </section>
 </main>
@@ -213,8 +214,7 @@
       <li><a href="addon.html" aria-current="page">Get the addon</a></li>
     </ul>
   </nav>
-  <p class="small">Questions? Whisper any officer in game.</p>
-  <p class="small muted">Build 02202d8 <span aria-hidden="true">·</span> <a href="version.json">version.json</a></p>
+  <p class="small">Questions? Whisper any Unbothered Warlords member in game.</p>
   <p class="small muted">Fan-run guild site, not affiliated with Blizzard Entertainment. World of Warcraft is a trademark of Blizzard Entertainment. No cookies, trackers or scripts.</p>
 </footer>
 </body>
