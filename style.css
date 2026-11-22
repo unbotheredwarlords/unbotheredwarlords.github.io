@@ -535,7 +535,7 @@ footer a { padding-block: .35rem; }
 .sim-radio { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .sim-view { position: relative; aspect-ratio: 984 / 861; background: var(--bg-deep) url(img/sim/ground.webp) center / cover; }
-.sim-st { display: none; position: absolute; inset: 0; }
+.sim-st { visibility: hidden; position: absolute; inset: 0; background: 0 0 / 100% 100% no-repeat; }
 .sim-st img { display: block; width: 100%; height: 100%; }
 .sim-hot { position: absolute; cursor: pointer; }
 .sim-hot:hover { background: color-mix(in srgb, var(--white) 10%, transparent); }
@@ -550,96 +550,180 @@ footer a { padding-block: .35rem; }
   .sim-tabs, .sim-acts { display: flex; }
 }
 /* sim:start */
-#sim-b_addons_fish:checked ~ .sim-view .sim-st-b_addons_fish, #sim-b_addons_fish:checked ~ .sim-under .sim-u-b_addons_fish { display: block; }
-#sim-b_addons_kit:checked ~ .sim-view .sim-st-b_addons_kit, #sim-b_addons_kit:checked ~ .sim-under .sim-u-b_addons_kit { display: block; }
-#sim-b_addons_layout:checked ~ .sim-view .sim-st-b_addons_layout, #sim-b_addons_layout:checked ~ .sim-under .sim-u-b_addons_layout { display: block; }
-#sim-b_addons_macros:checked ~ .sim-view .sim-st-b_addons_macros, #sim-b_addons_macros:checked ~ .sim-under .sim-u-b_addons_macros { display: block; }
-#sim-b_addons_report:checked ~ .sim-view .sim-st-b_addons_report, #sim-b_addons_report:checked ~ .sim-under .sim-u-b_addons_report { display: block; }
-#sim-b_guild_contact:checked ~ .sim-view .sim-st-b_guild_contact, #sim-b_guild_contact:checked ~ .sim-under .sim-u-b_guild_contact { display: block; }
-#sim-b_guild_craft:checked ~ .sim-view .sim-st-b_guild_craft, #sim-b_guild_craft:checked ~ .sim-under .sim-u-b_guild_craft { display: block; }
-#sim-b_guild_discord:checked ~ .sim-view .sim-st-b_guild_discord, #sim-b_guild_discord:checked ~ .sim-under .sim-u-b_guild_discord { display: block; }
-#sim-b_guild_events:checked ~ .sim-view .sim-st-b_guild_events, #sim-b_guild_events:checked ~ .sim-under .sim-u-b_guild_events { display: block; }
-#sim-b_guild_jobs:checked ~ .sim-view .sim-st-b_guild_jobs, #sim-b_guild_jobs:checked ~ .sim-under .sim-u-b_guild_jobs { display: block; }
-#sim-b_guild_likes:checked ~ .sim-view .sim-st-b_guild_likes, #sim-b_guild_likes:checked ~ .sim-under .sim-u-b_guild_likes { display: block; }
-#sim-b_guild_loot:checked ~ .sim-view .sim-st-b_guild_loot, #sim-b_guild_loot:checked ~ .sim-under .sim-u-b_guild_loot { display: block; }
-#sim-b_guild_rate:checked ~ .sim-view .sim-st-b_guild_rate, #sim-b_guild_rate:checked ~ .sim-under .sim-u-b_guild_rate { display: block; }
-#sim-b_guild_welcome:checked ~ .sim-view .sim-st-b_guild_welcome, #sim-b_guild_welcome:checked ~ .sim-under .sim-u-b_guild_welcome { display: block; }
-#sim-b_level_chain:checked ~ .sim-view .sim-st-b_level_chain, #sim-b_level_chain:checked ~ .sim-under .sim-u-b_level_chain { display: block; }
-#sim-b_level_gear:checked ~ .sim-view .sim-st-b_level_gear, #sim-b_level_gear:checked ~ .sim-under .sim-u-b_level_gear { display: block; }
-#sim-b_level_mail:checked ~ .sim-view .sim-st-b_level_mail, #sim-b_level_mail:checked ~ .sim-under .sim-u-b_level_mail { display: block; }
-#sim-b_play_call:checked ~ .sim-view .sim-st-b_play_call, #sim-b_play_call:checked ~ .sim-under .sim-u-b_play_call { display: block; }
-#sim-b_play_near:checked ~ .sim-view .sim-st-b_play_near, #sim-b_play_near:checked ~ .sim-under .sim-u-b_play_near { display: block; }
-#sim-b_play_prep:checked ~ .sim-view .sim-st-b_play_prep, #sim-b_play_prep:checked ~ .sim-under .sim-u-b_play_prep { display: block; }
-#sim-b_raids_plan:checked ~ .sim-view .sim-st-b_raids_plan, #sim-b_raids_plan:checked ~ .sim-under .sim-u-b_raids_plan { display: block; }
-#sim-b_start_call:checked ~ .sim-view .sim-st-b_start_call, #sim-b_start_call:checked ~ .sim-under .sim-u-b_start_call { display: block; }
-#sim-b_start_gear:checked ~ .sim-view .sim-st-b_start_gear, #sim-b_start_gear:checked ~ .sim-under .sim-u-b_start_gear { display: block; }
-#sim-b_start_prep:checked ~ .sim-view .sim-st-b_start_prep, #sim-b_start_prep:checked ~ .sim-under .sim-u-b_start_prep { display: block; }
-#sim-o_addons_fish:checked ~ .sim-view .sim-st-o_addons_fish, #sim-o_addons_fish:checked ~ .sim-under .sim-u-o_addons_fish { display: block; }
-#sim-o_addons_kit:checked ~ .sim-view .sim-st-o_addons_kit, #sim-o_addons_kit:checked ~ .sim-under .sim-u-o_addons_kit { display: block; }
-#sim-o_addons_layout:checked ~ .sim-view .sim-st-o_addons_layout, #sim-o_addons_layout:checked ~ .sim-under .sim-u-o_addons_layout { display: block; }
-#sim-o_addons_macros:checked ~ .sim-view .sim-st-o_addons_macros, #sim-o_addons_macros:checked ~ .sim-under .sim-u-o_addons_macros { display: block; }
-#sim-o_addons_report:checked ~ .sim-view .sim-st-o_addons_report, #sim-o_addons_report:checked ~ .sim-under .sim-u-o_addons_report { display: block; }
-#sim-o_addons_settings:checked ~ .sim-view .sim-st-o_addons_settings, #sim-o_addons_settings:checked ~ .sim-under .sim-u-o_addons_settings { display: block; }
-#sim-o_addons_share:checked ~ .sim-view .sim-st-o_addons_share, #sim-o_addons_share:checked ~ .sim-under .sim-u-o_addons_share { display: block; }
-#sim-o_guild_contact:checked ~ .sim-view .sim-st-o_guild_contact, #sim-o_guild_contact:checked ~ .sim-under .sim-u-o_guild_contact { display: block; }
-#sim-o_guild_craft:checked ~ .sim-view .sim-st-o_guild_craft, #sim-o_guild_craft:checked ~ .sim-under .sim-u-o_guild_craft { display: block; }
-#sim-o_guild_discord:checked ~ .sim-view .sim-st-o_guild_discord, #sim-o_guild_discord:checked ~ .sim-under .sim-u-o_guild_discord { display: block; }
-#sim-o_guild_events:checked ~ .sim-view .sim-st-o_guild_events, #sim-o_guild_events:checked ~ .sim-under .sim-u-o_guild_events { display: block; }
-#sim-o_guild_jobs:checked ~ .sim-view .sim-st-o_guild_jobs, #sim-o_guild_jobs:checked ~ .sim-under .sim-u-o_guild_jobs { display: block; }
-#sim-o_guild_likes:checked ~ .sim-view .sim-st-o_guild_likes, #sim-o_guild_likes:checked ~ .sim-under .sim-u-o_guild_likes { display: block; }
-#sim-o_guild_loot:checked ~ .sim-view .sim-st-o_guild_loot, #sim-o_guild_loot:checked ~ .sim-under .sim-u-o_guild_loot { display: block; }
-#sim-o_guild_rate:checked ~ .sim-view .sim-st-o_guild_rate, #sim-o_guild_rate:checked ~ .sim-under .sim-u-o_guild_rate { display: block; }
-#sim-o_guild_welcome:checked ~ .sim-view .sim-st-o_guild_welcome, #sim-o_guild_welcome:checked ~ .sim-under .sim-u-o_guild_welcome { display: block; }
-#sim-o_level_bags:checked ~ .sim-view .sim-st-o_level_bags, #sim-o_level_bags:checked ~ .sim-under .sim-u-o_level_bags { display: block; }
-#sim-o_level_bars:checked ~ .sim-view .sim-st-o_level_bars, #sim-o_level_bars:checked ~ .sim-under .sim-u-o_level_bars { display: block; }
-#sim-o_level_chain:checked ~ .sim-view .sim-st-o_level_chain, #sim-o_level_chain:checked ~ .sim-under .sim-u-o_level_chain { display: block; }
-#sim-o_level_dungeons:checked ~ .sim-view .sim-st-o_level_dungeons, #sim-o_level_dungeons:checked ~ .sim-under .sim-u-o_level_dungeons { display: block; }
-#sim-o_level_gear:checked ~ .sim-view .sim-st-o_level_gear, #sim-o_level_gear:checked ~ .sim-under .sim-u-o_level_gear { display: block; }
-#sim-o_level_guide:checked ~ .sim-view .sim-st-o_level_guide, #sim-o_level_guide:checked ~ .sim-under .sim-u-o_level_guide { display: block; }
-#sim-o_level_hold:checked ~ .sim-view .sim-st-o_level_hold, #sim-o_level_hold:checked ~ .sim-under .sim-u-o_level_hold { display: block; }
-#sim-o_level_mail:checked ~ .sim-view .sim-st-o_level_mail, #sim-o_level_mail:checked ~ .sim-under .sim-u-o_level_mail { display: block; }
-#sim-o_level_space:checked ~ .sim-view .sim-st-o_level_space, #sim-o_level_space:checked ~ .sim-under .sim-u-o_level_space { display: block; }
-#sim-o_play_call:checked ~ .sim-view .sim-st-o_play_call, #sim-o_play_call:checked ~ .sim-under .sim-u-o_play_call { display: block; }
-#sim-o_play_meet:checked ~ .sim-view .sim-st-o_play_meet, #sim-o_play_meet:checked ~ .sim-under .sim-u-o_play_meet { display: block; }
-#sim-o_play_near:checked ~ .sim-view .sim-st-o_play_near, #sim-o_play_near:checked ~ .sim-under .sim-u-o_play_near { display: block; }
-#sim-o_play_prep:checked ~ .sim-view .sim-st-o_play_prep, #sim-o_play_prep:checked ~ .sim-under .sim-u-o_play_prep { display: block; }
-#sim-o_play_thanks:checked ~ .sim-view .sim-st-o_play_thanks, #sim-o_play_thanks:checked ~ .sim-under .sim-u-o_play_thanks { display: block; }
-#sim-o_raids_plan:checked ~ .sim-view .sim-st-o_raids_plan, #sim-o_raids_plan:checked ~ .sim-under .sim-u-o_raids_plan { display: block; }
-#sim-o_raids_raidrec:checked ~ .sim-view .sim-st-o_raids_raidrec, #sim-o_raids_raidrec:checked ~ .sim-under .sim-u-o_raids_raidrec { display: block; }
-#sim-o_start_call:checked ~ .sim-view .sim-st-o_start_call, #sim-o_start_call:checked ~ .sim-under .sim-u-o_start_call { display: block; }
-#sim-o_start_gear:checked ~ .sim-view .sim-st-o_start_gear, #sim-o_start_gear:checked ~ .sim-under .sim-u-o_start_gear { display: block; }
-#sim-o_start_near:checked ~ .sim-view .sim-st-o_start_near, #sim-o_start_near:checked ~ .sim-under .sim-u-o_start_near { display: block; }
-#sim-o_start_prep:checked ~ .sim-view .sim-st-o_start_prep, #sim-o_start_prep:checked ~ .sim-under .sim-u-o_start_prep { display: block; }
-#sim-p_addons:checked ~ .sim-view .sim-st-p_addons, #sim-p_addons:checked ~ .sim-under .sim-u-p_addons { display: block; }
-#sim-p_guild:checked ~ .sim-view .sim-st-p_guild, #sim-p_guild:checked ~ .sim-under .sim-u-p_guild { display: block; }
-#sim-p_level:checked ~ .sim-view .sim-st-p_level, #sim-p_level:checked ~ .sim-under .sim-u-p_level { display: block; }
-#sim-p_play:checked ~ .sim-view .sim-st-p_play, #sim-p_play:checked ~ .sim-under .sim-u-p_play { display: block; }
-#sim-p_raids:checked ~ .sim-view .sim-st-p_raids, #sim-p_raids:checked ~ .sim-under .sim-u-p_raids { display: block; }
-#sim-p_start:checked ~ .sim-view .sim-st-p_start, #sim-p_start:checked ~ .sim-under .sim-u-p_start { display: block; }
-#sim-t_addons_share:checked ~ .sim-view .sim-st-t_addons_share, #sim-t_addons_share:checked ~ .sim-under .sim-u-t_addons_share { display: block; }
-#sim-t_guild_craft:checked ~ .sim-view .sim-st-t_guild_craft, #sim-t_guild_craft:checked ~ .sim-under .sim-u-t_guild_craft { display: block; }
-#sim-t_guild_events:checked ~ .sim-view .sim-st-t_guild_events, #sim-t_guild_events:checked ~ .sim-under .sim-u-t_guild_events { display: block; }
-#sim-t_guild_rate:checked ~ .sim-view .sim-st-t_guild_rate, #sim-t_guild_rate:checked ~ .sim-under .sim-u-t_guild_rate { display: block; }
-#sim-t_level_bags:checked ~ .sim-view .sim-st-t_level_bags, #sim-t_level_bags:checked ~ .sim-under .sim-u-t_level_bags { display: block; }
-#sim-t_level_bars:checked ~ .sim-view .sim-st-t_level_bars, #sim-t_level_bars:checked ~ .sim-under .sim-u-t_level_bars { display: block; }
-#sim-t_level_chain:checked ~ .sim-view .sim-st-t_level_chain, #sim-t_level_chain:checked ~ .sim-under .sim-u-t_level_chain { display: block; }
-#sim-t_level_dungeons:checked ~ .sim-view .sim-st-t_level_dungeons, #sim-t_level_dungeons:checked ~ .sim-under .sim-u-t_level_dungeons { display: block; }
-#sim-t_level_gear:checked ~ .sim-view .sim-st-t_level_gear, #sim-t_level_gear:checked ~ .sim-under .sim-u-t_level_gear { display: block; }
-#sim-t_level_guide:checked ~ .sim-view .sim-st-t_level_guide, #sim-t_level_guide:checked ~ .sim-under .sim-u-t_level_guide { display: block; }
-#sim-t_level_hold:checked ~ .sim-view .sim-st-t_level_hold, #sim-t_level_hold:checked ~ .sim-under .sim-u-t_level_hold { display: block; }
-#sim-t_level_mail:checked ~ .sim-view .sim-st-t_level_mail, #sim-t_level_mail:checked ~ .sim-under .sim-u-t_level_mail { display: block; }
-#sim-t_level_space:checked ~ .sim-view .sim-st-t_level_space, #sim-t_level_space:checked ~ .sim-under .sim-u-t_level_space { display: block; }
-#sim-t_start_gear:checked ~ .sim-view .sim-st-t_start_gear, #sim-t_start_gear:checked ~ .sim-under .sim-u-t_start_gear { display: block; }
-#sim-u_addons_kit_Fix_my_kit:checked ~ .sim-view .sim-st-u_addons_kit_Fix_my_kit, #sim-u_addons_kit_Fix_my_kit:checked ~ .sim-under .sim-u-u_addons_kit_Fix_my_kit { display: block; }
-#sim-u_addons_kit_Optional_extras:checked ~ .sim-view .sim-st-u_addons_kit_Optional_extras, #sim-u_addons_kit_Optional_extras:checked ~ .sim-under .sim-u-u_addons_kit_Optional_extras { display: block; }
-#sim-u_addons_layout_DialogueUI_look:checked ~ .sim-view .sim-st-u_addons_layout_DialogueUI_look, #sim-u_addons_layout_DialogueUI_look:checked ~ .sim-under .sim-u-u_addons_layout_DialogueUI_look { display: block; }
-#sim-u_addons_report_Self_test:checked ~ .sim-view .sim-st-u_addons_report_Self_test, #sim-u_addons_report_Self_test:checked ~ .sim-under .sim-u-u_addons_report_Self_test { display: block; }
-#sim-u_addons_report_Version:checked ~ .sim-view .sim-st-u_addons_report_Version, #sim-u_addons_report_Version:checked ~ .sim-under .sim-u-u_addons_report_Version { display: block; }
-#sim-u_play_meet_Clear_it:checked ~ .sim-view .sim-st-u_play_meet_Clear_it, #sim-u_play_meet_Clear_it:checked ~ .sim-under .sim-u-u_play_meet_Clear_it { display: block; }
-#sim-u_play_prep_Razorfen_Kraul:checked ~ .sim-view .sim-st-u_play_prep_Razorfen_Kraul, #sim-u_play_prep_Razorfen_Kraul:checked ~ .sim-under .sim-u-u_play_prep_Razorfen_Kraul { display: block; }
-#sim-u_play_prep_Shadowfang_Keep:checked ~ .sim-view .sim-st-u_play_prep_Shadowfang_Keep, #sim-u_play_prep_Shadowfang_Keep:checked ~ .sim-under .sim-u-u_play_prep_Shadowfang_Keep { display: block; }
-#sim-u_start_prep_Razorfen_Kraul:checked ~ .sim-view .sim-st-u_start_prep_Razorfen_Kraul, #sim-u_start_prep_Razorfen_Kraul:checked ~ .sim-under .sim-u-u_start_prep_Razorfen_Kraul { display: block; }
-#sim-u_start_prep_Shadowfang_Keep:checked ~ .sim-view .sim-st-u_start_prep_Shadowfang_Keep, #sim-u_start_prep_Shadowfang_Keep:checked ~ .sim-under .sim-u-u_start_prep_Shadowfang_Keep { display: block; }
+#sim-b_addons_fish:checked ~ .sim-view .sim-st-b_addons_fish { visibility: visible; } #sim-b_addons_fish:checked ~ .sim-under .sim-u-b_addons_fish { display: block; }
+.sim-st-b_addons_fish { background-image: url(img/sim/p_addons.webp); }
+#sim-b_addons_kit:checked ~ .sim-view .sim-st-b_addons_kit { visibility: visible; } #sim-b_addons_kit:checked ~ .sim-under .sim-u-b_addons_kit { display: block; }
+.sim-st-b_addons_kit { background-image: url(img/sim/p_addons.webp); }
+#sim-b_addons_layout:checked ~ .sim-view .sim-st-b_addons_layout { visibility: visible; } #sim-b_addons_layout:checked ~ .sim-under .sim-u-b_addons_layout { display: block; }
+.sim-st-b_addons_layout { background-image: url(img/sim/p_addons.webp); }
+#sim-b_addons_macros:checked ~ .sim-view .sim-st-b_addons_macros { visibility: visible; } #sim-b_addons_macros:checked ~ .sim-under .sim-u-b_addons_macros { display: block; }
+.sim-st-b_addons_macros { background-image: url(img/sim/p_addons.webp); }
+#sim-b_addons_report:checked ~ .sim-view .sim-st-b_addons_report { visibility: visible; } #sim-b_addons_report:checked ~ .sim-under .sim-u-b_addons_report { display: block; }
+.sim-st-b_addons_report { background-image: url(img/sim/p_addons.webp); }
+#sim-b_guild_contact:checked ~ .sim-view .sim-st-b_guild_contact { visibility: visible; } #sim-b_guild_contact:checked ~ .sim-under .sim-u-b_guild_contact { display: block; }
+.sim-st-b_guild_contact { background-image: url(img/sim/p_guild.webp); }
+#sim-b_guild_craft:checked ~ .sim-view .sim-st-b_guild_craft { visibility: visible; } #sim-b_guild_craft:checked ~ .sim-under .sim-u-b_guild_craft { display: block; }
+.sim-st-b_guild_craft { background-image: url(img/sim/p_guild.webp); }
+#sim-b_guild_discord:checked ~ .sim-view .sim-st-b_guild_discord { visibility: visible; } #sim-b_guild_discord:checked ~ .sim-under .sim-u-b_guild_discord { display: block; }
+.sim-st-b_guild_discord { background-image: url(img/sim/p_guild.webp); }
+#sim-b_guild_events:checked ~ .sim-view .sim-st-b_guild_events { visibility: visible; } #sim-b_guild_events:checked ~ .sim-under .sim-u-b_guild_events { display: block; }
+.sim-st-b_guild_events { background-image: url(img/sim/p_guild.webp); }
+#sim-b_guild_jobs:checked ~ .sim-view .sim-st-b_guild_jobs { visibility: visible; } #sim-b_guild_jobs:checked ~ .sim-under .sim-u-b_guild_jobs { display: block; }
+.sim-st-b_guild_jobs { background-image: url(img/sim/p_guild.webp); }
+#sim-b_guild_likes:checked ~ .sim-view .sim-st-b_guild_likes { visibility: visible; } #sim-b_guild_likes:checked ~ .sim-under .sim-u-b_guild_likes { display: block; }
+.sim-st-b_guild_likes { background-image: url(img/sim/p_guild.webp); }
+#sim-b_guild_loot:checked ~ .sim-view .sim-st-b_guild_loot { visibility: visible; } #sim-b_guild_loot:checked ~ .sim-under .sim-u-b_guild_loot { display: block; }
+.sim-st-b_guild_loot { background-image: url(img/sim/p_guild.webp); }
+#sim-b_guild_rate:checked ~ .sim-view .sim-st-b_guild_rate { visibility: visible; } #sim-b_guild_rate:checked ~ .sim-under .sim-u-b_guild_rate { display: block; }
+.sim-st-b_guild_rate { background-image: url(img/sim/p_guild.webp); }
+#sim-b_guild_welcome:checked ~ .sim-view .sim-st-b_guild_welcome { visibility: visible; } #sim-b_guild_welcome:checked ~ .sim-under .sim-u-b_guild_welcome { display: block; }
+.sim-st-b_guild_welcome { background-image: url(img/sim/p_guild.webp); }
+#sim-b_level_chain:checked ~ .sim-view .sim-st-b_level_chain { visibility: visible; } #sim-b_level_chain:checked ~ .sim-under .sim-u-b_level_chain { display: block; }
+.sim-st-b_level_chain { background-image: url(img/sim/p_level.webp); }
+#sim-b_level_gear:checked ~ .sim-view .sim-st-b_level_gear { visibility: visible; } #sim-b_level_gear:checked ~ .sim-under .sim-u-b_level_gear { display: block; }
+.sim-st-b_level_gear { background-image: url(img/sim/p_level.webp); }
+#sim-b_level_mail:checked ~ .sim-view .sim-st-b_level_mail { visibility: visible; } #sim-b_level_mail:checked ~ .sim-under .sim-u-b_level_mail { display: block; }
+.sim-st-b_level_mail { background-image: url(img/sim/p_level.webp); }
+#sim-b_play_call:checked ~ .sim-view .sim-st-b_play_call { visibility: visible; } #sim-b_play_call:checked ~ .sim-under .sim-u-b_play_call { display: block; }
+.sim-st-b_play_call { background-image: url(img/sim/p_play.webp); }
+#sim-b_play_near:checked ~ .sim-view .sim-st-b_play_near { visibility: visible; } #sim-b_play_near:checked ~ .sim-under .sim-u-b_play_near { display: block; }
+.sim-st-b_play_near { background-image: url(img/sim/p_play.webp); }
+#sim-b_play_prep:checked ~ .sim-view .sim-st-b_play_prep { visibility: visible; } #sim-b_play_prep:checked ~ .sim-under .sim-u-b_play_prep { display: block; }
+.sim-st-b_play_prep { background-image: url(img/sim/p_play.webp); }
+#sim-b_raids_plan:checked ~ .sim-view .sim-st-b_raids_plan { visibility: visible; } #sim-b_raids_plan:checked ~ .sim-under .sim-u-b_raids_plan { display: block; }
+.sim-st-b_raids_plan { background-image: url(img/sim/p_raids.webp); }
+#sim-b_start_call:checked ~ .sim-view .sim-st-b_start_call { visibility: visible; } #sim-b_start_call:checked ~ .sim-under .sim-u-b_start_call { display: block; }
+.sim-st-b_start_call { background-image: url(img/sim/p_start.webp); }
+#sim-b_start_gear:checked ~ .sim-view .sim-st-b_start_gear { visibility: visible; } #sim-b_start_gear:checked ~ .sim-under .sim-u-b_start_gear { display: block; }
+.sim-st-b_start_gear { background-image: url(img/sim/p_start.webp); }
+#sim-b_start_prep:checked ~ .sim-view .sim-st-b_start_prep { visibility: visible; } #sim-b_start_prep:checked ~ .sim-under .sim-u-b_start_prep { display: block; }
+.sim-st-b_start_prep { background-image: url(img/sim/p_start.webp); }
+#sim-o_addons_fish:checked ~ .sim-view .sim-st-o_addons_fish { visibility: visible; } #sim-o_addons_fish:checked ~ .sim-under .sim-u-o_addons_fish { display: block; }
+.sim-st-o_addons_fish { background-image: url(img/sim/p_addons.webp); }
+#sim-o_addons_kit:checked ~ .sim-view .sim-st-o_addons_kit { visibility: visible; } #sim-o_addons_kit:checked ~ .sim-under .sim-u-o_addons_kit { display: block; }
+.sim-st-o_addons_kit { background-image: url(img/sim/p_addons.webp); }
+#sim-o_addons_layout:checked ~ .sim-view .sim-st-o_addons_layout { visibility: visible; } #sim-o_addons_layout:checked ~ .sim-under .sim-u-o_addons_layout { display: block; }
+.sim-st-o_addons_layout { background-image: url(img/sim/p_addons.webp); }
+#sim-o_addons_macros:checked ~ .sim-view .sim-st-o_addons_macros { visibility: visible; } #sim-o_addons_macros:checked ~ .sim-under .sim-u-o_addons_macros { display: block; }
+.sim-st-o_addons_macros { background-image: url(img/sim/p_addons.webp); }
+#sim-o_addons_report:checked ~ .sim-view .sim-st-o_addons_report { visibility: visible; } #sim-o_addons_report:checked ~ .sim-under .sim-u-o_addons_report { display: block; }
+.sim-st-o_addons_report { background-image: url(img/sim/p_addons.webp); }
+#sim-o_addons_settings:checked ~ .sim-view .sim-st-o_addons_settings { visibility: visible; } #sim-o_addons_settings:checked ~ .sim-under .sim-u-o_addons_settings { display: block; }
+.sim-st-o_addons_settings { background-image: url(img/sim/p_addons.webp); }
+#sim-o_addons_share:checked ~ .sim-view .sim-st-o_addons_share { visibility: visible; } #sim-o_addons_share:checked ~ .sim-under .sim-u-o_addons_share { display: block; }
+.sim-st-o_addons_share { background-image: url(img/sim/p_addons.webp); }
+#sim-o_guild_contact:checked ~ .sim-view .sim-st-o_guild_contact { visibility: visible; } #sim-o_guild_contact:checked ~ .sim-under .sim-u-o_guild_contact { display: block; }
+.sim-st-o_guild_contact { background-image: url(img/sim/p_guild.webp); }
+#sim-o_guild_craft:checked ~ .sim-view .sim-st-o_guild_craft { visibility: visible; } #sim-o_guild_craft:checked ~ .sim-under .sim-u-o_guild_craft { display: block; }
+.sim-st-o_guild_craft { background-image: url(img/sim/p_guild.webp); }
+#sim-o_guild_discord:checked ~ .sim-view .sim-st-o_guild_discord { visibility: visible; } #sim-o_guild_discord:checked ~ .sim-under .sim-u-o_guild_discord { display: block; }
+.sim-st-o_guild_discord { background-image: url(img/sim/p_guild.webp); }
+#sim-o_guild_events:checked ~ .sim-view .sim-st-o_guild_events { visibility: visible; } #sim-o_guild_events:checked ~ .sim-under .sim-u-o_guild_events { display: block; }
+.sim-st-o_guild_events { background-image: url(img/sim/p_guild.webp); }
+#sim-o_guild_jobs:checked ~ .sim-view .sim-st-o_guild_jobs { visibility: visible; } #sim-o_guild_jobs:checked ~ .sim-under .sim-u-o_guild_jobs { display: block; }
+.sim-st-o_guild_jobs { background-image: url(img/sim/p_guild.webp); }
+#sim-o_guild_likes:checked ~ .sim-view .sim-st-o_guild_likes { visibility: visible; } #sim-o_guild_likes:checked ~ .sim-under .sim-u-o_guild_likes { display: block; }
+.sim-st-o_guild_likes { background-image: url(img/sim/p_guild.webp); }
+#sim-o_guild_loot:checked ~ .sim-view .sim-st-o_guild_loot { visibility: visible; } #sim-o_guild_loot:checked ~ .sim-under .sim-u-o_guild_loot { display: block; }
+.sim-st-o_guild_loot { background-image: url(img/sim/p_guild.webp); }
+#sim-o_guild_rate:checked ~ .sim-view .sim-st-o_guild_rate { visibility: visible; } #sim-o_guild_rate:checked ~ .sim-under .sim-u-o_guild_rate { display: block; }
+.sim-st-o_guild_rate { background-image: url(img/sim/p_guild.webp); }
+#sim-o_guild_welcome:checked ~ .sim-view .sim-st-o_guild_welcome { visibility: visible; } #sim-o_guild_welcome:checked ~ .sim-under .sim-u-o_guild_welcome { display: block; }
+.sim-st-o_guild_welcome { background-image: url(img/sim/p_guild.webp); }
+#sim-o_level_bags:checked ~ .sim-view .sim-st-o_level_bags { visibility: visible; } #sim-o_level_bags:checked ~ .sim-under .sim-u-o_level_bags { display: block; }
+.sim-st-o_level_bags { background-image: url(img/sim/p_level.webp); }
+#sim-o_level_bars:checked ~ .sim-view .sim-st-o_level_bars { visibility: visible; } #sim-o_level_bars:checked ~ .sim-under .sim-u-o_level_bars { display: block; }
+.sim-st-o_level_bars { background-image: url(img/sim/p_level.webp); }
+#sim-o_level_chain:checked ~ .sim-view .sim-st-o_level_chain { visibility: visible; } #sim-o_level_chain:checked ~ .sim-under .sim-u-o_level_chain { display: block; }
+.sim-st-o_level_chain { background-image: url(img/sim/p_level.webp); }
+#sim-o_level_dungeons:checked ~ .sim-view .sim-st-o_level_dungeons { visibility: visible; } #sim-o_level_dungeons:checked ~ .sim-under .sim-u-o_level_dungeons { display: block; }
+.sim-st-o_level_dungeons { background-image: url(img/sim/p_level.webp); }
+#sim-o_level_gear:checked ~ .sim-view .sim-st-o_level_gear { visibility: visible; } #sim-o_level_gear:checked ~ .sim-under .sim-u-o_level_gear { display: block; }
+.sim-st-o_level_gear { background-image: url(img/sim/p_level.webp); }
+#sim-o_level_guide:checked ~ .sim-view .sim-st-o_level_guide { visibility: visible; } #sim-o_level_guide:checked ~ .sim-under .sim-u-o_level_guide { display: block; }
+.sim-st-o_level_guide { background-image: url(img/sim/p_level.webp); }
+#sim-o_level_hold:checked ~ .sim-view .sim-st-o_level_hold { visibility: visible; } #sim-o_level_hold:checked ~ .sim-under .sim-u-o_level_hold { display: block; }
+.sim-st-o_level_hold { background-image: url(img/sim/p_level.webp); }
+#sim-o_level_mail:checked ~ .sim-view .sim-st-o_level_mail { visibility: visible; } #sim-o_level_mail:checked ~ .sim-under .sim-u-o_level_mail { display: block; }
+.sim-st-o_level_mail { background-image: url(img/sim/p_level.webp); }
+#sim-o_level_space:checked ~ .sim-view .sim-st-o_level_space { visibility: visible; } #sim-o_level_space:checked ~ .sim-under .sim-u-o_level_space { display: block; }
+.sim-st-o_level_space { background-image: url(img/sim/p_level.webp); }
+#sim-o_play_call:checked ~ .sim-view .sim-st-o_play_call { visibility: visible; } #sim-o_play_call:checked ~ .sim-under .sim-u-o_play_call { display: block; }
+.sim-st-o_play_call { background-image: url(img/sim/p_play.webp); }
+#sim-o_play_meet:checked ~ .sim-view .sim-st-o_play_meet { visibility: visible; } #sim-o_play_meet:checked ~ .sim-under .sim-u-o_play_meet { display: block; }
+.sim-st-o_play_meet { background-image: url(img/sim/p_play.webp); }
+#sim-o_play_near:checked ~ .sim-view .sim-st-o_play_near { visibility: visible; } #sim-o_play_near:checked ~ .sim-under .sim-u-o_play_near { display: block; }
+.sim-st-o_play_near { background-image: url(img/sim/p_play.webp); }
+#sim-o_play_prep:checked ~ .sim-view .sim-st-o_play_prep { visibility: visible; } #sim-o_play_prep:checked ~ .sim-under .sim-u-o_play_prep { display: block; }
+.sim-st-o_play_prep { background-image: url(img/sim/p_play.webp); }
+#sim-o_play_thanks:checked ~ .sim-view .sim-st-o_play_thanks { visibility: visible; } #sim-o_play_thanks:checked ~ .sim-under .sim-u-o_play_thanks { display: block; }
+.sim-st-o_play_thanks { background-image: url(img/sim/p_play.webp); }
+#sim-o_raids_plan:checked ~ .sim-view .sim-st-o_raids_plan { visibility: visible; } #sim-o_raids_plan:checked ~ .sim-under .sim-u-o_raids_plan { display: block; }
+.sim-st-o_raids_plan { background-image: url(img/sim/p_raids.webp); }
+#sim-o_raids_raidrec:checked ~ .sim-view .sim-st-o_raids_raidrec { visibility: visible; } #sim-o_raids_raidrec:checked ~ .sim-under .sim-u-o_raids_raidrec { display: block; }
+.sim-st-o_raids_raidrec { background-image: url(img/sim/p_raids.webp); }
+#sim-o_start_call:checked ~ .sim-view .sim-st-o_start_call { visibility: visible; } #sim-o_start_call:checked ~ .sim-under .sim-u-o_start_call { display: block; }
+.sim-st-o_start_call { background-image: url(img/sim/p_start.webp); }
+#sim-o_start_gear:checked ~ .sim-view .sim-st-o_start_gear { visibility: visible; } #sim-o_start_gear:checked ~ .sim-under .sim-u-o_start_gear { display: block; }
+.sim-st-o_start_gear { background-image: url(img/sim/p_start.webp); }
+#sim-o_start_near:checked ~ .sim-view .sim-st-o_start_near { visibility: visible; } #sim-o_start_near:checked ~ .sim-under .sim-u-o_start_near { display: block; }
+.sim-st-o_start_near { background-image: url(img/sim/p_start.webp); }
+#sim-o_start_prep:checked ~ .sim-view .sim-st-o_start_prep { visibility: visible; } #sim-o_start_prep:checked ~ .sim-under .sim-u-o_start_prep { display: block; }
+.sim-st-o_start_prep { background-image: url(img/sim/p_start.webp); }
+#sim-p_addons:checked ~ .sim-view .sim-st-p_addons { visibility: visible; } #sim-p_addons:checked ~ .sim-under .sim-u-p_addons { display: block; }
+#sim-p_guild:checked ~ .sim-view .sim-st-p_guild { visibility: visible; } #sim-p_guild:checked ~ .sim-under .sim-u-p_guild { display: block; }
+#sim-p_level:checked ~ .sim-view .sim-st-p_level { visibility: visible; } #sim-p_level:checked ~ .sim-under .sim-u-p_level { display: block; }
+#sim-p_play:checked ~ .sim-view .sim-st-p_play { visibility: visible; } #sim-p_play:checked ~ .sim-under .sim-u-p_play { display: block; }
+#sim-p_raids:checked ~ .sim-view .sim-st-p_raids { visibility: visible; } #sim-p_raids:checked ~ .sim-under .sim-u-p_raids { display: block; }
+#sim-p_start:checked ~ .sim-view .sim-st-p_start { visibility: visible; } #sim-p_start:checked ~ .sim-under .sim-u-p_start { display: block; }
+#sim-t_addons_share:checked ~ .sim-view .sim-st-t_addons_share { visibility: visible; } #sim-t_addons_share:checked ~ .sim-under .sim-u-t_addons_share { display: block; }
+.sim-st-t_addons_share { background-image: url(img/sim/p_addons.webp); }
+#sim-t_guild_craft:checked ~ .sim-view .sim-st-t_guild_craft { visibility: visible; } #sim-t_guild_craft:checked ~ .sim-under .sim-u-t_guild_craft { display: block; }
+.sim-st-t_guild_craft { background-image: url(img/sim/p_guild.webp); }
+#sim-t_guild_events:checked ~ .sim-view .sim-st-t_guild_events { visibility: visible; } #sim-t_guild_events:checked ~ .sim-under .sim-u-t_guild_events { display: block; }
+.sim-st-t_guild_events { background-image: url(img/sim/p_guild.webp); }
+#sim-t_guild_rate:checked ~ .sim-view .sim-st-t_guild_rate { visibility: visible; } #sim-t_guild_rate:checked ~ .sim-under .sim-u-t_guild_rate { display: block; }
+.sim-st-t_guild_rate { background-image: url(img/sim/p_guild.webp); }
+#sim-t_level_bags:checked ~ .sim-view .sim-st-t_level_bags { visibility: visible; } #sim-t_level_bags:checked ~ .sim-under .sim-u-t_level_bags { display: block; }
+.sim-st-t_level_bags { background-image: url(img/sim/p_level.webp); }
+#sim-t_level_bars:checked ~ .sim-view .sim-st-t_level_bars { visibility: visible; } #sim-t_level_bars:checked ~ .sim-under .sim-u-t_level_bars { display: block; }
+.sim-st-t_level_bars { background-image: url(img/sim/p_level.webp); }
+#sim-t_level_chain:checked ~ .sim-view .sim-st-t_level_chain { visibility: visible; } #sim-t_level_chain:checked ~ .sim-under .sim-u-t_level_chain { display: block; }
+.sim-st-t_level_chain { background-image: url(img/sim/p_level.webp); }
+#sim-t_level_dungeons:checked ~ .sim-view .sim-st-t_level_dungeons { visibility: visible; } #sim-t_level_dungeons:checked ~ .sim-under .sim-u-t_level_dungeons { display: block; }
+.sim-st-t_level_dungeons { background-image: url(img/sim/p_level.webp); }
+#sim-t_level_gear:checked ~ .sim-view .sim-st-t_level_gear { visibility: visible; } #sim-t_level_gear:checked ~ .sim-under .sim-u-t_level_gear { display: block; }
+.sim-st-t_level_gear { background-image: url(img/sim/p_level.webp); }
+#sim-t_level_guide:checked ~ .sim-view .sim-st-t_level_guide { visibility: visible; } #sim-t_level_guide:checked ~ .sim-under .sim-u-t_level_guide { display: block; }
+.sim-st-t_level_guide { background-image: url(img/sim/p_level.webp); }
+#sim-t_level_hold:checked ~ .sim-view .sim-st-t_level_hold { visibility: visible; } #sim-t_level_hold:checked ~ .sim-under .sim-u-t_level_hold { display: block; }
+.sim-st-t_level_hold { background-image: url(img/sim/p_level.webp); }
+#sim-t_level_mail:checked ~ .sim-view .sim-st-t_level_mail { visibility: visible; } #sim-t_level_mail:checked ~ .sim-under .sim-u-t_level_mail { display: block; }
+.sim-st-t_level_mail { background-image: url(img/sim/p_level.webp); }
+#sim-t_level_space:checked ~ .sim-view .sim-st-t_level_space { visibility: visible; } #sim-t_level_space:checked ~ .sim-under .sim-u-t_level_space { display: block; }
+.sim-st-t_level_space { background-image: url(img/sim/p_level.webp); }
+#sim-t_start_gear:checked ~ .sim-view .sim-st-t_start_gear { visibility: visible; } #sim-t_start_gear:checked ~ .sim-under .sim-u-t_start_gear { display: block; }
+.sim-st-t_start_gear { background-image: url(img/sim/p_start.webp); }
+#sim-u_addons_kit_Fix_my_kit:checked ~ .sim-view .sim-st-u_addons_kit_Fix_my_kit { visibility: visible; } #sim-u_addons_kit_Fix_my_kit:checked ~ .sim-under .sim-u-u_addons_kit_Fix_my_kit { display: block; }
+.sim-st-u_addons_kit_Fix_my_kit { background-image: url(img/sim/p_addons.webp); }
+#sim-u_addons_kit_Optional_extras:checked ~ .sim-view .sim-st-u_addons_kit_Optional_extras { visibility: visible; } #sim-u_addons_kit_Optional_extras:checked ~ .sim-under .sim-u-u_addons_kit_Optional_extras { display: block; }
+.sim-st-u_addons_kit_Optional_extras { background-image: url(img/sim/p_addons.webp); }
+#sim-u_addons_layout_DialogueUI_look:checked ~ .sim-view .sim-st-u_addons_layout_DialogueUI_look { visibility: visible; } #sim-u_addons_layout_DialogueUI_look:checked ~ .sim-under .sim-u-u_addons_layout_DialogueUI_look { display: block; }
+.sim-st-u_addons_layout_DialogueUI_look { background-image: url(img/sim/p_addons.webp); }
+#sim-u_addons_report_Self_test:checked ~ .sim-view .sim-st-u_addons_report_Self_test { visibility: visible; } #sim-u_addons_report_Self_test:checked ~ .sim-under .sim-u-u_addons_report_Self_test { display: block; }
+.sim-st-u_addons_report_Self_test { background-image: url(img/sim/p_addons.webp); }
+#sim-u_addons_report_Version:checked ~ .sim-view .sim-st-u_addons_report_Version { visibility: visible; } #sim-u_addons_report_Version:checked ~ .sim-under .sim-u-u_addons_report_Version { display: block; }
+.sim-st-u_addons_report_Version { background-image: url(img/sim/p_addons.webp); }
+#sim-u_play_meet_Clear_it:checked ~ .sim-view .sim-st-u_play_meet_Clear_it { visibility: visible; } #sim-u_play_meet_Clear_it:checked ~ .sim-under .sim-u-u_play_meet_Clear_it { display: block; }
+.sim-st-u_play_meet_Clear_it { background-image: url(img/sim/p_play.webp); }
+#sim-u_play_prep_Razorfen_Kraul:checked ~ .sim-view .sim-st-u_play_prep_Razorfen_Kraul { visibility: visible; } #sim-u_play_prep_Razorfen_Kraul:checked ~ .sim-under .sim-u-u_play_prep_Razorfen_Kraul { display: block; }
+.sim-st-u_play_prep_Razorfen_Kraul { background-image: url(img/sim/p_play.webp); }
+#sim-u_play_prep_Shadowfang_Keep:checked ~ .sim-view .sim-st-u_play_prep_Shadowfang_Keep { visibility: visible; } #sim-u_play_prep_Shadowfang_Keep:checked ~ .sim-under .sim-u-u_play_prep_Shadowfang_Keep { display: block; }
+.sim-st-u_play_prep_Shadowfang_Keep { background-image: url(img/sim/p_play.webp); }
+#sim-u_start_prep_Razorfen_Kraul:checked ~ .sim-view .sim-st-u_start_prep_Razorfen_Kraul { visibility: visible; } #sim-u_start_prep_Razorfen_Kraul:checked ~ .sim-under .sim-u-u_start_prep_Razorfen_Kraul { display: block; }
+.sim-st-u_start_prep_Razorfen_Kraul { background-image: url(img/sim/p_start.webp); }
+#sim-u_start_prep_Shadowfang_Keep:checked ~ .sim-view .sim-st-u_start_prep_Shadowfang_Keep { visibility: visible; } #sim-u_start_prep_Shadowfang_Keep:checked ~ .sim-under .sim-u-u_start_prep_Shadowfang_Keep { display: block; }
+.sim-st-u_start_prep_Shadowfang_Keep { background-image: url(img/sim/p_start.webp); }
 .sim-h0 { left: 2.74%; top: 7.37%; width: 22.05%; height: 3.68%; }
 .sim-h1 { left: 2.74%; top: 11.59%; width: 22.05%; height: 3.68%; }
 .sim-h2 { left: 2.74%; top: 15.93%; width: 22.05%; height: 3.68%; }
