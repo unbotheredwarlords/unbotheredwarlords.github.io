@@ -32,12 +32,13 @@
   --shade-1: rgba(0,0,0,.45);
   --shade-2: rgba(0,0,0,.6);
   --shade-3: rgba(0,0,0,.9);
-  /* One type scale (7 steps), one spacing scale (8 steps, rem so it grows with the fluid root), three radii. */
+  /* One type scale (8 steps), one spacing scale (8 steps, rem so it grows with the fluid root), three radii. */
   --fs-label: .875rem;
   --fs-small: 1rem;
   --fs-body: 1.125rem;
   --fs-h3: 1.3rem;
   --fs-h2: clamp(1.75rem, 4vw, 2.6rem);
+  --fs-h2-sm: clamp(1.5rem, 3.2vw, 2rem);   /* a section of a reference page, such as the guide */
   --fs-title: clamp(2.2rem, 6vw, 3.6rem);
   --fs-h1: clamp(min(2.6rem, (100vw - 2.5rem) * .135), 9vw, 5.2rem);   /* "UNBOTHERED" is 7.3 em wide: it fits its
      column on any phone, at any text size (the min() term only bites with large text) */
@@ -350,7 +351,7 @@ footer a { padding-block: .35rem; }
     white-space: normal; line-height: 1.15; text-align: center; }   /* 320px: a label may take two lines, never overflow */
 }
 .page-addon .other-os { color: var(--muted); margin-bottom: 1.1rem; }
-@media (max-width: 22rem) { h1 { font-size: min(2.3rem, (100vw - 2.5rem) * .135); } .eyebrow { letter-spacing: .12em; } }   /* 320px phones, and any phone at
+@media (max-width: 22rem) { :root { --fs-h1: min(2.3rem, (100vw - 2.5rem) * .135); } .eyebrow { letter-spacing: .12em; } }   /* 320px phones, and any phone at
    large text (this rem query matches there too): the name fits with room to spare */
 
 /* Site navigation: the same header and footer on every page, every page linked from both, the current one marked
@@ -475,7 +476,7 @@ footer a { padding-block: .35rem; }
 }
 .guide-page { scroll-margin-top: var(--s-5); }
 .guide-page + .guide-page { margin-top: var(--s-7); }
-.page-guide .guide-page h2 { margin: 0 0 var(--s-4); font-size: clamp(1.5rem, 3.2vw, 2rem); }
+.page-guide .guide-page h2 { margin: 0 0 var(--s-4); font-size: var(--fs-h2-sm); }
 .guide-intro { color: var(--muted); margin: calc(var(--s-2) * -1) 0 var(--s-4); }
 .guide-shot { display: block; width: 100%; max-width: 48rem; height: auto; margin-bottom: var(--s-3); }
 .features { list-style: none; margin: 0; padding: 0; max-width: 48rem; border-top: 1px solid var(--line); }
