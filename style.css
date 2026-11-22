@@ -55,7 +55,6 @@
   /* Shades the pieces use, so no colour is written outside this block (scripts/check_site.py). */
   --black: #000; --white: #fff; --bg-deep: #0a0706;
   --spark: #ffc27a; --spark-glow: #ff8c3c;   /* the hero's drifting embers */
-  --win: #0f0b09; --win-rail: #140f0c; --win-bar: #1d1512; --win-btn: #1a1310;   /* the UW Guild window on /addon */
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -526,80 +525,503 @@ footer a { padding-block: .35rem; }
 /* ranks.html ends by pointing on: one line on the addon, the guide and the download. */
 .page-next { max-width: var(--measure); margin: var(--s-7) auto 0; padding-top: var(--s-6); border-top: 1px solid var(--line); }
 
-/* The UW Guild window to click through on /addon (scripts/site_window.py builds it from the addon's Handbook; no
-   script: a radio button a page, a popover a card). Dark like the game's own frame, in the site's gold and ember. */
+/* The UW Guild window to click through on /addon: the addon's own window, drawn from its code a state at a time
+   (scripts/site_window.py). A radio button a state; each clickable part of a picture is a label for the state it
+   leads to. Over the Barrens' ground, as in game. */
 .sim-lead { margin: var(--s-6) auto var(--s-3); }
-.sim { max-width: 56rem; margin: 0 auto var(--s-6); }
+.sim { max-width: 62rem; margin: 0 auto var(--s-6); border-radius: var(--radius); overflow: hidden; }
 .sim-radio { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.sim-win { border: 1px solid var(--line-hi); border-radius: var(--radius); background: var(--win);
-  box-shadow: 0 18px 50px color-mix(in srgb, var(--black) 55%, transparent), inset 0 1px 0 color-mix(in srgb, var(--white) 4%, transparent); overflow: hidden; }
-.sim-bar { display: flex; align-items: center; justify-content: center; gap: .5rem; margin: 0; padding: .45rem 1rem;
-  background: linear-gradient(var(--win-bar), var(--bg)); border-bottom: 1px solid var(--line);
-  font: 700 var(--fs-small)/1.2 var(--sans); color: var(--text); letter-spacing: .02em; }
-.sim-bar img { width: 1.5rem; height: 1.5rem; border-radius: 50%; }
-.sim-body { display: grid; grid-template-columns: 12.5rem minmax(0, 1fr); min-height: 26rem; }
-.sim-nav { display: flex; flex-direction: column; gap: .15rem; padding: .6rem; border-right: 1px solid var(--line); background: var(--win-rail); }
-.sim-nav label { display: flex; align-items: center; gap: .55rem; min-height: 2.75rem; padding: .25rem .6rem .25rem .35rem;
-  border-radius: var(--radius-sm); border-left: 3px solid transparent; cursor: pointer;
-  color: var(--gold); font: 700 var(--fs-small)/1.15 var(--sans); }
-.sim-nav label:hover { background: var(--card); }
-.sim-icon { display: grid; place-items: center; flex: none; width: 2rem; height: 2rem; border-radius: var(--radius-sm);
-  border: 1px solid var(--glow-3); background: var(--glow-1); color: var(--gold); }
-.sim-icon .icon { width: 1.1rem; height: 1.1rem; }
-.sim-pages { min-width: 0; padding: .75rem 1rem 1rem; }
-.sim-page { display: none; }
-.sim-page-h { margin: 0 0 .5rem; padding-bottom: .45rem; border-bottom: 1px solid var(--line); color: var(--gold);
-  font: 700 1.15rem/1.2 var(--sans); }
-.sim-rows { list-style: none; margin: 0; padding: 0; }
-.sim-row { display: flex; align-items: center; gap: .7rem; padding: .5rem 0; border-bottom: 1px solid color-mix(in srgb, var(--line-hi) 35%, transparent); }
-.sim-text { flex: 1; min-width: 0; }
-.sim-name { padding: 0; border: 0; background: none; cursor: pointer; text-align: left;
-  color: var(--gold); font: 700 1rem/1.25 var(--sans); }
-.sim-name:hover { text-decoration: underline; text-underline-offset: .2em; }
-.sim-line { display: block; color: var(--text); font-size: var(--fs-small); line-height: 1.35; }
-.sim-tag { display: inline-block; margin-left: .35rem; padding: 0 .5rem; border: 1px solid var(--glow-3); border-radius: 999px;
-  color: var(--ember-200); font-size: .8rem; line-height: 1.5; vertical-align: .1em; }
-.sim-acts { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: .4rem; flex: none; max-width: 50%; }
-.sim-btn { min-height: 2.25rem; padding: .3rem .8rem; border: 1px solid var(--line-hi); border-radius: var(--radius-sm);
-  background: linear-gradient(var(--card-2), var(--win-btn)); color: var(--text); font: 700 .9rem/1.1 var(--sans); cursor: pointer; }
-.sim-btn:hover { border-color: var(--ember); color: var(--ember-200); }
-.sim-switch { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; cursor: pointer; }
-.sim-switch input { width: 1.3rem; height: 1.3rem; margin: 0; accent-color: var(--ember); cursor: pointer; }
-.sim-name:focus-visible, .sim-btn:focus-visible, .sim-switch input:focus-visible { outline: 3px solid var(--ember); outline-offset: 2px; }
-.sim-card { width: min(30rem, calc(100% - 2rem)); max-height: calc(100% - 2rem); margin: auto; padding: 1.1rem 1.25rem;
-  border: 1px solid var(--line-hi); border-radius: var(--radius); background: var(--bg-2); color: var(--text);
-  box-shadow: 0 18px 50px color-mix(in srgb, var(--black) 60%, transparent); overflow: auto; }
-.sim-card::backdrop { background: color-mix(in srgb, var(--bg-deep) 70%, transparent); }
-.sim-card-h { display: flex; align-items: center; gap: .6rem; margin: 0 0 .6rem; color: var(--gold); font: 700 1.1rem/1.2 var(--sans); }
-.sim-card q { color: var(--gold); }
-.sim-card-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; margin: 1rem 0 0; }
-.sim-card-foot .btn { min-height: 2.75rem; }
-
-#sim-play:checked ~ .sim-win .sim-p-play { display: block; }
-#sim-play:checked ~ .sim-win label[for="sim-play"] { background: var(--card-2); border-left-color: var(--ember); border-bottom-color: var(--ember); color: var(--text); }
-#sim-play:focus-visible ~ .sim-win label[for="sim-play"] { outline: 3px solid var(--ember); outline-offset: -3px; }
-#sim-level:checked ~ .sim-win .sim-p-level { display: block; }
-#sim-level:checked ~ .sim-win label[for="sim-level"] { background: var(--card-2); border-left-color: var(--ember); border-bottom-color: var(--ember); color: var(--text); }
-#sim-level:focus-visible ~ .sim-win label[for="sim-level"] { outline: 3px solid var(--ember); outline-offset: -3px; }
-#sim-guild:checked ~ .sim-win .sim-p-guild { display: block; }
-#sim-guild:checked ~ .sim-win label[for="sim-guild"] { background: var(--card-2); border-left-color: var(--ember); border-bottom-color: var(--ember); color: var(--text); }
-#sim-guild:focus-visible ~ .sim-win label[for="sim-guild"] { outline: 3px solid var(--ember); outline-offset: -3px; }
-#sim-addons:checked ~ .sim-win .sim-p-addons { display: block; }
-#sim-addons:checked ~ .sim-win label[for="sim-addons"] { background: var(--card-2); border-left-color: var(--ember); border-bottom-color: var(--ember); color: var(--text); }
-#sim-addons:focus-visible ~ .sim-win label[for="sim-addons"] { outline: 3px solid var(--ember); outline-offset: -3px; }
-#sim-raids:checked ~ .sim-win .sim-p-raids { display: block; }
-#sim-raids:checked ~ .sim-win label[for="sim-raids"] { background: var(--card-2); border-left-color: var(--ember); border-bottom-color: var(--ember); color: var(--text); }
-#sim-raids:focus-visible ~ .sim-win label[for="sim-raids"] { outline: 3px solid var(--ember); outline-offset: -3px; }
-@media (max-width: 45.99rem) {   /* phones: the pages become one row over the window; buttons go under their row */
-  .sim-body { grid-template-columns: minmax(0, 1fr); min-height: 0; }
-  .sim-nav { flex-direction: row; overflow-x: auto; scrollbar-width: none; border-right: 0; border-bottom: 1px solid var(--line); }
-  .sim-nav::-webkit-scrollbar { display: none; }
-  .sim-nav label { flex: none; border-left: 0; border-bottom: 3px solid transparent; }
-  .sim-row { flex-wrap: wrap; }
-  .sim-acts { max-width: none; }
-  .sim-acts:has(.sim-btn) { width: 100%; justify-content: flex-start; padding-left: 2.7rem; }
+.sim-view { position: relative; aspect-ratio: 984 / 861; background: var(--bg-deep) url(img/sim/ground.webp) center / cover; }
+.sim-st { display: none; position: absolute; inset: 0; }
+.sim-st img { display: block; width: 100%; height: 100%; }
+.sim-hot { position: absolute; cursor: pointer; }
+.sim-hot:hover { background: color-mix(in srgb, var(--white) 10%, transparent); }
+.sim-radio:focus-visible ~ .sim-view { outline: 3px solid var(--ember); outline-offset: 2px; }
+.sim-under { padding: var(--s-3) var(--s-4) var(--s-4); background: var(--bg-deep); }
+.sim-u { display: none; }
+.sim-tabs, .sim-acts { display: none; flex-wrap: wrap; gap: var(--s-2); margin: 0 0 var(--s-3); }
+.sim-chip { display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--s-4); border: 1px solid var(--line); border-radius: 999px; cursor: pointer; }
+.sim-chip.sim-on { border-color: var(--ember); color: var(--ember); }
+.sim-guide { margin: 0; }
+@media (max-width: 45.99rem) {
+  .sim-tabs, .sim-acts { display: flex; }
 }
+/* sim:start */
+#sim-b_addons_fish:checked ~ .sim-view .sim-st-b_addons_fish, #sim-b_addons_fish:checked ~ .sim-under .sim-u-b_addons_fish { display: block; }
+#sim-b_addons_kit:checked ~ .sim-view .sim-st-b_addons_kit, #sim-b_addons_kit:checked ~ .sim-under .sim-u-b_addons_kit { display: block; }
+#sim-b_addons_layout:checked ~ .sim-view .sim-st-b_addons_layout, #sim-b_addons_layout:checked ~ .sim-under .sim-u-b_addons_layout { display: block; }
+#sim-b_addons_macros:checked ~ .sim-view .sim-st-b_addons_macros, #sim-b_addons_macros:checked ~ .sim-under .sim-u-b_addons_macros { display: block; }
+#sim-b_addons_report:checked ~ .sim-view .sim-st-b_addons_report, #sim-b_addons_report:checked ~ .sim-under .sim-u-b_addons_report { display: block; }
+#sim-b_guild_contact:checked ~ .sim-view .sim-st-b_guild_contact, #sim-b_guild_contact:checked ~ .sim-under .sim-u-b_guild_contact { display: block; }
+#sim-b_guild_craft:checked ~ .sim-view .sim-st-b_guild_craft, #sim-b_guild_craft:checked ~ .sim-under .sim-u-b_guild_craft { display: block; }
+#sim-b_guild_discord:checked ~ .sim-view .sim-st-b_guild_discord, #sim-b_guild_discord:checked ~ .sim-under .sim-u-b_guild_discord { display: block; }
+#sim-b_guild_events:checked ~ .sim-view .sim-st-b_guild_events, #sim-b_guild_events:checked ~ .sim-under .sim-u-b_guild_events { display: block; }
+#sim-b_guild_jobs:checked ~ .sim-view .sim-st-b_guild_jobs, #sim-b_guild_jobs:checked ~ .sim-under .sim-u-b_guild_jobs { display: block; }
+#sim-b_guild_likes:checked ~ .sim-view .sim-st-b_guild_likes, #sim-b_guild_likes:checked ~ .sim-under .sim-u-b_guild_likes { display: block; }
+#sim-b_guild_loot:checked ~ .sim-view .sim-st-b_guild_loot, #sim-b_guild_loot:checked ~ .sim-under .sim-u-b_guild_loot { display: block; }
+#sim-b_guild_rate:checked ~ .sim-view .sim-st-b_guild_rate, #sim-b_guild_rate:checked ~ .sim-under .sim-u-b_guild_rate { display: block; }
+#sim-b_guild_welcome:checked ~ .sim-view .sim-st-b_guild_welcome, #sim-b_guild_welcome:checked ~ .sim-under .sim-u-b_guild_welcome { display: block; }
+#sim-b_level_chain:checked ~ .sim-view .sim-st-b_level_chain, #sim-b_level_chain:checked ~ .sim-under .sim-u-b_level_chain { display: block; }
+#sim-b_level_gear:checked ~ .sim-view .sim-st-b_level_gear, #sim-b_level_gear:checked ~ .sim-under .sim-u-b_level_gear { display: block; }
+#sim-b_level_mail:checked ~ .sim-view .sim-st-b_level_mail, #sim-b_level_mail:checked ~ .sim-under .sim-u-b_level_mail { display: block; }
+#sim-b_play_call:checked ~ .sim-view .sim-st-b_play_call, #sim-b_play_call:checked ~ .sim-under .sim-u-b_play_call { display: block; }
+#sim-b_play_near:checked ~ .sim-view .sim-st-b_play_near, #sim-b_play_near:checked ~ .sim-under .sim-u-b_play_near { display: block; }
+#sim-b_play_prep:checked ~ .sim-view .sim-st-b_play_prep, #sim-b_play_prep:checked ~ .sim-under .sim-u-b_play_prep { display: block; }
+#sim-b_raids_plan:checked ~ .sim-view .sim-st-b_raids_plan, #sim-b_raids_plan:checked ~ .sim-under .sim-u-b_raids_plan { display: block; }
+#sim-b_start_call:checked ~ .sim-view .sim-st-b_start_call, #sim-b_start_call:checked ~ .sim-under .sim-u-b_start_call { display: block; }
+#sim-b_start_gear:checked ~ .sim-view .sim-st-b_start_gear, #sim-b_start_gear:checked ~ .sim-under .sim-u-b_start_gear { display: block; }
+#sim-b_start_prep:checked ~ .sim-view .sim-st-b_start_prep, #sim-b_start_prep:checked ~ .sim-under .sim-u-b_start_prep { display: block; }
+#sim-o_addons_fish:checked ~ .sim-view .sim-st-o_addons_fish, #sim-o_addons_fish:checked ~ .sim-under .sim-u-o_addons_fish { display: block; }
+#sim-o_addons_kit:checked ~ .sim-view .sim-st-o_addons_kit, #sim-o_addons_kit:checked ~ .sim-under .sim-u-o_addons_kit { display: block; }
+#sim-o_addons_layout:checked ~ .sim-view .sim-st-o_addons_layout, #sim-o_addons_layout:checked ~ .sim-under .sim-u-o_addons_layout { display: block; }
+#sim-o_addons_macros:checked ~ .sim-view .sim-st-o_addons_macros, #sim-o_addons_macros:checked ~ .sim-under .sim-u-o_addons_macros { display: block; }
+#sim-o_addons_report:checked ~ .sim-view .sim-st-o_addons_report, #sim-o_addons_report:checked ~ .sim-under .sim-u-o_addons_report { display: block; }
+#sim-o_addons_settings:checked ~ .sim-view .sim-st-o_addons_settings, #sim-o_addons_settings:checked ~ .sim-under .sim-u-o_addons_settings { display: block; }
+#sim-o_addons_share:checked ~ .sim-view .sim-st-o_addons_share, #sim-o_addons_share:checked ~ .sim-under .sim-u-o_addons_share { display: block; }
+#sim-o_guild_contact:checked ~ .sim-view .sim-st-o_guild_contact, #sim-o_guild_contact:checked ~ .sim-under .sim-u-o_guild_contact { display: block; }
+#sim-o_guild_craft:checked ~ .sim-view .sim-st-o_guild_craft, #sim-o_guild_craft:checked ~ .sim-under .sim-u-o_guild_craft { display: block; }
+#sim-o_guild_discord:checked ~ .sim-view .sim-st-o_guild_discord, #sim-o_guild_discord:checked ~ .sim-under .sim-u-o_guild_discord { display: block; }
+#sim-o_guild_events:checked ~ .sim-view .sim-st-o_guild_events, #sim-o_guild_events:checked ~ .sim-under .sim-u-o_guild_events { display: block; }
+#sim-o_guild_jobs:checked ~ .sim-view .sim-st-o_guild_jobs, #sim-o_guild_jobs:checked ~ .sim-under .sim-u-o_guild_jobs { display: block; }
+#sim-o_guild_likes:checked ~ .sim-view .sim-st-o_guild_likes, #sim-o_guild_likes:checked ~ .sim-under .sim-u-o_guild_likes { display: block; }
+#sim-o_guild_loot:checked ~ .sim-view .sim-st-o_guild_loot, #sim-o_guild_loot:checked ~ .sim-under .sim-u-o_guild_loot { display: block; }
+#sim-o_guild_rate:checked ~ .sim-view .sim-st-o_guild_rate, #sim-o_guild_rate:checked ~ .sim-under .sim-u-o_guild_rate { display: block; }
+#sim-o_guild_welcome:checked ~ .sim-view .sim-st-o_guild_welcome, #sim-o_guild_welcome:checked ~ .sim-under .sim-u-o_guild_welcome { display: block; }
+#sim-o_level_bags:checked ~ .sim-view .sim-st-o_level_bags, #sim-o_level_bags:checked ~ .sim-under .sim-u-o_level_bags { display: block; }
+#sim-o_level_bars:checked ~ .sim-view .sim-st-o_level_bars, #sim-o_level_bars:checked ~ .sim-under .sim-u-o_level_bars { display: block; }
+#sim-o_level_chain:checked ~ .sim-view .sim-st-o_level_chain, #sim-o_level_chain:checked ~ .sim-under .sim-u-o_level_chain { display: block; }
+#sim-o_level_dungeons:checked ~ .sim-view .sim-st-o_level_dungeons, #sim-o_level_dungeons:checked ~ .sim-under .sim-u-o_level_dungeons { display: block; }
+#sim-o_level_gear:checked ~ .sim-view .sim-st-o_level_gear, #sim-o_level_gear:checked ~ .sim-under .sim-u-o_level_gear { display: block; }
+#sim-o_level_guide:checked ~ .sim-view .sim-st-o_level_guide, #sim-o_level_guide:checked ~ .sim-under .sim-u-o_level_guide { display: block; }
+#sim-o_level_hold:checked ~ .sim-view .sim-st-o_level_hold, #sim-o_level_hold:checked ~ .sim-under .sim-u-o_level_hold { display: block; }
+#sim-o_level_mail:checked ~ .sim-view .sim-st-o_level_mail, #sim-o_level_mail:checked ~ .sim-under .sim-u-o_level_mail { display: block; }
+#sim-o_level_space:checked ~ .sim-view .sim-st-o_level_space, #sim-o_level_space:checked ~ .sim-under .sim-u-o_level_space { display: block; }
+#sim-o_play_call:checked ~ .sim-view .sim-st-o_play_call, #sim-o_play_call:checked ~ .sim-under .sim-u-o_play_call { display: block; }
+#sim-o_play_meet:checked ~ .sim-view .sim-st-o_play_meet, #sim-o_play_meet:checked ~ .sim-under .sim-u-o_play_meet { display: block; }
+#sim-o_play_near:checked ~ .sim-view .sim-st-o_play_near, #sim-o_play_near:checked ~ .sim-under .sim-u-o_play_near { display: block; }
+#sim-o_play_prep:checked ~ .sim-view .sim-st-o_play_prep, #sim-o_play_prep:checked ~ .sim-under .sim-u-o_play_prep { display: block; }
+#sim-o_play_thanks:checked ~ .sim-view .sim-st-o_play_thanks, #sim-o_play_thanks:checked ~ .sim-under .sim-u-o_play_thanks { display: block; }
+#sim-o_raids_plan:checked ~ .sim-view .sim-st-o_raids_plan, #sim-o_raids_plan:checked ~ .sim-under .sim-u-o_raids_plan { display: block; }
+#sim-o_raids_raidrec:checked ~ .sim-view .sim-st-o_raids_raidrec, #sim-o_raids_raidrec:checked ~ .sim-under .sim-u-o_raids_raidrec { display: block; }
+#sim-o_start_call:checked ~ .sim-view .sim-st-o_start_call, #sim-o_start_call:checked ~ .sim-under .sim-u-o_start_call { display: block; }
+#sim-o_start_gear:checked ~ .sim-view .sim-st-o_start_gear, #sim-o_start_gear:checked ~ .sim-under .sim-u-o_start_gear { display: block; }
+#sim-o_start_near:checked ~ .sim-view .sim-st-o_start_near, #sim-o_start_near:checked ~ .sim-under .sim-u-o_start_near { display: block; }
+#sim-o_start_prep:checked ~ .sim-view .sim-st-o_start_prep, #sim-o_start_prep:checked ~ .sim-under .sim-u-o_start_prep { display: block; }
+#sim-p_addons:checked ~ .sim-view .sim-st-p_addons, #sim-p_addons:checked ~ .sim-under .sim-u-p_addons { display: block; }
+#sim-p_guild:checked ~ .sim-view .sim-st-p_guild, #sim-p_guild:checked ~ .sim-under .sim-u-p_guild { display: block; }
+#sim-p_level:checked ~ .sim-view .sim-st-p_level, #sim-p_level:checked ~ .sim-under .sim-u-p_level { display: block; }
+#sim-p_play:checked ~ .sim-view .sim-st-p_play, #sim-p_play:checked ~ .sim-under .sim-u-p_play { display: block; }
+#sim-p_raids:checked ~ .sim-view .sim-st-p_raids, #sim-p_raids:checked ~ .sim-under .sim-u-p_raids { display: block; }
+#sim-p_start:checked ~ .sim-view .sim-st-p_start, #sim-p_start:checked ~ .sim-under .sim-u-p_start { display: block; }
+#sim-t_addons_share:checked ~ .sim-view .sim-st-t_addons_share, #sim-t_addons_share:checked ~ .sim-under .sim-u-t_addons_share { display: block; }
+#sim-t_guild_craft:checked ~ .sim-view .sim-st-t_guild_craft, #sim-t_guild_craft:checked ~ .sim-under .sim-u-t_guild_craft { display: block; }
+#sim-t_guild_events:checked ~ .sim-view .sim-st-t_guild_events, #sim-t_guild_events:checked ~ .sim-under .sim-u-t_guild_events { display: block; }
+#sim-t_guild_rate:checked ~ .sim-view .sim-st-t_guild_rate, #sim-t_guild_rate:checked ~ .sim-under .sim-u-t_guild_rate { display: block; }
+#sim-t_level_bags:checked ~ .sim-view .sim-st-t_level_bags, #sim-t_level_bags:checked ~ .sim-under .sim-u-t_level_bags { display: block; }
+#sim-t_level_bars:checked ~ .sim-view .sim-st-t_level_bars, #sim-t_level_bars:checked ~ .sim-under .sim-u-t_level_bars { display: block; }
+#sim-t_level_chain:checked ~ .sim-view .sim-st-t_level_chain, #sim-t_level_chain:checked ~ .sim-under .sim-u-t_level_chain { display: block; }
+#sim-t_level_dungeons:checked ~ .sim-view .sim-st-t_level_dungeons, #sim-t_level_dungeons:checked ~ .sim-under .sim-u-t_level_dungeons { display: block; }
+#sim-t_level_gear:checked ~ .sim-view .sim-st-t_level_gear, #sim-t_level_gear:checked ~ .sim-under .sim-u-t_level_gear { display: block; }
+#sim-t_level_guide:checked ~ .sim-view .sim-st-t_level_guide, #sim-t_level_guide:checked ~ .sim-under .sim-u-t_level_guide { display: block; }
+#sim-t_level_hold:checked ~ .sim-view .sim-st-t_level_hold, #sim-t_level_hold:checked ~ .sim-under .sim-u-t_level_hold { display: block; }
+#sim-t_level_mail:checked ~ .sim-view .sim-st-t_level_mail, #sim-t_level_mail:checked ~ .sim-under .sim-u-t_level_mail { display: block; }
+#sim-t_level_space:checked ~ .sim-view .sim-st-t_level_space, #sim-t_level_space:checked ~ .sim-under .sim-u-t_level_space { display: block; }
+#sim-t_start_gear:checked ~ .sim-view .sim-st-t_start_gear, #sim-t_start_gear:checked ~ .sim-under .sim-u-t_start_gear { display: block; }
+#sim-u_addons_kit_Fix_my_kit:checked ~ .sim-view .sim-st-u_addons_kit_Fix_my_kit, #sim-u_addons_kit_Fix_my_kit:checked ~ .sim-under .sim-u-u_addons_kit_Fix_my_kit { display: block; }
+#sim-u_addons_kit_Optional_extras:checked ~ .sim-view .sim-st-u_addons_kit_Optional_extras, #sim-u_addons_kit_Optional_extras:checked ~ .sim-under .sim-u-u_addons_kit_Optional_extras { display: block; }
+#sim-u_addons_layout_DialogueUI_look:checked ~ .sim-view .sim-st-u_addons_layout_DialogueUI_look, #sim-u_addons_layout_DialogueUI_look:checked ~ .sim-under .sim-u-u_addons_layout_DialogueUI_look { display: block; }
+#sim-u_addons_report_Self_test:checked ~ .sim-view .sim-st-u_addons_report_Self_test, #sim-u_addons_report_Self_test:checked ~ .sim-under .sim-u-u_addons_report_Self_test { display: block; }
+#sim-u_addons_report_Version:checked ~ .sim-view .sim-st-u_addons_report_Version, #sim-u_addons_report_Version:checked ~ .sim-under .sim-u-u_addons_report_Version { display: block; }
+#sim-u_play_meet_Clear_it:checked ~ .sim-view .sim-st-u_play_meet_Clear_it, #sim-u_play_meet_Clear_it:checked ~ .sim-under .sim-u-u_play_meet_Clear_it { display: block; }
+#sim-u_play_prep_Razorfen_Kraul:checked ~ .sim-view .sim-st-u_play_prep_Razorfen_Kraul, #sim-u_play_prep_Razorfen_Kraul:checked ~ .sim-under .sim-u-u_play_prep_Razorfen_Kraul { display: block; }
+#sim-u_play_prep_Shadowfang_Keep:checked ~ .sim-view .sim-st-u_play_prep_Shadowfang_Keep, #sim-u_play_prep_Shadowfang_Keep:checked ~ .sim-under .sim-u-u_play_prep_Shadowfang_Keep { display: block; }
+#sim-u_start_prep_Razorfen_Kraul:checked ~ .sim-view .sim-st-u_start_prep_Razorfen_Kraul, #sim-u_start_prep_Razorfen_Kraul:checked ~ .sim-under .sim-u-u_start_prep_Razorfen_Kraul { display: block; }
+#sim-u_start_prep_Shadowfang_Keep:checked ~ .sim-view .sim-st-u_start_prep_Shadowfang_Keep, #sim-u_start_prep_Shadowfang_Keep:checked ~ .sim-under .sim-u-u_start_prep_Shadowfang_Keep { display: block; }
+.sim-h0 { left: 2.74%; top: 7.9%; width: 22.05%; height: 3.95%; }
+.sim-h1 { left: 2.74%; top: 12.43%; width: 22.05%; height: 3.95%; }
+.sim-h2 { left: 2.74%; top: 17.07%; width: 22.05%; height: 3.95%; }
+.sim-h3 { left: 2.74%; top: 21.6%; width: 22.05%; height: 3.95%; }
+.sim-h4 { left: 2.74%; top: 26.13%; width: 22.05%; height: 3.95%; }
+.sim-h5 { left: 2.74%; top: 30.78%; width: 22.05%; height: 3.95%; }
+.sim-h6 { left: 81.81%; top: 13.24%; width: 14.02%; height: 3.25%; }
+.sim-h7 { left: 27.13%; top: 11.85%; width: 69.21%; height: 6.16%; }
+.sim-h8 { left: 88.11%; top: 19.51%; width: 7.72%; height: 3.25%; }
+.sim-h9 { left: 27.13%; top: 18%; width: 69.21%; height: 6.16%; }
+.sim-h10 { left: 83.64%; top: 25.67%; width: 12.2%; height: 3.25%; }
+.sim-h11 { left: 27.13%; top: 24.16%; width: 69.21%; height: 6.16%; }
+.sim-h12 { left: 87.09%; top: 31.94%; width: 8.74%; height: 3.25%; }
+.sim-h13 { left: 27.13%; top: 30.43%; width: 69.21%; height: 6.16%; }
+.sim-h14 { left: 92.38%; top: 37.75%; width: 3.46%; height: 3.95%; }
+.sim-h15 { left: 27.13%; top: 36.59%; width: 69.21%; height: 6.16%; }
+.sim-h16 { left: 81.3%; top: 44.25%; width: 14.43%; height: 3.25%; }
+.sim-h17 { left: 27.13%; top: 42.86%; width: 69.21%; height: 6.16%; }
+.sim-h18 { left: 27.13%; top: 55.4%; width: 69.21%; height: 6.16%; }
+.sim-h19 { left: 88.11%; top: 32.75%; width: 7.72%; height: 3.25%; }
+.sim-h20 { left: 27.13%; top: 31.24%; width: 69.21%; height: 6.16%; }
+.sim-h21 { left: 83.64%; top: 38.91%; width: 12.2%; height: 3.25%; }
+.sim-h22 { left: 27.13%; top: 37.4%; width: 69.21%; height: 6.16%; }
+.sim-h23 { left: 87.09%; top: 45.06%; width: 8.74%; height: 3.25%; }
+.sim-h24 { left: 27.13%; top: 43.67%; width: 69.21%; height: 6.16%; }
+.sim-h25 { left: 92.38%; top: 50.99%; width: 3.46%; height: 3.95%; }
+.sim-h26 { left: 27.13%; top: 49.83%; width: 69.21%; height: 6.16%; }
+.sim-h27 { left: 81.3%; top: 57.49%; width: 14.43%; height: 3.25%; }
+.sim-h28 { left: 27.13%; top: 56.1%; width: 69.21%; height: 6.16%; }
+.sim-h29 { left: 27.13%; top: 62.25%; width: 69.21%; height: 6.16%; }
+.sim-h30 { left: 83.64%; top: 29.73%; width: 12.2%; height: 3.25%; }
+.sim-h31 { left: 27.13%; top: 28.34%; width: 69.21%; height: 6.16%; }
+.sim-h32 { left: 87.09%; top: 36%; width: 8.74%; height: 3.25%; }
+.sim-h33 { left: 27.13%; top: 34.49%; width: 69.21%; height: 6.16%; }
+.sim-h34 { left: 92.38%; top: 41.81%; width: 3.46%; height: 3.95%; }
+.sim-h35 { left: 27.13%; top: 40.65%; width: 69.21%; height: 6.16%; }
+.sim-h36 { left: 81.3%; top: 48.43%; width: 14.43%; height: 3.25%; }
+.sim-h37 { left: 27.13%; top: 46.92%; width: 69.21%; height: 6.16%; }
+.sim-h38 { left: 27.13%; top: 53.08%; width: 69.21%; height: 6.16%; }
+.sim-h39 { left: 79.78%; top: 36.59%; width: 3.46%; height: 3.95%; }
+.sim-h40 { left: 85.16%; top: 13.12%; width: 10.57%; height: 3.6%; }
+.sim-h41 { left: 74.49%; top: 19.51%; width: 16.97%; height: 3.25%; }
+.sim-h42 { left: 92.38%; top: 19.16%; width: 3.46%; height: 3.95%; }
+.sim-h43 { left: 80.08%; top: 25.67%; width: 11.48%; height: 3.25%; }
+.sim-h44 { left: 92.38%; top: 25.32%; width: 3.46%; height: 3.95%; }
+.sim-h45 { left: 80.08%; top: 31.94%; width: 15.75%; height: 3.25%; }
+.sim-h46 { left: 84.45%; top: 38.1%; width: 11.28%; height: 3.25%; }
+.sim-h47 { left: 89.53%; top: 44.25%; width: 6.3%; height: 3.25%; }
+.sim-h48 { left: 84.76%; top: 50.52%; width: 6.71%; height: 3.25%; }
+.sim-h49 { left: 92.38%; top: 50.17%; width: 3.46%; height: 3.95%; }
+.sim-h50 { left: 27.13%; top: 49.01%; width: 69.21%; height: 6.16%; }
+.sim-h51 { left: 88.52%; top: 56.68%; width: 7.32%; height: 3.25%; }
+.sim-h52 { left: 27.13%; top: 55.28%; width: 69.21%; height: 6.16%; }
+.sim-h53 { left: 83.23%; top: 67.02%; width: 12.6%; height: 3.25%; }
+.sim-h54 { left: 27.13%; top: 65.51%; width: 69.21%; height: 6.16%; }
+.sim-h55 { left: 80.08%; top: 36.59%; width: 11.48%; height: 3.25%; }
+.sim-h56 { left: 92.38%; top: 36.35%; width: 3.46%; height: 3.95%; }
+.sim-h57 { left: 27.13%; top: 35.19%; width: 69.21%; height: 6.16%; }
+.sim-h58 { left: 80.08%; top: 42.86%; width: 15.75%; height: 3.25%; }
+.sim-h59 { left: 27.13%; top: 41.35%; width: 69.21%; height: 6.16%; }
+.sim-h60 { left: 84.45%; top: 49.01%; width: 11.28%; height: 3.25%; }
+.sim-h61 { left: 27.13%; top: 47.62%; width: 69.21%; height: 6.16%; }
+.sim-h62 { left: 89.53%; top: 55.28%; width: 6.3%; height: 3.25%; }
+.sim-h63 { left: 27.13%; top: 53.77%; width: 69.21%; height: 6.16%; }
+.sim-h64 { left: 84.76%; top: 61.44%; width: 6.71%; height: 3.25%; }
+.sim-h65 { left: 92.38%; top: 61.09%; width: 3.46%; height: 3.95%; }
+.sim-h66 { left: 27.13%; top: 59.93%; width: 69.21%; height: 6.16%; }
+.sim-h67 { left: 88.52%; top: 67.71%; width: 7.32%; height: 3.25%; }
+.sim-h68 { left: 27.13%; top: 66.2%; width: 69.21%; height: 6.16%; }
+.sim-h69 { left: 83.23%; top: 73.87%; width: 12.6%; height: 3.25%; }
+.sim-h70 { left: 27.13%; top: 72.36%; width: 69.21%; height: 6.16%; }
+.sim-h71 { left: 80.08%; top: 38.21%; width: 15.75%; height: 3.25%; }
+.sim-h72 { left: 27.13%; top: 36.82%; width: 69.21%; height: 6.16%; }
+.sim-h73 { left: 84.45%; top: 44.48%; width: 11.28%; height: 3.25%; }
+.sim-h74 { left: 27.13%; top: 42.97%; width: 69.21%; height: 6.16%; }
+.sim-h75 { left: 89.53%; top: 50.64%; width: 6.3%; height: 3.25%; }
+.sim-h76 { left: 27.13%; top: 49.25%; width: 69.21%; height: 6.16%; }
+.sim-h77 { left: 84.76%; top: 56.91%; width: 6.71%; height: 3.25%; }
+.sim-h78 { left: 92.38%; top: 56.56%; width: 3.46%; height: 3.95%; }
+.sim-h79 { left: 88.52%; top: 63.07%; width: 7.32%; height: 3.25%; }
+.sim-h80 { left: 27.13%; top: 61.56%; width: 69.21%; height: 6.16%; }
+.sim-h81 { left: 83.23%; top: 69.34%; width: 12.6%; height: 3.25%; }
+.sim-h82 { left: 27.13%; top: 67.83%; width: 69.21%; height: 6.16%; }
+.sim-h83 { left: 89.53%; top: 57.49%; width: 6.3%; height: 3.25%; }
+.sim-h84 { left: 84.76%; top: 63.76%; width: 6.71%; height: 3.25%; }
+.sim-h85 { left: 92.38%; top: 63.41%; width: 3.46%; height: 3.95%; }
+.sim-h86 { left: 88.52%; top: 69.92%; width: 7.32%; height: 3.25%; }
+.sim-h87 { left: 27.13%; top: 68.52%; width: 69.21%; height: 6.16%; }
+.sim-h88 { left: 83.23%; top: 76.19%; width: 12.6%; height: 3.25%; }
+.sim-h89 { left: 27.13%; top: 74.68%; width: 69.21%; height: 6.16%; }
+.sim-h90 { left: 72.05%; top: 25.55%; width: 3.46%; height: 3.95%; }
+.sim-h91 { left: 84.45%; top: 53.66%; width: 11.28%; height: 3.25%; }
+.sim-h92 { left: 27.13%; top: 52.15%; width: 69.21%; height: 6.16%; }
+.sim-h93 { left: 89.53%; top: 59.81%; width: 6.3%; height: 3.25%; }
+.sim-h94 { left: 27.13%; top: 58.3%; width: 69.21%; height: 6.16%; }
+.sim-h95 { left: 84.76%; top: 65.97%; width: 6.71%; height: 3.25%; }
+.sim-h96 { left: 92.38%; top: 65.74%; width: 3.46%; height: 3.95%; }
+.sim-h97 { left: 27.13%; top: 64.58%; width: 69.21%; height: 6.16%; }
+.sim-h98 { left: 88.52%; top: 72.24%; width: 7.32%; height: 3.25%; }
+.sim-h99 { left: 27.13%; top: 70.73%; width: 69.21%; height: 6.16%; }
+.sim-h100 { left: 83.23%; top: 78.4%; width: 12.6%; height: 3.25%; }
+.sim-h101 { left: 27.13%; top: 77%; width: 69.21%; height: 6.16%; }
+.sim-h102 { left: 81.2%; top: 7.2%; width: 3.46%; height: 3.95%; }
+.sim-h103 { left: 75.81%; top: 13.24%; width: 15.75%; height: 3.25%; }
+.sim-h104 { left: 92.38%; top: 12.89%; width: 3.46%; height: 3.95%; }
+.sim-h105 { left: 92.38%; top: 31.59%; width: 3.46%; height: 3.95%; }
+.sim-h106 { left: 76.73%; top: 44.25%; width: 14.74%; height: 3.25%; }
+.sim-h107 { left: 92.38%; top: 44.02%; width: 3.46%; height: 3.95%; }
+.sim-h108 { left: 75.3%; top: 63.07%; width: 16.16%; height: 3.25%; }
+.sim-h109 { left: 92.38%; top: 62.72%; width: 3.46%; height: 3.95%; }
+.sim-h110 { left: 92.38%; top: 68.99%; width: 3.46%; height: 3.95%; }
+.sim-h111 { left: 92.38%; top: 23.23%; width: 3.46%; height: 3.95%; }
+.sim-h112 { left: 27.13%; top: 22.07%; width: 69.21%; height: 6.16%; }
+.sim-h113 { left: 92.38%; top: 29.38%; width: 3.46%; height: 3.95%; }
+.sim-h114 { left: 92.38%; top: 35.66%; width: 3.46%; height: 3.95%; }
+.sim-h115 { left: 76.73%; top: 48.43%; width: 14.74%; height: 3.25%; }
+.sim-h116 { left: 92.38%; top: 48.08%; width: 3.46%; height: 3.95%; }
+.sim-h117 { left: 92.38%; top: 54.24%; width: 3.46%; height: 3.95%; }
+.sim-h118 { left: 75.3%; top: 60.74%; width: 16.16%; height: 3.25%; }
+.sim-h119 { left: 92.38%; top: 60.51%; width: 3.46%; height: 3.95%; }
+.sim-h120 { left: 27.13%; top: 59.35%; width: 69.21%; height: 6.16%; }
+.sim-h121 { left: 92.38%; top: 66.67%; width: 3.46%; height: 3.95%; }
+.sim-h122 { left: 75.3%; top: 56.68%; width: 16.16%; height: 3.25%; }
+.sim-h123 { left: 92.38%; top: 56.33%; width: 3.46%; height: 3.95%; }
+.sim-h124 { left: 95.53%; top: 1.51%; width: 3.46%; height: 3.95%; }
+.sim-h125 { left: 82.32%; top: 28.57%; width: 13.41%; height: 3.25%; }
+.sim-h126 { left: 27.13%; top: 27.18%; width: 69.21%; height: 6.16%; }
+.sim-h127 { left: 76.63%; top: 34.84%; width: 19.11%; height: 3.25%; }
+.sim-h128 { left: 27.13%; top: 33.33%; width: 69.21%; height: 6.16%; }
+.sim-h129 { left: 27.13%; top: 39.61%; width: 69.21%; height: 6.16%; }
+.sim-h130 { left: 27.13%; top: 45.76%; width: 69.21%; height: 6.16%; }
+.sim-h131 { left: 78.25%; top: 13.12%; width: 17.58%; height: 3.6%; }
+.sim-h132 { left: 82.32%; top: 19.51%; width: 13.41%; height: 3.25%; }
+.sim-h133 { left: 76.63%; top: 25.67%; width: 19.11%; height: 3.25%; }
+.sim-h134 { left: 79.88%; top: 13.12%; width: 15.85%; height: 3.6%; }
+.sim-h135 { left: 27.13%; top: 24.39%; width: 69.21%; height: 6.16%; }
+.sim-h136 { left: 76.63%; top: 32.87%; width: 19.11%; height: 3.25%; }
+.sim-h137 { left: 27.13%; top: 31.36%; width: 69.21%; height: 6.16%; }
+.sim-h138 { left: 82.32%; top: 39.02%; width: 13.41%; height: 3.25%; }
+.sim-h139 { left: 27.13%; top: 37.63%; width: 69.21%; height: 6.16%; }
+.sim-h140 { left: 75.81%; top: 45.3%; width: 15.75%; height: 3.25%; }
+.sim-h141 { left: 92.38%; top: 44.95%; width: 3.46%; height: 3.95%; }
+.sim-h142 { left: 27.13%; top: 43.79%; width: 69.21%; height: 6.16%; }
+.sim-h143 { left: 82.32%; top: 45.41%; width: 13.41%; height: 3.25%; }
+.sim-h144 { left: 27.13%; top: 44.02%; width: 69.21%; height: 6.16%; }
+.sim-h145 { left: 75.81%; top: 51.68%; width: 15.75%; height: 3.25%; }
+.sim-h146 { left: 92.38%; top: 51.34%; width: 3.46%; height: 3.95%; }
+.sim-h147 { left: 27.13%; top: 50.17%; width: 69.21%; height: 6.16%; }
+.sim-h148 { left: 27.13%; top: 65.39%; width: 69.21%; height: 6.16%; }
+.sim-h149 { left: 88.11%; top: 43.32%; width: 7.72%; height: 3.25%; }
+.sim-h150 { left: 27.13%; top: 41.81%; width: 69.21%; height: 6.16%; }
+.sim-h151 { left: 83.64%; top: 49.48%; width: 12.2%; height: 3.25%; }
+.sim-h152 { left: 27.13%; top: 48.08%; width: 69.21%; height: 6.16%; }
+.sim-h153 { left: 87.09%; top: 55.75%; width: 8.74%; height: 3.25%; }
+.sim-h154 { left: 27.13%; top: 54.24%; width: 69.21%; height: 6.16%; }
+.sim-h155 { left: 92.38%; top: 61.56%; width: 3.46%; height: 3.95%; }
+.sim-h156 { left: 27.13%; top: 60.51%; width: 69.21%; height: 6.16%; }
+.sim-h157 { left: 81.3%; top: 68.18%; width: 14.43%; height: 3.25%; }
+.sim-h158 { left: 27.13%; top: 66.67%; width: 69.21%; height: 6.16%; }
+.sim-h159 { left: 27.13%; top: 72.94%; width: 69.21%; height: 6.16%; }
+.sim-h160 { left: 33.74%; top: 24.16%; width: 11.18%; height: 3.25%; }
+.sim-h161 { left: 45.73%; top: 24.16%; width: 16.16%; height: 3.25%; }
+.sim-h162 { left: 83.64%; top: 40.42%; width: 12.2%; height: 3.25%; }
+.sim-h163 { left: 27.13%; top: 38.91%; width: 69.21%; height: 6.16%; }
+.sim-h164 { left: 87.09%; top: 46.57%; width: 8.74%; height: 3.25%; }
+.sim-h165 { left: 27.13%; top: 45.06%; width: 69.21%; height: 6.16%; }
+.sim-h166 { left: 92.38%; top: 52.5%; width: 3.46%; height: 3.95%; }
+.sim-h167 { left: 27.13%; top: 51.34%; width: 69.21%; height: 6.16%; }
+.sim-h168 { left: 81.3%; top: 59%; width: 14.43%; height: 3.25%; }
+.sim-h169 { left: 27.13%; top: 57.49%; width: 69.21%; height: 6.16%; }
+.sim-h170 { left: 27.13%; top: 63.76%; width: 69.21%; height: 6.16%; }
+.sim-h171 { left: 33.74%; top: 30.43%; width: 16.57%; height: 3.25%; }
+.sim-h172 { left: 87.09%; top: 41.81%; width: 8.74%; height: 3.25%; }
+.sim-h173 { left: 27.13%; top: 40.42%; width: 69.21%; height: 6.16%; }
+.sim-h174 { left: 92.38%; top: 47.74%; width: 3.46%; height: 3.95%; }
+.sim-h175 { left: 27.13%; top: 46.57%; width: 69.21%; height: 6.16%; }
+.sim-h176 { left: 81.3%; top: 54.24%; width: 14.43%; height: 3.25%; }
+.sim-h177 { left: 27.13%; top: 52.85%; width: 69.21%; height: 6.16%; }
+.sim-h178 { left: 27.13%; top: 59%; width: 69.21%; height: 6.16%; }
+.sim-h179 { left: 92.38%; top: 48.43%; width: 3.46%; height: 3.95%; }
+.sim-h180 { left: 27.13%; top: 47.27%; width: 69.21%; height: 6.16%; }
+.sim-h181 { left: 81.3%; top: 54.94%; width: 14.43%; height: 3.25%; }
+.sim-h182 { left: 27.13%; top: 53.43%; width: 69.21%; height: 6.16%; }
+.sim-h183 { left: 27.13%; top: 59.7%; width: 69.21%; height: 6.16%; }
+.sim-h184 { left: 33.74%; top: 42.86%; width: 9.86%; height: 3.25%; }
+.sim-h185 { left: 44.51%; top: 42.86%; width: 9.25%; height: 3.25%; }
+.sim-h186 { left: 81.3%; top: 67.83%; width: 14.43%; height: 3.25%; }
+.sim-h187 { left: 27.13%; top: 66.32%; width: 69.21%; height: 6.16%; }
+.sim-h188 { left: 27.13%; top: 72.59%; width: 69.21%; height: 6.16%; }
+.sim-h189 { left: 83.23%; top: 77%; width: 12.6%; height: 3.25%; }
+.sim-h190 { left: 27.13%; top: 75.49%; width: 69.21%; height: 6.16%; }
+.sim-h191 { left: 85.16%; top: 12.89%; width: 10.57%; height: 3.6%; }
+.sim-h192 { left: 27.13%; top: 11.85%; width: 69.21%; height: 5.92%; }
+.sim-h193 { left: 74.49%; top: 18.93%; width: 16.97%; height: 3.25%; }
+.sim-h194 { left: 92.38%; top: 18.7%; width: 3.46%; height: 3.95%; }
+.sim-h195 { left: 27.13%; top: 17.65%; width: 69.21%; height: 5.92%; }
+.sim-h196 { left: 80.08%; top: 43.79%; width: 11.48%; height: 3.25%; }
+.sim-h197 { left: 92.38%; top: 43.44%; width: 3.46%; height: 3.95%; }
+.sim-h198 { left: 27.13%; top: 42.51%; width: 69.21%; height: 5.92%; }
+.sim-h199 { left: 80.08%; top: 49.71%; width: 15.75%; height: 3.25%; }
+.sim-h200 { left: 27.13%; top: 48.43%; width: 69.21%; height: 5.92%; }
+.sim-h201 { left: 84.45%; top: 55.52%; width: 11.28%; height: 3.25%; }
+.sim-h202 { left: 27.13%; top: 54.24%; width: 69.21%; height: 5.92%; }
+.sim-h203 { left: 89.53%; top: 61.44%; width: 6.3%; height: 3.25%; }
+.sim-h204 { left: 27.13%; top: 60.16%; width: 69.21%; height: 5.92%; }
+.sim-h205 { left: 84.76%; top: 67.36%; width: 6.71%; height: 3.25%; }
+.sim-h206 { left: 92.38%; top: 67.02%; width: 3.46%; height: 3.95%; }
+.sim-h207 { left: 27.13%; top: 65.97%; width: 69.21%; height: 5.92%; }
+.sim-h208 { left: 88.52%; top: 73.17%; width: 7.32%; height: 3.25%; }
+.sim-h209 { left: 27.13%; top: 71.89%; width: 69.21%; height: 5.92%; }
+.sim-h210 { left: 83.23%; top: 79.09%; width: 12.6%; height: 3.25%; }
+.sim-h211 { left: 27.13%; top: 77.82%; width: 69.21%; height: 5.92%; }
+.sim-h212 { left: 83.23%; top: 62.95%; width: 12.6%; height: 3.25%; }
+.sim-h213 { left: 27.13%; top: 61.44%; width: 69.21%; height: 6.16%; }
+.sim-h214 { left: 80.08%; top: 48.55%; width: 15.75%; height: 3.25%; }
+.sim-h215 { left: 27.13%; top: 47.04%; width: 69.21%; height: 6.16%; }
+.sim-h216 { left: 84.45%; top: 54.7%; width: 11.28%; height: 3.25%; }
+.sim-h217 { left: 27.13%; top: 53.31%; width: 69.21%; height: 6.16%; }
+.sim-h218 { left: 89.53%; top: 60.98%; width: 6.3%; height: 3.25%; }
+.sim-h219 { left: 27.13%; top: 59.47%; width: 69.21%; height: 6.16%; }
+.sim-h220 { left: 84.76%; top: 67.13%; width: 6.71%; height: 3.25%; }
+.sim-h221 { left: 92.38%; top: 66.78%; width: 3.46%; height: 3.95%; }
+.sim-h222 { left: 27.13%; top: 65.74%; width: 69.21%; height: 6.16%; }
+.sim-h223 { left: 88.52%; top: 73.4%; width: 7.32%; height: 3.25%; }
+.sim-h224 { left: 27.13%; top: 71.89%; width: 69.21%; height: 6.16%; }
+.sim-h225 { left: 83.23%; top: 79.56%; width: 12.6%; height: 3.25%; }
+.sim-h226 { left: 27.13%; top: 78.16%; width: 69.21%; height: 6.16%; }
+.sim-h227 { left: 89.53%; top: 60.63%; width: 6.3%; height: 3.25%; }
+.sim-h228 { left: 27.13%; top: 59.12%; width: 69.21%; height: 6.16%; }
+.sim-h229 { left: 84.76%; top: 66.78%; width: 6.71%; height: 3.25%; }
+.sim-h230 { left: 92.38%; top: 66.55%; width: 3.46%; height: 3.95%; }
+.sim-h231 { left: 88.52%; top: 73.05%; width: 7.32%; height: 3.25%; }
+.sim-h232 { left: 27.13%; top: 71.54%; width: 69.21%; height: 6.16%; }
+.sim-h233 { left: 83.23%; top: 79.21%; width: 12.6%; height: 3.25%; }
+.sim-h234 { left: 27.13%; top: 77.82%; width: 69.21%; height: 6.16%; }
+.sim-h235 { left: 84.76%; top: 60.51%; width: 6.71%; height: 3.25%; }
+.sim-h236 { left: 92.38%; top: 60.16%; width: 3.46%; height: 3.95%; }
+.sim-h237 { left: 88.52%; top: 66.67%; width: 7.32%; height: 3.25%; }
+.sim-h238 { left: 27.13%; top: 65.16%; width: 69.21%; height: 6.16%; }
+.sim-h239 { left: 83.23%; top: 72.94%; width: 12.6%; height: 3.25%; }
+.sim-h240 { left: 27.13%; top: 71.43%; width: 69.21%; height: 6.16%; }
+.sim-h241 { left: 84.45%; top: 54.47%; width: 11.28%; height: 3.25%; }
+.sim-h242 { left: 27.13%; top: 52.96%; width: 69.21%; height: 6.16%; }
+.sim-h243 { left: 88.52%; top: 71.08%; width: 7.32%; height: 3.25%; }
+.sim-h244 { left: 27.13%; top: 69.57%; width: 69.21%; height: 6.16%; }
+.sim-h245 { left: 83.23%; top: 77.24%; width: 12.6%; height: 3.25%; }
+.sim-h246 { left: 27.13%; top: 75.84%; width: 69.21%; height: 6.16%; }
+.sim-h247 { left: 74.49%; top: 24.16%; width: 16.97%; height: 3.25%; }
+.sim-h248 { left: 92.38%; top: 23.93%; width: 3.46%; height: 3.95%; }
+.sim-h249 { left: 27.13%; top: 22.76%; width: 69.21%; height: 6.16%; }
+.sim-h250 { left: 80.08%; top: 30.43%; width: 11.48%; height: 3.25%; }
+.sim-h251 { left: 92.38%; top: 30.08%; width: 3.46%; height: 3.95%; }
+.sim-h252 { left: 27.13%; top: 28.92%; width: 69.21%; height: 6.16%; }
+.sim-h253 { left: 80.08%; top: 36.59%; width: 15.75%; height: 3.25%; }
+.sim-h254 { left: 84.45%; top: 42.86%; width: 11.28%; height: 3.25%; }
+.sim-h255 { left: 89.53%; top: 49.01%; width: 6.3%; height: 3.25%; }
+.sim-h256 { left: 84.76%; top: 55.28%; width: 6.71%; height: 3.25%; }
+.sim-h257 { left: 92.38%; top: 54.94%; width: 3.46%; height: 3.95%; }
+.sim-h258 { left: 88.52%; top: 61.44%; width: 7.32%; height: 3.25%; }
+.sim-h259 { left: 83.23%; top: 67.71%; width: 12.6%; height: 3.25%; }
+.sim-h260 { left: 75.81%; top: 13.12%; width: 15.75%; height: 3.25%; }
+.sim-h261 { left: 92.38%; top: 12.78%; width: 3.46%; height: 3.95%; }
+.sim-h262 { left: 92.38%; top: 24.51%; width: 3.46%; height: 3.95%; }
+.sim-h263 { left: 27.13%; top: 23.58%; width: 69.21%; height: 5.92%; }
+.sim-h264 { left: 92.38%; top: 30.43%; width: 3.46%; height: 3.95%; }
+.sim-h265 { left: 27.13%; top: 29.38%; width: 69.21%; height: 5.92%; }
+.sim-h266 { left: 92.38%; top: 55.28%; width: 3.46%; height: 3.95%; }
+.sim-h267 { left: 76.73%; top: 61.44%; width: 14.74%; height: 3.25%; }
+.sim-h268 { left: 75.3%; top: 73.17%; width: 16.16%; height: 3.25%; }
+.sim-h269 { left: 92.38%; top: 72.94%; width: 3.46%; height: 3.95%; }
+.sim-h270 { left: 92.38%; top: 78.75%; width: 3.46%; height: 3.95%; }
+.sim-h271 { left: 92.38%; top: 49.36%; width: 3.46%; height: 3.95%; }
+.sim-h272 { left: 75.3%; top: 73.4%; width: 16.16%; height: 3.25%; }
+.sim-h273 { left: 92.38%; top: 73.05%; width: 3.46%; height: 3.95%; }
+.sim-h274 { left: 92.38%; top: 79.21%; width: 3.46%; height: 3.95%; }
+.sim-h275 { left: 75.81%; top: 12.89%; width: 15.75%; height: 3.25%; }
+.sim-h276 { left: 92.38%; top: 12.66%; width: 3.46%; height: 3.95%; }
+.sim-h277 { left: 27.13%; top: 11.85%; width: 69.21%; height: 5.57%; }
+.sim-h278 { left: 92.38%; top: 18.12%; width: 3.46%; height: 3.95%; }
+.sim-h279 { left: 27.13%; top: 17.31%; width: 69.21%; height: 5.57%; }
+.sim-h280 { left: 92.38%; top: 23.69%; width: 3.46%; height: 3.95%; }
+.sim-h281 { left: 27.13%; top: 22.88%; width: 69.21%; height: 5.57%; }
+.sim-h282 { left: 92.38%; top: 29.27%; width: 3.46%; height: 3.95%; }
+.sim-h283 { left: 27.13%; top: 28.46%; width: 69.21%; height: 5.57%; }
+.sim-h284 { left: 92.38%; top: 34.84%; width: 3.46%; height: 3.95%; }
+.sim-h285 { left: 27.13%; top: 34.03%; width: 69.21%; height: 5.57%; }
+.sim-h286 { left: 76.73%; top: 40.65%; width: 14.74%; height: 3.25%; }
+.sim-h287 { left: 92.38%; top: 40.42%; width: 3.46%; height: 3.95%; }
+.sim-h288 { left: 27.13%; top: 39.61%; width: 69.21%; height: 5.57%; }
+.sim-h289 { left: 92.38%; top: 45.88%; width: 3.46%; height: 3.95%; }
+.sim-h290 { left: 27.13%; top: 45.06%; width: 69.21%; height: 5.57%; }
+.sim-h291 { left: 75.3%; top: 51.8%; width: 16.16%; height: 3.25%; }
+.sim-h292 { left: 92.38%; top: 51.45%; width: 3.46%; height: 3.95%; }
+.sim-h293 { left: 27.13%; top: 50.64%; width: 69.21%; height: 5.57%; }
+.sim-h294 { left: 92.38%; top: 57.03%; width: 3.46%; height: 3.95%; }
+.sim-h295 { left: 27.13%; top: 56.21%; width: 69.21%; height: 5.57%; }
+.sim-h296 { left: 92.38%; top: 39.37%; width: 3.46%; height: 3.95%; }
+.sim-h297 { left: 27.13%; top: 38.56%; width: 69.21%; height: 5.57%; }
+.sim-h298 { left: 27.13%; top: 44.13%; width: 69.21%; height: 5.57%; }
+.sim-h299 { left: 92.38%; top: 50.52%; width: 3.46%; height: 3.95%; }
+.sim-h300 { left: 27.13%; top: 49.71%; width: 69.21%; height: 5.57%; }
+.sim-h301 { left: 92.38%; top: 56.1%; width: 3.46%; height: 3.95%; }
+.sim-h302 { left: 27.13%; top: 55.28%; width: 69.21%; height: 5.57%; }
+.sim-h303 { left: 76.73%; top: 61.9%; width: 14.74%; height: 3.25%; }
+.sim-h304 { left: 27.13%; top: 60.74%; width: 69.21%; height: 5.57%; }
+.sim-h305 { left: 92.38%; top: 67.13%; width: 3.46%; height: 3.95%; }
+.sim-h306 { left: 27.13%; top: 66.32%; width: 69.21%; height: 5.57%; }
+.sim-h307 { left: 75.3%; top: 73.05%; width: 16.16%; height: 3.25%; }
+.sim-h308 { left: 92.38%; top: 72.71%; width: 3.46%; height: 3.95%; }
+.sim-h309 { left: 27.13%; top: 71.89%; width: 69.21%; height: 5.57%; }
+.sim-h310 { left: 92.38%; top: 78.28%; width: 3.46%; height: 3.95%; }
+.sim-h311 { left: 27.13%; top: 77.47%; width: 69.21%; height: 5.57%; }
+.sim-h312 { left: 27.13%; top: 35.31%; width: 69.21%; height: 5.92%; }
+.sim-h313 { left: 75.3%; top: 71.08%; width: 16.16%; height: 3.25%; }
+.sim-h314 { left: 92.38%; top: 70.73%; width: 3.46%; height: 3.95%; }
+.sim-h315 { left: 92.38%; top: 77%; width: 3.46%; height: 3.95%; }
+.sim-h316 { left: 92.38%; top: 48.2%; width: 3.46%; height: 3.95%; }
+.sim-h317 { left: 92.38%; top: 54.47%; width: 3.46%; height: 3.95%; }
+.sim-h318 { left: 76.73%; top: 60.98%; width: 14.74%; height: 3.25%; }
+.sim-h319 { left: 92.38%; top: 60.63%; width: 3.46%; height: 3.95%; }
+.sim-h320 { left: 76.63%; top: 35.66%; width: 19.11%; height: 3.25%; }
+.sim-h321 { left: 27.13%; top: 34.15%; width: 69.21%; height: 6.16%; }
+.sim-h322 { left: 33.74%; top: 42.86%; width: 9.25%; height: 3.25%; }
+.sim-h323 { left: 82.32%; top: 29.38%; width: 13.41%; height: 3.25%; }
+.sim-h324 { left: 27.13%; top: 27.99%; width: 69.21%; height: 6.16%; }
+.sim-h325 { left: 27.13%; top: 50.64%; width: 69.21%; height: 6.16%; }
+.sim-h326 { left: 27.13%; top: 56.91%; width: 69.21%; height: 6.16%; }
+.sim-h327 { left: 33.74%; top: 36.59%; width: 18.19%; height: 3.25%; }
+.sim-h328 { left: 52.74%; top: 36.59%; width: 15.55%; height: 3.25%; }
+.sim-h329 { left: 27.13%; top: 34.38%; width: 69.21%; height: 6.16%; }
+.sim-h330 { left: 75.81%; top: 55.28%; width: 15.75%; height: 3.25%; }
+.sim-h331 { left: 76.63%; top: 42.86%; width: 19.11%; height: 3.25%; }
+.sim-h332 { left: 82.32%; top: 49.01%; width: 13.41%; height: 3.25%; }
+.sim-h333 { left: 82.32%; top: 59.35%; width: 13.41%; height: 3.25%; }
+.sim-h334 { left: 27.13%; top: 57.84%; width: 69.21%; height: 6.16%; }
+.sim-h335 { left: 75.81%; top: 65.51%; width: 15.75%; height: 3.25%; }
+.sim-h336 { left: 92.38%; top: 65.16%; width: 3.46%; height: 3.95%; }
+.sim-h337 { left: 27.13%; top: 64.11%; width: 69.21%; height: 6.16%; }
+.sim-h338 { left: 33.74%; top: 43.79%; width: 18.19%; height: 3.25%; }
+.sim-h339 { left: 52.74%; top: 43.79%; width: 15.55%; height: 3.25%; }
+.sim-h340 { left: 92.38%; top: 62.6%; width: 3.46%; height: 3.95%; }
+.sim-h341 { left: 81.3%; top: 52.96%; width: 14.43%; height: 3.25%; }
+.sim-h342 { left: 27.13%; top: 51.45%; width: 69.21%; height: 6.16%; }
+.sim-h343 { left: 27.13%; top: 57.72%; width: 69.21%; height: 6.16%; }
+.sim-h344 { left: 80.08%; top: 32.06%; width: 11.48%; height: 3.25%; }
+.sim-h345 { left: 92.38%; top: 31.71%; width: 3.46%; height: 3.95%; }
+.sim-h346 { left: 27.13%; top: 30.55%; width: 69.21%; height: 6.16%; }
+.sim-h347 { left: 80.08%; top: 36%; width: 15.75%; height: 3.25%; }
+.sim-h348 { left: 84.45%; top: 42.16%; width: 11.28%; height: 3.25%; }
+.sim-h349 { left: 89.53%; top: 48.43%; width: 6.3%; height: 3.25%; }
+.sim-h350 { left: 84.76%; top: 54.59%; width: 6.71%; height: 3.25%; }
+.sim-h351 { left: 88.52%; top: 60.74%; width: 7.32%; height: 3.25%; }
+.sim-h352 { left: 92.38%; top: 37.98%; width: 3.46%; height: 3.95%; }
+.sim-h353 { left: 92.38%; top: 44.13%; width: 3.46%; height: 3.95%; }
+.sim-h354 { left: 76.73%; top: 50.64%; width: 14.74%; height: 3.25%; }
+.sim-h355 { left: 92.38%; top: 50.29%; width: 3.46%; height: 3.95%; }
+.sim-h356 { left: 92.38%; top: 25.55%; width: 3.46%; height: 3.95%; }
+.sim-h357 { left: 88.11%; top: 36.47%; width: 7.72%; height: 3.25%; }
+.sim-h358 { left: 27.13%; top: 34.96%; width: 69.21%; height: 6.16%; }
+.sim-h359 { left: 83.64%; top: 42.62%; width: 12.2%; height: 3.25%; }
+.sim-h360 { left: 27.13%; top: 41.23%; width: 69.21%; height: 6.16%; }
+.sim-h361 { left: 87.09%; top: 48.9%; width: 8.74%; height: 3.25%; }
+.sim-h362 { left: 27.13%; top: 47.39%; width: 69.21%; height: 6.16%; }
+.sim-h363 { left: 92.38%; top: 54.7%; width: 3.46%; height: 3.95%; }
+.sim-h364 { left: 27.13%; top: 53.66%; width: 69.21%; height: 6.16%; }
+.sim-h365 { left: 81.3%; top: 61.32%; width: 14.43%; height: 3.25%; }
+.sim-h366 { left: 27.13%; top: 59.81%; width: 69.21%; height: 6.16%; }
+.sim-h367 { left: 27.13%; top: 65.97%; width: 69.21%; height: 6.16%; }
+.sim-h368 { left: 88.11%; top: 47.85%; width: 7.72%; height: 3.25%; }
+.sim-h369 { left: 27.13%; top: 46.46%; width: 69.21%; height: 6.16%; }
+.sim-h370 { left: 83.64%; top: 54.12%; width: 12.2%; height: 3.25%; }
+.sim-h371 { left: 27.13%; top: 52.61%; width: 69.21%; height: 6.16%; }
+.sim-h372 { left: 87.09%; top: 60.28%; width: 8.74%; height: 3.25%; }
+.sim-h373 { left: 27.13%; top: 58.89%; width: 69.21%; height: 6.16%; }
+.sim-h374 { left: 92.38%; top: 66.2%; width: 3.46%; height: 3.95%; }
+.sim-h375 { left: 27.13%; top: 65.04%; width: 69.21%; height: 6.16%; }
+.sim-h376 { left: 81.3%; top: 72.71%; width: 14.43%; height: 3.25%; }
+.sim-h377 { left: 27.13%; top: 71.2%; width: 69.21%; height: 6.16%; }
+.sim-h378 { left: 27.13%; top: 77.47%; width: 69.21%; height: 6.16%; }
+.sim-h379 { left: 27.13%; top: 55.87%; width: 69.21%; height: 6.16%; }
+.sim-h380 { left: 81.3%; top: 63.53%; width: 14.43%; height: 3.25%; }
+.sim-h381 { left: 27.13%; top: 62.14%; width: 69.21%; height: 6.16%; }
+.sim-h382 { left: 27.13%; top: 68.29%; width: 69.21%; height: 6.16%; }
+/* sim:end */
 
 /* Another computer? Mac, Linux and Windows by hand as tabs, with no script: a tab is a link to its panel, and the
    panel the address points at (:target) is the one shown; with none, the first. The hero's links land on the same
