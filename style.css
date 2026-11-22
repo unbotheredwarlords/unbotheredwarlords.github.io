@@ -232,6 +232,7 @@ main { max-width: 74rem; margin: 0 auto; padding: 0 1.25rem; }
   background: radial-gradient(ellipse at 50% 120%, var(--glow-2), transparent 60%), var(--bg-2) url("img/grain.png"); }
 .final h2 { font-weight: 900; font-size: var(--fs-title); margin-bottom: .6rem; }
 .final p { color: var(--muted); font-size: var(--fs-h3); }
+.final .final-next { margin-top: var(--s-5); font-size: var(--fs-body); }
 
 footer { max-width: 74rem; margin: 0 auto; padding: 2rem 1.25rem 2.75rem; text-align: center; }
 footer p + p { margin-top: .4rem; }
@@ -255,8 +256,8 @@ footer p + p { margin-top: .4rem; }
 .kit-extras span { font-size: var(--fs-small); color: var(--muted); }
 .kit-extras .kit-uw { color: inherit; }
 .kit-where { margin-top: var(--s-4); font-size: var(--fs-small); color: var(--muted); }
-.page-addon .section > p, .faq { max-width: var(--measure); margin-left: auto; margin-right: auto; }
-.page-addon .section > p + p { margin-top: .75rem; }   /* paragraphs read as separate thoughts */
+.page-addon .section > p, .page-addon .os-panel > p, .faq { max-width: var(--measure); margin-left: auto; margin-right: auto; }
+.page-addon .section > p + p, .page-addon .os-panel > p + p { margin-top: .75rem; }   /* paragraphs read as separate thoughts */
 .page-addon .paths + p { margin-top: var(--s-5); }   /* ranks.html: the line under a row of cards */
 .ver { font-size: var(--fs-small); color: var(--text); }
 .hash { overflow-wrap: anywhere; font-size: .82em; }
@@ -587,3 +588,33 @@ footer a { padding-block: .35rem; }
   .sim-acts { max-width: none; }
   .sim-acts:has(.sim-btn) { width: 100%; justify-content: flex-start; padding-left: 2.7rem; }
 }
+
+/* Another computer? Mac, Linux and Windows by hand as tabs, with no script: a tab is a link to its panel, and the
+   panel the address points at (:target) is the one shown; with none, the first. The hero's links land on the same
+   panels. */
+.os { margin-top: var(--s-5); }
+.os-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s-2); margin: 0 auto var(--s-5); }
+.os-tabs a { display: inline-flex; align-items: center; min-height: 2.75rem; padding: var(--s-2) var(--s-4);
+  border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--card); color: var(--text);
+  font-weight: 700; text-decoration: none; }
+.os-tabs a:hover { border-color: var(--line-hi); }
+.os-tabs a:focus-visible { outline: 2px solid var(--ember-200); outline-offset: 2px; }
+.os-panel { scroll-margin-top: 10rem; }
+.os-panel + .os-panel { margin-top: var(--s-6); }
+.os-h { margin-bottom: var(--s-3); text-align: center; }
+/* Browsers without :has() (older Firefox and Safari) skip this block and show all three panels, one after another. */
+@supports selector(:has(*)) {
+  .os-panel { display: none; }
+  .os-panel + .os-panel { margin-top: 0; }
+  .os-h { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .os-panel:target { display: block; }
+  .os-panel:has(:target) { display: block; }   /* an old link to a panel's heading still opens its panel */
+  .os:not(:has(.os-panel:target, .os-panel :target)) .os-panel:first-of-type { display: block; }
+  .os:not(:has(.os-panel:target, .os-panel :target)) .os-tabs a[href="#mac"],
+  .os:has(#mac:target, #mac :target) .os-tabs a[href="#mac"],
+  .os:has(#linux:target, #linux :target) .os-tabs a[href="#linux"],
+  .os:has(#manual:target, #manual :target) .os-tabs a[href="#manual"] {
+    border-color: var(--ember); background: var(--card-2); color: var(--gold); }
+}
+.os-panel > .steps { margin-top: 0; }
+.os-panel > p + .steps { margin-top: var(--s-4); }
