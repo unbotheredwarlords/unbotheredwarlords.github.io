@@ -46,7 +46,8 @@
   --radius-md: .625rem;
   --radius-lg: .875rem;
   --radius: var(--radius-lg);
-  --measure: 66ch;   /* reading line length: 45-75 characters (Bringhurst; Dyson 2004) */
+  --measure: 39rem;   /* reading line length: about 66 characters of body text (45-75: Bringhurst; Dyson 2004). In rem,
+     not ch, so small notes under a paragraph share its edges instead of centring narrower */
   --display: "Cinzel", "Trajan Pro", "Iowan Old Style", Georgia, serif;
   --sans: "Alegreya Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --mono: ui-monospace, "Cascadia Mono", "SF Mono", Menlo, Consolas, monospace;
@@ -75,9 +76,11 @@ a { color: var(--ember-200); text-underline-offset: .18em; }
    (.cmd): one box to read or copy, wrapping inside it only where it must. */
 code { font: .92em/1.5 var(--mono); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: .05rem .4rem;
   overflow-wrap: normal; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
-code.cmd { display: block; width: fit-content; max-width: 100%; margin: var(--s-2) 0; padding: var(--s-2) var(--s-3); white-space: pre-wrap; overflow-wrap: anywhere;
-  text-wrap: balance; }   /* a wrapped command splits into even lines, never one word alone */
+code.cmd { display: block; width: fit-content; max-width: 100%; margin: var(--s-2) 0; padding: var(--s-2) var(--s-3); white-space: pre-wrap; overflow-wrap: normal;
+  overflow-x: auto; text-wrap: balance; }   /* a command wraps only at its spaces, into even lines: a path too long for
+  a phone scrolls in its box instead of breaking mid-word, so it can be read and typed as it is */
 .nowrap { white-space: nowrap; }
+.cmd .tok { white-space: nowrap; }   /* a piece of a command: it breaks only at a space or a <wbr> after a slash, never at a hyphen */
 @media (max-width: 30rem) { .faq .nowrap, .steps .nowrap, .way .nowrap { white-space: normal; } }   /* a folder path may wrap at
    its spaces on a phone (at large text it would push the page sideways) */
 .muted { color: var(--muted); }
