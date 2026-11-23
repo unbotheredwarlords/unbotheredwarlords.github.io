@@ -668,6 +668,8 @@ footer a { padding-block: .35rem; }
 .sim-st-o_level_mail { background-image: url(img/sim/p_level.webp); }
 #sim-o_level_space:checked ~ .sim-view .sim-st-o_level_space { visibility: visible; } #sim-o_level_space:checked ~ .sim-under .sim-u-o_level_space { display: block; }
 .sim-st-o_level_space { background-image: url(img/sim/p_level.webp); }
+#sim-o_play_alts:checked ~ .sim-view .sim-st-o_play_alts { visibility: visible; } #sim-o_play_alts:checked ~ .sim-under .sim-u-o_play_alts { display: block; }
+.sim-st-o_play_alts { background-image: url(img/sim/p_play.webp); }
 #sim-o_play_call:checked ~ .sim-view .sim-st-o_play_call { visibility: visible; } #sim-o_play_call:checked ~ .sim-under .sim-u-o_play_call { display: block; }
 .sim-st-o_play_call { background-image: url(img/sim/p_play.webp); }
 #sim-o_play_enchant:checked ~ .sim-view .sim-st-o_play_enchant { visibility: visible; } #sim-o_play_enchant:checked ~ .sim-under .sim-u-o_play_enchant { display: block; }
@@ -724,6 +726,8 @@ footer a { padding-block: .35rem; }
 .sim-st-t_level_mail { background-image: url(img/sim/p_level.webp); }
 #sim-t_level_space:checked ~ .sim-view .sim-st-t_level_space { visibility: visible; } #sim-t_level_space:checked ~ .sim-under .sim-u-t_level_space { display: block; }
 .sim-st-t_level_space { background-image: url(img/sim/p_level.webp); }
+#sim-t_play_alts:checked ~ .sim-view .sim-st-t_play_alts { visibility: visible; } #sim-t_play_alts:checked ~ .sim-under .sim-u-t_play_alts { display: block; }
+.sim-st-t_play_alts { background-image: url(img/sim/p_play.webp); }
 #sim-t_start_gear:checked ~ .sim-view .sim-st-t_start_gear { visibility: visible; } #sim-t_start_gear:checked ~ .sim-under .sim-u-t_start_gear { display: block; }
 .sim-st-t_start_gear { background-image: url(img/sim/p_start.webp); }
 #sim-u_addons_kit_Fix_my_kit:checked ~ .sim-view .sim-st-u_addons_kit_Fix_my_kit { visibility: visible; } #sim-u_addons_kit_Fix_my_kit:checked ~ .sim-under .sim-u-u_addons_kit_Fix_my_kit { display: block; }
@@ -891,29 +895,29 @@ footer a { padding-block: .35rem; }
 .sim-h138 { left: 27.13%; top: 42.69%; width: 69.21%; height: 5.74%; }
 .sim-h139 { left: 82.22%; top: 49.84%; width: 13.62%; height: 3.03%; }
 .sim-h140 { left: 27.13%; top: 48.54%; width: 69.21%; height: 5.74%; }
-.sim-h141 { left: 82.22%; top: 47.24%; width: 13.62%; height: 3.03%; }
-.sim-h142 { left: 79.88%; top: 12.24%; width: 15.85%; height: 3.36%; }
-.sim-h143 { left: 27.13%; top: 22.75%; width: 69.21%; height: 5.74%; }
-.sim-h144 { left: 76.63%; top: 30.66%; width: 19.11%; height: 3.03%; }
-.sim-h145 { left: 27.13%; top: 29.25%; width: 69.21%; height: 5.74%; }
-.sim-h146 { left: 82.32%; top: 36.4%; width: 13.41%; height: 3.03%; }
-.sim-h147 { left: 27.13%; top: 35.1%; width: 69.21%; height: 5.74%; }
-.sim-h148 { left: 75.81%; top: 42.25%; width: 15.75%; height: 3.03%; }
-.sim-h149 { left: 92.38%; top: 41.93%; width: 3.46%; height: 3.68%; }
-.sim-h150 { left: 27.13%; top: 40.85%; width: 69.21%; height: 5.74%; }
-.sim-h151 { left: 82.32%; top: 42.36%; width: 13.41%; height: 3.03%; }
-.sim-h152 { left: 27.13%; top: 41.06%; width: 69.21%; height: 5.74%; }
-.sim-h153 { left: 75.81%; top: 48.21%; width: 15.75%; height: 3.03%; }
-.sim-h154 { left: 92.38%; top: 47.89%; width: 3.46%; height: 3.68%; }
-.sim-h155 { left: 27.13%; top: 46.8%; width: 69.21%; height: 5.74%; }
-.sim-h156 { left: 78.46%; top: 62.3%; width: 17.28%; height: 3.03%; }
-.sim-h157 { left: 27.13%; top: 61%; width: 69.21%; height: 5.74%; }
-.sim-h158 { left: 27.13%; top: 66.74%; width: 69.21%; height: 5.74%; }
-.sim-h159 { left: 88.11%; top: 38.24%; width: 7.72%; height: 3.03%; }
-.sim-h160 { left: 83.64%; top: 44.1%; width: 12.2%; height: 3.03%; }
-.sim-h161 { left: 87.09%; top: 49.84%; width: 8.74%; height: 3.03%; }
-.sim-h162 { left: 92.38%; top: 55.36%; width: 3.46%; height: 3.68%; }
-.sim-h163 { left: 27.13%; top: 54.28%; width: 69.21%; height: 5.74%; }
+.sim-h141 { left: 92.38%; top: 55.36%; width: 3.46%; height: 3.68%; }
+.sim-h142 { left: 27.13%; top: 54.28%; width: 69.21%; height: 5.74%; }
+.sim-h143 { left: 82.22%; top: 47.24%; width: 13.62%; height: 3.03%; }
+.sim-h144 { left: 79.88%; top: 12.24%; width: 15.85%; height: 3.36%; }
+.sim-h145 { left: 27.13%; top: 22.75%; width: 69.21%; height: 5.74%; }
+.sim-h146 { left: 76.63%; top: 30.66%; width: 19.11%; height: 3.03%; }
+.sim-h147 { left: 27.13%; top: 29.25%; width: 69.21%; height: 5.74%; }
+.sim-h148 { left: 82.32%; top: 36.4%; width: 13.41%; height: 3.03%; }
+.sim-h149 { left: 27.13%; top: 35.1%; width: 69.21%; height: 5.74%; }
+.sim-h150 { left: 75.81%; top: 42.25%; width: 15.75%; height: 3.03%; }
+.sim-h151 { left: 92.38%; top: 41.93%; width: 3.46%; height: 3.68%; }
+.sim-h152 { left: 27.13%; top: 40.85%; width: 69.21%; height: 5.74%; }
+.sim-h153 { left: 82.32%; top: 42.36%; width: 13.41%; height: 3.03%; }
+.sim-h154 { left: 27.13%; top: 41.06%; width: 69.21%; height: 5.74%; }
+.sim-h155 { left: 75.81%; top: 48.21%; width: 15.75%; height: 3.03%; }
+.sim-h156 { left: 92.38%; top: 47.89%; width: 3.46%; height: 3.68%; }
+.sim-h157 { left: 27.13%; top: 46.8%; width: 69.21%; height: 5.74%; }
+.sim-h158 { left: 78.46%; top: 62.3%; width: 17.28%; height: 3.03%; }
+.sim-h159 { left: 27.13%; top: 61%; width: 69.21%; height: 5.74%; }
+.sim-h160 { left: 27.13%; top: 66.74%; width: 69.21%; height: 5.74%; }
+.sim-h161 { left: 88.11%; top: 38.24%; width: 7.72%; height: 3.03%; }
+.sim-h162 { left: 83.64%; top: 44.1%; width: 12.2%; height: 3.03%; }
+.sim-h163 { left: 87.09%; top: 49.84%; width: 8.74%; height: 3.03%; }
 .sim-h164 { left: 81.3%; top: 61.43%; width: 14.43%; height: 3.03%; }
 .sim-h165 { left: 27.13%; top: 60.02%; width: 69.21%; height: 5.74%; }
 .sim-h166 { left: 78.46%; top: 67.17%; width: 17.28%; height: 3.03%; }
@@ -1101,68 +1105,72 @@ footer a { padding-block: .35rem; }
 .sim-h348 { left: 76.63%; top: 33.26%; width: 19.11%; height: 3.03%; }
 .sim-h349 { left: 27.13%; top: 31.85%; width: 69.21%; height: 5.74%; }
 .sim-h350 { left: 82.22%; top: 50.6%; width: 13.62%; height: 3.03%; }
-.sim-h351 { left: 33.74%; top: 53.63%; width: 16.77%; height: 3.03%; }
-.sim-h352 { left: 82.22%; top: 51.25%; width: 13.62%; height: 3.03%; }
-.sim-h353 { left: 33.74%; top: 39.98%; width: 9.25%; height: 3.03%; }
-.sim-h354 { left: 82.32%; top: 27.41%; width: 13.41%; height: 3.03%; }
-.sim-h355 { left: 27.13%; top: 26.11%; width: 69.21%; height: 5.74%; }
-.sim-h356 { left: 27.13%; top: 47.24%; width: 69.21%; height: 5.74%; }
-.sim-h357 { left: 27.13%; top: 53.09%; width: 69.21%; height: 5.74%; }
-.sim-h358 { left: 82.22%; top: 60.24%; width: 13.62%; height: 3.03%; }
-.sim-h359 { left: 27.13%; top: 58.83%; width: 69.21%; height: 5.74%; }
-.sim-h360 { left: 33.74%; top: 34.13%; width: 18.19%; height: 3.03%; }
-.sim-h361 { left: 52.74%; top: 34.13%; width: 15.55%; height: 3.03%; }
-.sim-h362 { left: 27.13%; top: 29.9%; width: 69.21%; height: 5.74%; }
-.sim-h363 { left: 75.81%; top: 51.57%; width: 15.75%; height: 3.03%; }
-.sim-h364 { left: 76.63%; top: 39.98%; width: 19.11%; height: 3.03%; }
-.sim-h365 { left: 82.32%; top: 45.72%; width: 13.41%; height: 3.03%; }
-.sim-h366 { left: 82.32%; top: 55.36%; width: 13.41%; height: 3.03%; }
-.sim-h367 { left: 27.13%; top: 53.95%; width: 69.21%; height: 5.74%; }
-.sim-h368 { left: 75.81%; top: 61.11%; width: 15.75%; height: 3.03%; }
-.sim-h369 { left: 92.38%; top: 60.78%; width: 3.46%; height: 3.68%; }
-.sim-h370 { left: 27.13%; top: 59.8%; width: 69.21%; height: 5.74%; }
-.sim-h371 { left: 33.74%; top: 40.85%; width: 18.19%; height: 3.03%; }
-.sim-h372 { left: 52.74%; top: 40.85%; width: 15.55%; height: 3.03%; }
-.sim-h373 { left: 92.38%; top: 58.4%; width: 3.46%; height: 3.68%; }
-.sim-h374 { left: 81.3%; top: 49.4%; width: 14.43%; height: 3.03%; }
-.sim-h375 { left: 27.13%; top: 48%; width: 69.21%; height: 5.74%; }
-.sim-h376 { left: 78.46%; top: 55.15%; width: 17.28%; height: 3.03%; }
-.sim-h377 { left: 27.13%; top: 53.85%; width: 69.21%; height: 5.74%; }
-.sim-h378 { left: 27.13%; top: 59.59%; width: 69.21%; height: 5.74%; }
-.sim-h379 { left: 80.08%; top: 29.9%; width: 11.48%; height: 3.03%; }
-.sim-h380 { left: 92.38%; top: 29.58%; width: 3.46%; height: 3.68%; }
-.sim-h381 { left: 27.13%; top: 28.49%; width: 69.21%; height: 5.74%; }
-.sim-h382 { left: 80.08%; top: 33.59%; width: 15.75%; height: 3.03%; }
-.sim-h383 { left: 84.45%; top: 39.33%; width: 11.28%; height: 3.03%; }
-.sim-h384 { left: 89.53%; top: 45.18%; width: 6.3%; height: 3.03%; }
-.sim-h385 { left: 84.76%; top: 50.92%; width: 6.71%; height: 3.03%; }
-.sim-h386 { left: 88.52%; top: 56.66%; width: 7.32%; height: 3.03%; }
-.sim-h387 { left: 92.38%; top: 35.43%; width: 3.46%; height: 3.68%; }
-.sim-h388 { left: 92.38%; top: 41.17%; width: 3.46%; height: 3.68%; }
-.sim-h389 { left: 76.73%; top: 47.24%; width: 14.74%; height: 3.03%; }
-.sim-h390 { left: 92.38%; top: 46.91%; width: 3.46%; height: 3.68%; }
-.sim-h391 { left: 92.38%; top: 23.84%; width: 3.46%; height: 3.68%; }
-.sim-h392 { left: 88.11%; top: 34.02%; width: 7.72%; height: 3.03%; }
-.sim-h393 { left: 27.13%; top: 32.61%; width: 69.21%; height: 5.74%; }
-.sim-h394 { left: 83.64%; top: 39.76%; width: 12.2%; height: 3.03%; }
-.sim-h395 { left: 27.13%; top: 38.46%; width: 69.21%; height: 5.74%; }
-.sim-h396 { left: 87.09%; top: 45.61%; width: 8.74%; height: 3.03%; }
-.sim-h397 { left: 27.13%; top: 44.2%; width: 69.21%; height: 5.74%; }
-.sim-h398 { left: 92.38%; top: 51.03%; width: 3.46%; height: 3.68%; }
-.sim-h399 { left: 27.13%; top: 50.05%; width: 69.21%; height: 5.74%; }
-.sim-h400 { left: 81.3%; top: 57.2%; width: 14.43%; height: 3.03%; }
-.sim-h401 { left: 27.13%; top: 55.8%; width: 69.21%; height: 5.74%; }
-.sim-h402 { left: 78.46%; top: 62.95%; width: 17.28%; height: 3.03%; }
-.sim-h403 { left: 27.13%; top: 61.54%; width: 69.21%; height: 5.74%; }
-.sim-h404 { left: 27.13%; top: 67.39%; width: 69.21%; height: 5.74%; }
-.sim-h405 { left: 27.13%; top: 52.11%; width: 69.21%; height: 5.74%; }
-.sim-h406 { left: 81.3%; top: 59.26%; width: 14.43%; height: 3.03%; }
-.sim-h407 { left: 27.13%; top: 57.96%; width: 69.21%; height: 5.74%; }
-.sim-h408 { left: 78.46%; top: 65.11%; width: 17.28%; height: 3.03%; }
-.sim-h409 { left: 27.13%; top: 63.71%; width: 69.21%; height: 5.74%; }
-.sim-h410 { left: 27.13%; top: 69.56%; width: 69.21%; height: 5.74%; }
-.sim-h411 { left: 27.13%; top: 71.61%; width: 69.21%; height: 5.2%; }
-.sim-h412 { left: 82.22%; top: 55.04%; width: 13.62%; height: 3.03%; }
+.sim-h351 { left: 27.13%; top: 61.54%; width: 69.21%; height: 5.74%; }
+.sim-h352 { left: 33.74%; top: 53.63%; width: 16.77%; height: 3.03%; }
+.sim-h353 { left: 82.22%; top: 51.25%; width: 13.62%; height: 3.03%; }
+.sim-h354 { left: 92.38%; top: 56.66%; width: 3.46%; height: 3.68%; }
+.sim-h355 { left: 33.74%; top: 39.98%; width: 9.25%; height: 3.03%; }
+.sim-h356 { left: 82.32%; top: 27.41%; width: 13.41%; height: 3.03%; }
+.sim-h357 { left: 27.13%; top: 26.11%; width: 69.21%; height: 5.74%; }
+.sim-h358 { left: 27.13%; top: 47.24%; width: 69.21%; height: 5.74%; }
+.sim-h359 { left: 27.13%; top: 53.09%; width: 69.21%; height: 5.74%; }
+.sim-h360 { left: 82.22%; top: 60.24%; width: 13.62%; height: 3.03%; }
+.sim-h361 { left: 27.13%; top: 58.83%; width: 69.21%; height: 5.74%; }
+.sim-h362 { left: 92.38%; top: 65.66%; width: 3.46%; height: 3.68%; }
+.sim-h363 { left: 27.13%; top: 64.68%; width: 69.21%; height: 5.74%; }
+.sim-h364 { left: 33.74%; top: 34.13%; width: 18.19%; height: 3.03%; }
+.sim-h365 { left: 52.74%; top: 34.13%; width: 15.55%; height: 3.03%; }
+.sim-h366 { left: 27.13%; top: 29.9%; width: 69.21%; height: 5.74%; }
+.sim-h367 { left: 75.81%; top: 51.57%; width: 15.75%; height: 3.03%; }
+.sim-h368 { left: 76.63%; top: 39.98%; width: 19.11%; height: 3.03%; }
+.sim-h369 { left: 82.32%; top: 45.72%; width: 13.41%; height: 3.03%; }
+.sim-h370 { left: 82.32%; top: 55.36%; width: 13.41%; height: 3.03%; }
+.sim-h371 { left: 27.13%; top: 53.95%; width: 69.21%; height: 5.74%; }
+.sim-h372 { left: 75.81%; top: 61.11%; width: 15.75%; height: 3.03%; }
+.sim-h373 { left: 92.38%; top: 60.78%; width: 3.46%; height: 3.68%; }
+.sim-h374 { left: 27.13%; top: 59.8%; width: 69.21%; height: 5.74%; }
+.sim-h375 { left: 33.74%; top: 40.85%; width: 18.19%; height: 3.03%; }
+.sim-h376 { left: 52.74%; top: 40.85%; width: 15.55%; height: 3.03%; }
+.sim-h377 { left: 92.38%; top: 58.4%; width: 3.46%; height: 3.68%; }
+.sim-h378 { left: 81.3%; top: 49.4%; width: 14.43%; height: 3.03%; }
+.sim-h379 { left: 27.13%; top: 48%; width: 69.21%; height: 5.74%; }
+.sim-h380 { left: 78.46%; top: 55.15%; width: 17.28%; height: 3.03%; }
+.sim-h381 { left: 27.13%; top: 53.85%; width: 69.21%; height: 5.74%; }
+.sim-h382 { left: 27.13%; top: 59.59%; width: 69.21%; height: 5.74%; }
+.sim-h383 { left: 80.08%; top: 29.9%; width: 11.48%; height: 3.03%; }
+.sim-h384 { left: 92.38%; top: 29.58%; width: 3.46%; height: 3.68%; }
+.sim-h385 { left: 27.13%; top: 28.49%; width: 69.21%; height: 5.74%; }
+.sim-h386 { left: 80.08%; top: 33.59%; width: 15.75%; height: 3.03%; }
+.sim-h387 { left: 84.45%; top: 39.33%; width: 11.28%; height: 3.03%; }
+.sim-h388 { left: 89.53%; top: 45.18%; width: 6.3%; height: 3.03%; }
+.sim-h389 { left: 84.76%; top: 50.92%; width: 6.71%; height: 3.03%; }
+.sim-h390 { left: 88.52%; top: 56.66%; width: 7.32%; height: 3.03%; }
+.sim-h391 { left: 92.38%; top: 35.43%; width: 3.46%; height: 3.68%; }
+.sim-h392 { left: 92.38%; top: 41.17%; width: 3.46%; height: 3.68%; }
+.sim-h393 { left: 76.73%; top: 47.24%; width: 14.74%; height: 3.03%; }
+.sim-h394 { left: 92.38%; top: 46.91%; width: 3.46%; height: 3.68%; }
+.sim-h395 { left: 92.38%; top: 23.84%; width: 3.46%; height: 3.68%; }
+.sim-h396 { left: 88.11%; top: 34.02%; width: 7.72%; height: 3.03%; }
+.sim-h397 { left: 27.13%; top: 32.61%; width: 69.21%; height: 5.74%; }
+.sim-h398 { left: 83.64%; top: 39.76%; width: 12.2%; height: 3.03%; }
+.sim-h399 { left: 27.13%; top: 38.46%; width: 69.21%; height: 5.74%; }
+.sim-h400 { left: 87.09%; top: 45.61%; width: 8.74%; height: 3.03%; }
+.sim-h401 { left: 27.13%; top: 44.2%; width: 69.21%; height: 5.74%; }
+.sim-h402 { left: 92.38%; top: 51.03%; width: 3.46%; height: 3.68%; }
+.sim-h403 { left: 27.13%; top: 50.05%; width: 69.21%; height: 5.74%; }
+.sim-h404 { left: 81.3%; top: 57.2%; width: 14.43%; height: 3.03%; }
+.sim-h405 { left: 27.13%; top: 55.8%; width: 69.21%; height: 5.74%; }
+.sim-h406 { left: 78.46%; top: 62.95%; width: 17.28%; height: 3.03%; }
+.sim-h407 { left: 27.13%; top: 67.39%; width: 69.21%; height: 5.74%; }
+.sim-h408 { left: 27.13%; top: 52.11%; width: 69.21%; height: 5.74%; }
+.sim-h409 { left: 81.3%; top: 59.26%; width: 14.43%; height: 3.03%; }
+.sim-h410 { left: 27.13%; top: 57.96%; width: 69.21%; height: 5.74%; }
+.sim-h411 { left: 78.46%; top: 65.11%; width: 17.28%; height: 3.03%; }
+.sim-h412 { left: 27.13%; top: 63.71%; width: 69.21%; height: 5.74%; }
+.sim-h413 { left: 27.13%; top: 69.56%; width: 69.21%; height: 5.74%; }
+.sim-h414 { left: 27.13%; top: 71.61%; width: 69.21%; height: 5.2%; }
+.sim-h415 { left: 82.22%; top: 55.04%; width: 13.62%; height: 3.03%; }
+.sim-h416 { left: 92.38%; top: 60.56%; width: 3.46%; height: 3.68%; }
 /* sim:end */
 
 /* Another computer? Mac, Linux and Windows by hand as tabs, with no script: a tab is a link to its panel, and the

@@ -104,6 +104,7 @@
   <input class="sim-radio" type="radio" name="sim" id="sim-o_level_hold" aria-label="Keep the quest window open, opened, on Leveling helpers">
   <input class="sim-radio" type="radio" name="sim" id="sim-o_level_mail" aria-label="Send mats to my alts, opened, on Leveling helpers">
   <input class="sim-radio" type="radio" name="sim" id="sim-o_level_space" aria-label="Space uses quest items, opened, on Leveling helpers">
+  <input class="sim-radio" type="radio" name="sim" id="sim-o_play_alts" aria-label="Count my alts as me, opened, on Play together">
   <input class="sim-radio" type="radio" name="sim" id="sim-o_play_call" aria-label="Call a group, opened, on Play together">
   <input class="sim-radio" type="radio" name="sim" id="sim-o_play_enchant" aria-label="Ask a guild enchanter, opened, on Play together">
   <input class="sim-radio" type="radio" name="sim" id="sim-o_play_meet" aria-label="Meet point, opened, on Play together">
@@ -135,6 +136,7 @@
   <input class="sim-radio" type="radio" name="sim" id="sim-t_level_hold" aria-label="Keep the quest window open: its tick box, on Leveling helpers">
   <input class="sim-radio" type="radio" name="sim" id="sim-t_level_mail" aria-label="Send mats to my alts: its tick box, on Leveling helpers">
   <input class="sim-radio" type="radio" name="sim" id="sim-t_level_space" aria-label="Space uses quest items: its tick box, on Leveling helpers">
+  <input class="sim-radio" type="radio" name="sim" id="sim-t_play_alts" aria-label="Count my alts as me: its tick box, on Play together">
   <input class="sim-radio" type="radio" name="sim" id="sim-t_start_gear" aria-label="Wear clear gear upgrades: its tick box, on Start here">
   <input class="sim-radio" type="radio" name="sim" id="sim-u_addons_kit_Fix_my_kit" aria-label="Fix my kit, clicked, on Your addons">
   <input class="sim-radio" type="radio" name="sim" id="sim-u_addons_kit_Optional_extras" aria-label="Optional extras, clicked, on Your addons">
@@ -200,7 +202,7 @@
       <label class="sim-hot sim-h21" for="sim-b_addons_layout" aria-hidden="true"></label>
       <label class="sim-hot sim-h27" for="sim-t_addons_share" aria-hidden="true"></label>
       <p class="sr">
-        UW Guild · Your addons · Start here · Addon kit · Ready · Play together · Check my kit · The few addons the guild plays with. · Leveling helpers · Kit OK (v2026.11.23.0008-157cd9e). No error catcher: install BugSack (it brings BugGrabber) so /uw kit can count errors. Whole kit: /uw kit list. Optional extras by goal: /uw kit extras. Something broken? /uw kit report · Guild · Raids · Guild layout · Use it · The officers&#x27; raid frames, bars and meter. · Class macros · Show mine · Tested macros for your class, in one click. · Something broken? · Report · Report a problem, or test UW_Guild. · Share addon counts · Feature use, errors and setup, as totals with no names. · Fishing sound · Hear the splash: music off, effects up. · Outline and compass · Walkable outline · The ground you can walk on, and a compass of your quests. · All switches · Open settings · All the switches, in the game&#x27;s Settings. · 9 guildmates online · UW Kit OK (v2026.11.23.0008-157cd9e). · No error catcher: install BugSack (it brings BugGrabber) so /uw kit can count errors. · Whole kit: /uw kit list. Optional extras by goal: /uw kit extras. Something broken? /uw kit report
+        UW Guild · Your addons · Start here · Addon kit · Ready · Play together · Check my kit · The few addons the guild plays with. · Leveling helpers · Kit OK (v2026.11.23.0222-b56eb30). No error catcher: install BugSack (it brings BugGrabber) so /uw kit can count errors. Whole kit: /uw kit list. Optional extras by goal: /uw kit extras. Something broken? /uw kit report · Guild · Raids · Guild layout · Use it · The officers&#x27; raid frames, bars and meter. · Class macros · Show mine · Tested macros for your class, in one click. · Something broken? · Report · Report a problem, or test UW_Guild. · Share addon counts · Feature use, errors and setup, as totals with no names. · Fishing sound · Hear the splash: music off, effects up. · Outline and compass · Walkable outline · The ground you can walk on, and a compass of your quests. · All switches · Open settings · All the switches, in the game&#x27;s Settings. · 9 guildmates online · UW Kit OK (v2026.11.23.0222-b56eb30). · No error catcher: install BugSack (it brings BugGrabber) so /uw kit can count errors. · Whole kit: /uw kit list. Optional extras by goal: /uw kit extras. Something broken? /uw kit report
       </p>
     </div>
     <div class="sim-st sim-st-b_addons_layout">
@@ -240,7 +242,7 @@
       <img src="img/sim/b_addons_report.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
       <label class="sim-hot sim-h45" for="sim-p_addons" aria-hidden="true"></label>
       <p class="sr">
-        UW addon kit report · Press Ctrl+C, then paste it into /ask-officers in Discord. · UW kit report v2026.11.23.0008-157cd9e, client ? | missing: none | raid: DBM-Core or BigWigs | duplicates: none | kept as theirs: none | errors: no BugGrabber | blocked: none | no Forever file: none | needs another addon: none | UW_Guild errors: none | client lacks: nothing · UW Report ready: press Ctrl+C, then paste it into /ask-officers in Discord. Not on Discord? Whisper an officer: /uw audit shows them your kit.
+        UW addon kit report · Press Ctrl+C, then paste it into /ask-officers in Discord. · UW kit report v2026.11.23.0222-b56eb30, client ? | missing: none | raid: DBM-Core or BigWigs | duplicates: none | kept as theirs: none | errors: no BugGrabber | blocked: none | no Forever file: none | needs another addon: none | UW_Guild errors: none | client lacks: nothing · UW Report ready: press Ctrl+C, then paste it into /ask-officers in Discord. Not on Discord? Whisper an officer: /uw audit shows them your kit.
       </p>
     </div>
     <div class="sim-st sim-st-b_addons_view">
@@ -603,6 +605,7 @@
       <label class="sim-hot sim-h13" for="sim-o_play_meet" aria-hidden="true"></label>
       <label class="sim-hot sim-h15" for="sim-o_play_thanks" aria-hidden="true"></label>
       <label class="sim-hot sim-h17" for="sim-o_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h43" for="sim-o_play_alts" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
@@ -613,8 +616,9 @@
       <label class="sim-hot sim-h131" for="sim-b_play_prep" aria-hidden="true"></label>
       <label class="sim-hot sim-h132" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h130" for="sim-b_play_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h122" for="sim-t_play_alts" aria-hidden="true"></label>
       <p class="sr">
-        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Meet point · Raids · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · No guild enchanter knows an enchant for your gear yet. · 9 guildmates online · UW No guild enchanter knows an enchant for your gear yet.
+        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Meet point · Raids · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · No guild enchanter knows an enchant for your gear yet. · Count my alts as me · Your characters count as one person. · 9 guildmates online · UW No guild enchanter knows an enchant for your gear yet.
       </p>
     </div>
     <div class="sim-st sim-st-b_play_near">
@@ -625,6 +629,7 @@
       <label class="sim-hot sim-h137" for="sim-o_play_meet" aria-hidden="true"></label>
       <label class="sim-hot sim-h138" for="sim-o_play_thanks" aria-hidden="true"></label>
       <label class="sim-hot sim-h140" for="sim-o_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h142" for="sim-o_play_alts" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
@@ -634,8 +639,9 @@
       <label class="sim-hot sim-h135" for="sim-b_play_prep" aria-hidden="true"></label>
       <label class="sim-hot sim-h139" for="sim-b_play_enchant" aria-hidden="true"></label>
       <label class="sim-hot sim-h133" for="sim-b_play_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h141" for="sim-t_play_alts" aria-hidden="true"></label>
       <p class="sr">
-        UW Guild · Play together · Start here · Guildmates near my level · Who&#x27;s on near your level, free ones first. · Leveling helpers · Nell Brook · 22 · The Barrens · Guild · Lio Pell · 23 · Wailing Caverns · busy · Your addons · Call a group · Calls a group for your level in guild chat. · Raids · Dungeon quests · Blackfathom Deeps · Leads you to a dungeon&#x27;s quests and its door. · Meet point · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · 9 guildmates online · UW 2 guildmates near level 24. Click a name in chat to whisper or invite: · 22 [Nell Brook] The Barrens · 23 [Lio Pell] Wailing Caverns (busy)
+        UW Guild · Play together · Start here · Guildmates near my level · Who&#x27;s on near your level, free ones first. · Leveling helpers · Nell Brook · 22 · The Barrens · Guild · Lio Pell · 23 · Wailing Caverns · busy · Your addons · Call a group · Calls a group for your level in guild chat. · Raids · Dungeon quests · Blackfathom Deeps · Leads you to a dungeon&#x27;s quests and its door. · Meet point · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · Count my alts as me · Your characters count as one person. · 9 guildmates online · UW 2 guildmates near level 24. Click a name in chat to whisper or invite: · 22 [Nell Brook] The Barrens · 23 [Lio Pell] Wailing Caverns (busy)
       </p>
     </div>
     <div class="sim-st sim-st-b_play_prep">
@@ -646,6 +652,7 @@
       <label class="sim-hot sim-h79" for="sim-o_play_meet" aria-hidden="true"></label>
       <label class="sim-hot sim-h81" for="sim-o_play_thanks" aria-hidden="true"></label>
       <label class="sim-hot sim-h83" for="sim-o_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h19" for="sim-o_play_alts" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
@@ -654,23 +661,24 @@
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
       <label class="sim-hot sim-h129" for="sim-b_play_near" aria-hidden="true"></label>
       <label class="sim-hot sim-h131" for="sim-p_play" aria-hidden="true"></label>
-      <label class="sim-hot sim-h141" for="sim-b_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h143" for="sim-b_play_enchant" aria-hidden="true"></label>
       <label class="sim-hot sim-h130" for="sim-b_play_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h85" for="sim-t_play_alts" aria-hidden="true"></label>
       <p class="sr">
-        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it. · Raids · Meet point · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · 9 guildmates online · UW Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it.
+        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it. · Raids · Meet point · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · Count my alts as me · Your characters count as one person. · 9 guildmates online · UW Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it.
       </p>
     </div>
     <div class="sim-st sim-st-b_raids_plan">
       <img src="img/sim/b_raids_plan.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
       <label class="sim-hot sim-h7" for="sim-o_raids_plan" aria-hidden="true"></label>
-      <label class="sim-hot sim-h143" for="sim-o_raids_raidrec" aria-hidden="true"></label>
+      <label class="sim-hot sim-h145" for="sim-o_raids_raidrec" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
       <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h142" for="sim-p_raids" aria-hidden="true"></label>
+      <label class="sim-hot sim-h144" for="sim-p_raids" aria-hidden="true"></label>
       <p class="sr">
         UW Guild · Raids · Start here · Raid plan · Play together · Show my plan · Your own job in each step of the raid plan. · Leveling helpers · No plan yet. Your raid leader sends one before the pull, from the boss&#x27;s guide in Discord. · Guild · Raid records · Your addons · Kills and loot, shared live. Want to raid? Tell any officer. · 9 guildmates online · UW No plan yet. Your raid leader sends one before the pull, from the boss&#x27;s guide in Discord.
       </p>
@@ -685,19 +693,19 @@
     <div class="sim-st sim-st-b_start_gear">
       <img src="img/sim/b_start_gear.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
       <label class="sim-hot sim-h7" for="sim-o_start_near" aria-hidden="true"></label>
-      <label class="sim-hot sim-h145" for="sim-o_start_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h147" for="sim-o_start_call" aria-hidden="true"></label>
-      <label class="sim-hot sim-h150" for="sim-o_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h147" for="sim-o_start_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h149" for="sim-o_start_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h152" for="sim-o_start_gear" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
       <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h144" for="sim-b_start_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h148" for="sim-p_start" aria-hidden="true"></label>
-      <label class="sim-hot sim-h146" for="sim-b_start_call" aria-hidden="true"></label>
-      <label class="sim-hot sim-h149" for="sim-t_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h146" for="sim-b_start_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h150" for="sim-p_start" aria-hidden="true"></label>
+      <label class="sim-hot sim-h148" for="sim-b_start_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h151" for="sim-t_start_gear" aria-hidden="true"></label>
       <p class="sr">
         UW Guild · Start here · Picked for you now. Level 24, member. · Guildmates near my level · Play together · Who&#x27;s on near your level, free ones first. · Leveling helpers · Nell Brook · 22 · The Barrens · Guild · Lio Pell · 23 · Wailing Caverns · busy · Your addons · Find guildmates · Raids · Dungeon quests · Blackfathom Deeps · Leads you to a dungeon&#x27;s quests and its door. · Call a group · Calls a group for your level in guild chat. · Wear clear gear upgrades · Undo last swap · Puts on clear upgrades; asks on close calls. · Nothing to undo in the last 10 minutes. · 9 guildmates online · UW Nothing to undo in the last 10 minutes.
       </p>
@@ -705,19 +713,19 @@
     <div class="sim-st sim-st-b_start_prep">
       <img src="img/sim/b_start_prep.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
       <label class="sim-hot sim-h7" for="sim-o_start_near" aria-hidden="true"></label>
-      <label class="sim-hot sim-h145" for="sim-o_start_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h152" for="sim-o_start_call" aria-hidden="true"></label>
-      <label class="sim-hot sim-h155" for="sim-o_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h147" for="sim-o_start_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h154" for="sim-o_start_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h157" for="sim-o_start_gear" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
       <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h144" for="sim-p_start" aria-hidden="true"></label>
-      <label class="sim-hot sim-h153" for="sim-b_start_gear" aria-hidden="true"></label>
-      <label class="sim-hot sim-h151" for="sim-b_start_call" aria-hidden="true"></label>
-      <label class="sim-hot sim-h154" for="sim-t_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h146" for="sim-p_start" aria-hidden="true"></label>
+      <label class="sim-hot sim-h155" for="sim-b_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h153" for="sim-b_start_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h156" for="sim-t_start_gear" aria-hidden="true"></label>
       <p class="sr">
         UW Guild · Start here · Picked for you now. Level 24, member. · Guildmates near my level · Play together · Who&#x27;s on near your level, free ones first. · Leveling helpers · Nell Brook · 22 · The Barrens · Guild · Lio Pell · 23 · Wailing Caverns · busy · Your addons · Find guildmates · Raids · Dungeon quests · Blackfathom Deeps · Leads you to a dungeon&#x27;s quests and its door. · Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it. · Call a group · Calls a group for your level in guild chat. · Wear clear gear upgrades · Undo last swap · Puts on clear upgrades; asks on close calls. · 9 guildmates online · UW Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it.
       </p>
@@ -730,15 +738,15 @@
       <label class="sim-hot sim-h13" for="sim-o_addons_report" aria-hidden="true"></label>
       <label class="sim-hot sim-h15" for="sim-o_addons_share" aria-hidden="true"></label>
       <label class="sim-hot sim-h17" for="sim-p_addons" aria-hidden="true"></label>
-      <label class="sim-hot sim-h157" for="sim-o_addons_view" aria-hidden="true"></label>
-      <label class="sim-hot sim-h158" for="sim-o_addons_settings" aria-hidden="true"></label>
+      <label class="sim-hot sim-h159" for="sim-o_addons_view" aria-hidden="true"></label>
+      <label class="sim-hot sim-h160" for="sim-o_addons_settings" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
       <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h156" for="sim-b_addons_view" aria-hidden="true"></label>
+      <label class="sim-hot sim-h158" for="sim-b_addons_view" aria-hidden="true"></label>
       <label class="sim-hot sim-h16" for="sim-b_addons_fish" aria-hidden="true"></label>
       <label class="sim-hot sim-h6" for="sim-b_addons_kit" aria-hidden="true"></label>
       <label class="sim-hot sim-h10" for="sim-b_addons_macros" aria-hidden="true"></label>
@@ -755,7 +763,7 @@
       <label class="sim-hot sim-h137" for="sim-o_addons_layout" aria-hidden="true"></label>
       <label class="sim-hot sim-h138" for="sim-o_addons_macros" aria-hidden="true"></label>
       <label class="sim-hot sim-h140" for="sim-o_addons_report" aria-hidden="true"></label>
-      <label class="sim-hot sim-h163" for="sim-o_addons_share" aria-hidden="true"></label>
+      <label class="sim-hot sim-h142" for="sim-o_addons_share" aria-hidden="true"></label>
       <label class="sim-hot sim-h165" for="sim-o_addons_fish" aria-hidden="true"></label>
       <label class="sim-hot sim-h167" for="sim-o_addons_view" aria-hidden="true"></label>
       <label class="sim-hot sim-h168" for="sim-o_addons_settings" aria-hidden="true"></label>
@@ -769,13 +777,13 @@
       <label class="sim-hot sim-h170" for="sim-u_addons_kit_Optional_extras" aria-hidden="true"></label>
       <label class="sim-hot sim-h164" for="sim-b_addons_fish" aria-hidden="true"></label>
       <label class="sim-hot sim-h6" for="sim-b_addons_kit" aria-hidden="true"></label>
-      <label class="sim-hot sim-h160" for="sim-b_addons_macros" aria-hidden="true"></label>
+      <label class="sim-hot sim-h162" for="sim-b_addons_macros" aria-hidden="true"></label>
       <label class="sim-hot sim-h169" for="sim-u_addons_kit_Fix_my_kit" aria-hidden="true"></label>
-      <label class="sim-hot sim-h161" for="sim-b_addons_report" aria-hidden="true"></label>
-      <label class="sim-hot sim-h159" for="sim-b_addons_layout" aria-hidden="true"></label>
-      <label class="sim-hot sim-h162" for="sim-t_addons_share" aria-hidden="true"></label>
+      <label class="sim-hot sim-h163" for="sim-b_addons_report" aria-hidden="true"></label>
+      <label class="sim-hot sim-h161" for="sim-b_addons_layout" aria-hidden="true"></label>
+      <label class="sim-hot sim-h141" for="sim-t_addons_share" aria-hidden="true"></label>
       <p class="sr">
-        UW Guild · Your addons · Start here · Addon kit · Ready · Play together · Check my kit · The few addons the guild plays with. · Leveling helpers · The few addons the guild plays with. Shows what&#x27;s missing or doubled up; Fix turns duplicates off and kit addons on. · Guild · Fix my kit · Optional extras · Related: · Guild layout · Something broken? · Kit OK (v2026.11.23.0008-157cd9e). No error catcher: install BugSack (it brings BugGrabber) so /uw kit can count errors. 1 more in chat · Raids · Use it · The officers&#x27; raid frames, bars and meter. · Class macros · Show mine · Tested macros for your class, in one click. · Report · Report a problem, or test UW_Guild. · Share addon counts · Feature use, errors and setup, as totals with no names. · Fishing sound · Hear the splash: music off, effects up. · Outline and compass · Walkable outline · The ground you can walk on, and a compass of your quests. · All switches · Open settings · All the switches, in the game&#x27;s Settings. · 9 guildmates online
+        UW Guild · Your addons · Start here · Addon kit · Ready · Play together · Check my kit · The few addons the guild plays with. · Leveling helpers · The few addons the guild plays with. Shows what&#x27;s missing or doubled up; Fix turns duplicates off and kit addons on. · Guild · Fix my kit · Optional extras · Related: · Guild layout · Something broken? · Kit OK (v2026.11.23.0222-b56eb30). No error catcher: install BugSack (it brings BugGrabber) so /uw kit can count errors. 1 more in chat · Raids · Use it · The officers&#x27; raid frames, bars and meter. · Class macros · Show mine · Tested macros for your class, in one click. · Report · Report a problem, or test UW_Guild. · Share addon counts · Feature use, errors and setup, as totals with no names. · Fishing sound · Hear the splash: music off, effects up. · Outline and compass · Walkable outline · The ground you can walk on, and a compass of your quests. · All switches · Open settings · All the switches, in the game&#x27;s Settings. · 9 guildmates online
       </p>
     </div>
     <div class="sim-st sim-st-o_addons_layout">
@@ -1084,8 +1092,8 @@
       <label class="sim-hot sim-h13" for="sim-o_guild_loot" aria-hidden="true"></label>
       <label class="sim-hot sim-h15" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h268" for="sim-o_guild_likes" aria-hidden="true"></label>
-      <label class="sim-hot sim-h157" for="sim-o_guild_rate" aria-hidden="true"></label>
-      <label class="sim-hot sim-h158" for="sim-o_guild_contact" aria-hidden="true"></label>
+      <label class="sim-hot sim-h159" for="sim-o_guild_rate" aria-hidden="true"></label>
+      <label class="sim-hot sim-h160" for="sim-o_guild_contact" aria-hidden="true"></label>
       <label class="sim-hot sim-h273" for="sim-o_guild_discord" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
@@ -1150,8 +1158,8 @@
       <label class="sim-hot sim-h13" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h280" for="sim-o_guild_jobs" aria-hidden="true"></label>
       <label class="sim-hot sim-h268" for="sim-o_guild_likes" aria-hidden="true"></label>
-      <label class="sim-hot sim-h157" for="sim-o_guild_rate" aria-hidden="true"></label>
-      <label class="sim-hot sim-h158" for="sim-o_guild_contact" aria-hidden="true"></label>
+      <label class="sim-hot sim-h159" for="sim-o_guild_rate" aria-hidden="true"></label>
+      <label class="sim-hot sim-h160" for="sim-o_guild_contact" aria-hidden="true"></label>
       <label class="sim-hot sim-h273" for="sim-o_guild_discord" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
@@ -1395,7 +1403,7 @@
       <label class="sim-hot sim-h331" for="sim-b_level_chain" aria-hidden="true"></label>
       <label class="sim-hot sim-h312" for="sim-t_level_gear" aria-hidden="true"></label>
       <label class="sim-hot sim-h324" for="sim-t_level_bars" aria-hidden="true"></label>
-      <label class="sim-hot sim-h149" for="sim-t_level_space" aria-hidden="true"></label>
+      <label class="sim-hot sim-h151" for="sim-t_level_space" aria-hidden="true"></label>
       <label class="sim-hot sim-h327" for="sim-t_level_bags" aria-hidden="true"></label>
       <label class="sim-hot sim-h329" for="sim-t_level_guide" aria-hidden="true"></label>
       <label class="sim-hot sim-h332" for="sim-t_level_chain" aria-hidden="true"></label>
@@ -1538,6 +1546,30 @@
         UW Guild · Leveling helpers · Start here · Wear clear gear upgrades · Play together · Undo last swap · Puts on clear upgrades; asks on close calls. · New spells onto my bars · New spells and ranks go onto your bars. · Guild · Space uses quest items · Your addons · Space uses the quest item your target needs. · When your target is part of a quest you carry an item for, and it&#x27;s in range, Space uses the item. Shift+Space uses it in fights too. · Raids · Off: Space only jumps. · Related: · Quest guide marker · Quest chain tags · Space for quest items is off. /uw space on turns it back on. · Delete and Make room in bags · Delete drops your cheapest junk; Make room swaps it for loot. · A pin and marker at your quest&#x27;s next step. · List my chains · Shows each quest&#x27;s step in its chain (3/7). · Keep the quest window open · Waits a moment for the next quest after a turn-in. · Send mats to my alts · What would go · One click mails crafting mats to your alts. · Dungeon lines in chat · Dungeons as they open, and their quests in your group. · 9 guildmates online
       </p>
     </div>
+    <div class="sim-st sim-st-o_play_alts">
+      <img src="img/sim/o_play_alts.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
+      <label class="sim-hot sim-h7" for="sim-o_play_near" aria-hidden="true"></label>
+      <label class="sim-hot sim-h9" for="sim-o_play_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h11" for="sim-o_play_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h13" for="sim-o_play_meet" aria-hidden="true"></label>
+      <label class="sim-hot sim-h15" for="sim-o_play_thanks" aria-hidden="true"></label>
+      <label class="sim-hot sim-h17" for="sim-o_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h47" for="sim-p_play" aria-hidden="true"></label>
+      <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
+      <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
+      <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
+      <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
+      <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
+      <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
+      <label class="sim-hot sim-h129" for="sim-b_play_near" aria-hidden="true"></label>
+      <label class="sim-hot sim-h131" for="sim-b_play_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h132" for="sim-b_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h130" for="sim-b_play_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h58" for="sim-t_play_alts" aria-hidden="true"></label>
+      <p class="sr">
+        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Meet point · Raids · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · Count my alts as me · Your characters count as one person. · UW_Guild tells the guild bot which characters on this account are yours, so alts count as you. The list is never shown to anyone. · Off: your characters count as separate people. · Related: · Off: your characters count as separate people. /uw alts on turns it back on. · 9 guildmates online
+      </p>
+    </div>
     <div class="sim-st sim-st-o_play_call">
       <img src="img/sim/o_play_call.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
       <label class="sim-hot sim-h7" for="sim-o_play_near" aria-hidden="true"></label>
@@ -1546,6 +1578,7 @@
       <label class="sim-hot sim-h184" for="sim-o_play_meet" aria-hidden="true"></label>
       <label class="sim-hot sim-h186" for="sim-o_play_thanks" aria-hidden="true"></label>
       <label class="sim-hot sim-h188" for="sim-o_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h190" for="sim-o_play_alts" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
@@ -1556,8 +1589,9 @@
       <label class="sim-hot sim-h348" for="sim-b_play_prep" aria-hidden="true"></label>
       <label class="sim-hot sim-h350" for="sim-b_play_enchant" aria-hidden="true"></label>
       <label class="sim-hot sim-h130" for="sim-b_play_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h275" for="sim-t_play_alts" aria-hidden="true"></label>
       <p class="sr">
-        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Writes a line in guild chat for the dungeon at your level, then you invite whoever types inv. Anyone can also just ask in guild chat. · Your addons · Related: · Dungeon quests · Thank a guildmate · Raids · Blackfathom Deeps · Leads you to a dungeon&#x27;s quests and its door. · Meet point · Needs a group · Your group&#x27;s markers point at you to meet up. · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · 9 guildmates online
+        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Writes a line in guild chat for the dungeon at your level, then you invite whoever types inv. Anyone can also just ask in guild chat. · Your addons · Related: · Dungeon quests · Thank a guildmate · Raids · Blackfathom Deeps · Leads you to a dungeon&#x27;s quests and its door. · Meet point · Needs a group · Your group&#x27;s markers point at you to meet up. · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · Count my alts as me · Your characters count as one person. · 9 guildmates online
       </p>
     </div>
     <div class="sim-st sim-st-o_play_enchant">
@@ -1568,6 +1602,7 @@
       <label class="sim-hot sim-h13" for="sim-o_play_meet" aria-hidden="true"></label>
       <label class="sim-hot sim-h15" for="sim-o_play_thanks" aria-hidden="true"></label>
       <label class="sim-hot sim-h17" for="sim-p_play" aria-hidden="true"></label>
+      <label class="sim-hot sim-h351" for="sim-o_play_alts" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
@@ -1576,11 +1611,12 @@
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
       <label class="sim-hot sim-h129" for="sim-b_play_near" aria-hidden="true"></label>
       <label class="sim-hot sim-h131" for="sim-b_play_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h351" for="sim-u_play_enchant_Hide_the_button" aria-hidden="true"></label>
+      <label class="sim-hot sim-h352" for="sim-u_play_enchant_Hide_the_button" aria-hidden="true"></label>
       <label class="sim-hot sim-h132" for="sim-b_play_enchant" aria-hidden="true"></label>
       <label class="sim-hot sim-h130" for="sim-b_play_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h334" for="sim-t_play_alts" aria-hidden="true"></label>
       <p class="sr">
-        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Meet point · Raids · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · The icon under your wrist slot lists enchants online guildmates can make for your gear, best value for your level, gear and gold first. Click one to whisper them. A notice says when one is near you. · Hide the button · Related: · Crafting · No guild enchanter knows an enchant for your gear yet. · 9 guildmates online
+        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Meet point · Raids · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · The icon under your wrist slot lists enchants online guildmates can make for your gear, best value for your level, gear and gold first. Click one to whisper them. A notice says when one is near you. · Hide the button · Related: · Crafting · No guild enchanter knows an enchant for your gear yet. · Count my alts as me · Your characters count as one person. · 9 guildmates online
       </p>
     </div>
     <div class="sim-st sim-st-o_play_meet">
@@ -1591,6 +1627,7 @@
       <label class="sim-hot sim-h13" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h193" for="sim-o_play_thanks" aria-hidden="true"></label>
       <label class="sim-hot sim-h195" for="sim-o_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h197" for="sim-o_play_alts" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
@@ -1599,21 +1636,23 @@
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
       <label class="sim-hot sim-h129" for="sim-b_play_near" aria-hidden="true"></label>
       <label class="sim-hot sim-h131" for="sim-b_play_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h352" for="sim-b_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h353" for="sim-b_play_enchant" aria-hidden="true"></label>
       <label class="sim-hot sim-h130" for="sim-b_play_call" aria-hidden="true"></label>
-      <label class="sim-hot sim-h353" for="sim-u_play_meet_Clear_it" aria-hidden="true"></label>
+      <label class="sim-hot sim-h355" for="sim-u_play_meet_Clear_it" aria-hidden="true"></label>
+      <label class="sim-hot sim-h354" for="sim-t_play_alts" aria-hidden="true"></label>
       <p class="sr">
-        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Meet point · Raids · Needs a group · Your group&#x27;s markers point at you to meet up. · In a group, your spot becomes the group&#x27;s meet point: their markers point at you until you clear it. · Clear it · Related: · Quest guide marker · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · 9 guildmates online
+        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Meet point · Raids · Needs a group · Your group&#x27;s markers point at you to meet up. · In a group, your spot becomes the group&#x27;s meet point: their markers point at you until you clear it. · Clear it · Related: · Quest guide marker · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · Count my alts as me · Your characters count as one person. · 9 guildmates online
       </p>
     </div>
     <div class="sim-st sim-st-o_play_near">
       <img src="img/sim/o_play_near.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
       <label class="sim-hot sim-h7" for="sim-p_play" aria-hidden="true"></label>
-      <label class="sim-hot sim-h355" for="sim-o_play_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h357" for="sim-o_play_call" aria-hidden="true"></label>
       <label class="sim-hot sim-h349" for="sim-o_play_prep" aria-hidden="true"></label>
       <label class="sim-hot sim-h184" for="sim-o_play_meet" aria-hidden="true"></label>
       <label class="sim-hot sim-h186" for="sim-o_play_thanks" aria-hidden="true"></label>
       <label class="sim-hot sim-h188" for="sim-o_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h190" for="sim-o_play_alts" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
@@ -1623,9 +1662,10 @@
       <label class="sim-hot sim-h129" for="sim-b_play_near" aria-hidden="true"></label>
       <label class="sim-hot sim-h348" for="sim-b_play_prep" aria-hidden="true"></label>
       <label class="sim-hot sim-h350" for="sim-b_play_enchant" aria-hidden="true"></label>
-      <label class="sim-hot sim-h354" for="sim-b_play_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h356" for="sim-b_play_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h275" for="sim-t_play_alts" aria-hidden="true"></label>
       <p class="sr">
-        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Who&#x27;s online within a few levels of you, free ones first. Click a name in chat to whisper or invite. · Guild · Related: · Call a group · Dungeon quests · Meet point · Your addons · Calls a group for your level in guild chat. · Raids · Blackfathom Deeps · Leads you to a dungeon&#x27;s quests and its door. · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · 9 guildmates online
+        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Who&#x27;s online within a few levels of you, free ones first. Click a name in chat to whisper or invite. · Guild · Related: · Call a group · Dungeon quests · Meet point · Your addons · Calls a group for your level in guild chat. · Raids · Blackfathom Deeps · Leads you to a dungeon&#x27;s quests and its door. · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · Count my alts as me · Your characters count as one person. · 9 guildmates online
       </p>
     </div>
     <div class="sim-st sim-st-o_play_prep">
@@ -1633,9 +1673,10 @@
       <label class="sim-hot sim-h7" for="sim-o_play_near" aria-hidden="true"></label>
       <label class="sim-hot sim-h9" for="sim-o_play_call" aria-hidden="true"></label>
       <label class="sim-hot sim-h11" for="sim-p_play" aria-hidden="true"></label>
-      <label class="sim-hot sim-h356" for="sim-o_play_meet" aria-hidden="true"></label>
-      <label class="sim-hot sim-h357" for="sim-o_play_thanks" aria-hidden="true"></label>
-      <label class="sim-hot sim-h359" for="sim-o_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h358" for="sim-o_play_meet" aria-hidden="true"></label>
+      <label class="sim-hot sim-h359" for="sim-o_play_thanks" aria-hidden="true"></label>
+      <label class="sim-hot sim-h361" for="sim-o_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h363" for="sim-o_play_alts" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
@@ -1644,12 +1685,13 @@
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
       <label class="sim-hot sim-h129" for="sim-b_play_near" aria-hidden="true"></label>
       <label class="sim-hot sim-h131" for="sim-b_play_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h360" for="sim-u_play_prep_Shadowfang_Keep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h361" for="sim-u_play_prep_Razorfen_Kraul" aria-hidden="true"></label>
-      <label class="sim-hot sim-h358" for="sim-b_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h364" for="sim-u_play_prep_Shadowfang_Keep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h365" for="sim-u_play_prep_Razorfen_Kraul" aria-hidden="true"></label>
+      <label class="sim-hot sim-h360" for="sim-b_play_enchant" aria-hidden="true"></label>
       <label class="sim-hot sim-h130" for="sim-b_play_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h362" for="sim-t_play_alts" aria-hidden="true"></label>
       <p class="sr">
-        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Before a dungeon, an arrow walks you to each of its quests you can take now, then to the entrance. Pick one near your level. · Raids · Shadowfang Keep · Razorfen Kraul · Related: · Quest guide marker · Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it. · Meet point · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · 9 guildmates online
+        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Before a dungeon, an arrow walks you to each of its quests you can take now, then to the entrance. Pick one near your level. · Raids · Shadowfang Keep · Razorfen Kraul · Related: · Quest guide marker · Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it. · Meet point · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · Count my alts as me · Your characters count as one person. · 9 guildmates online
       </p>
     </div>
     <div class="sim-st sim-st-o_play_thanks">
@@ -1660,6 +1702,7 @@
       <label class="sim-hot sim-h13" for="sim-o_play_meet" aria-hidden="true"></label>
       <label class="sim-hot sim-h15" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h188" for="sim-o_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h190" for="sim-o_play_alts" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
@@ -1670,21 +1713,22 @@
       <label class="sim-hot sim-h131" for="sim-b_play_prep" aria-hidden="true"></label>
       <label class="sim-hot sim-h350" for="sim-b_play_enchant" aria-hidden="true"></label>
       <label class="sim-hot sim-h130" for="sim-b_play_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h275" for="sim-t_play_alts" aria-hidden="true"></label>
       <p class="sr">
-        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Meet point · Raids · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Thank someone you grouped with in the last 3 hours. It counts toward their Officer path. Once a day each. · Related: · Rate a leader · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · 9 guildmates online
+        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Meet point · Raids · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Thank someone you grouped with in the last 3 hours. It counts toward their Officer path. Once a day each. · Related: · Rate a leader · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · Count my alts as me · Your characters count as one person. · 9 guildmates online
       </p>
     </div>
     <div class="sim-st sim-st-o_raids_plan">
       <img src="img/sim/o_raids_plan.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
       <label class="sim-hot sim-h7" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h362" for="sim-o_raids_raidrec" aria-hidden="true"></label>
+      <label class="sim-hot sim-h366" for="sim-o_raids_raidrec" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
       <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h142" for="sim-b_raids_plan" aria-hidden="true"></label>
+      <label class="sim-hot sim-h144" for="sim-b_raids_plan" aria-hidden="true"></label>
       <p class="sr">
         UW Guild · Raids · Start here · Raid plan · Play together · Show my plan · Your own job in each step of the raid plan. · Leveling helpers · The raid leader pastes the plan code; you see your lines. · Related: · Loot rules · Addon kit · Guild · No plan yet. Your raid leader sends one before the pull, from the boss&#x27;s guide in Discord. · Your addons · Raid records · Kills and loot, shared live. Want to raid? Tell any officer. · 9 guildmates online
       </p>
@@ -1699,7 +1743,7 @@
       <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h142" for="sim-b_raids_plan" aria-hidden="true"></label>
+      <label class="sim-hot sim-h144" for="sim-b_raids_plan" aria-hidden="true"></label>
       <p class="sr">
         UW Guild · Raids · Start here · Raid plan · Play together · Show my plan · Your own job in each step of the raid plan. · Leveling helpers · Raid records · Kills and loot, shared live. Want to raid? Tell any officer. · Guild · Guild kills, attendance and loot awards, shared live from the raid. · Your addons · Related: · Loot rules · 9 guildmates online
       </p>
@@ -1707,8 +1751,8 @@
     <div class="sim-st sim-st-o_start_call">
       <img src="img/sim/o_start_call.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
       <label class="sim-hot sim-h7" for="sim-o_start_near" aria-hidden="true"></label>
-      <label class="sim-hot sim-h145" for="sim-o_start_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h147" for="sim-p_start" aria-hidden="true"></label>
+      <label class="sim-hot sim-h147" for="sim-o_start_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h149" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h71" for="sim-o_start_gear" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
@@ -1716,9 +1760,9 @@
       <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h144" for="sim-b_start_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h363" for="sim-b_start_gear" aria-hidden="true"></label>
-      <label class="sim-hot sim-h146" for="sim-b_start_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h146" for="sim-b_start_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h367" for="sim-b_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h148" for="sim-b_start_call" aria-hidden="true"></label>
       <label class="sim-hot sim-h295" for="sim-t_start_gear" aria-hidden="true"></label>
       <p class="sr">
         UW Guild · Start here · Picked for you now. Level 24, member. · Guildmates near my level · Play together · Who&#x27;s on near your level, free ones first. · Leveling helpers · Nell Brook · 22 · The Barrens · Guild · Lio Pell · 23 · Wailing Caverns · busy · Your addons · Find guildmates · Raids · Dungeon quests · Blackfathom Deeps · Leads you to a dungeon&#x27;s quests and its door. · Call a group · Calls a group for your level in guild chat. · Writes a line in guild chat for the dungeon at your level, then you invite whoever types inv. Anyone can also just ask in guild chat. · Related: · Thank a guildmate · Wear clear gear upgrades · Undo last swap · Puts on clear upgrades; asks on close calls. · 9 guildmates online
@@ -1727,19 +1771,19 @@
     <div class="sim-st sim-st-o_start_gear">
       <img src="img/sim/o_start_gear.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
       <label class="sim-hot sim-h7" for="sim-o_start_near" aria-hidden="true"></label>
-      <label class="sim-hot sim-h145" for="sim-o_start_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h147" for="sim-o_start_call" aria-hidden="true"></label>
-      <label class="sim-hot sim-h150" for="sim-p_start" aria-hidden="true"></label>
+      <label class="sim-hot sim-h147" for="sim-o_start_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h149" for="sim-o_start_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h152" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
       <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h144" for="sim-b_start_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h148" for="sim-b_start_gear" aria-hidden="true"></label>
-      <label class="sim-hot sim-h146" for="sim-b_start_call" aria-hidden="true"></label>
-      <label class="sim-hot sim-h149" for="sim-t_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h146" for="sim-b_start_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h150" for="sim-b_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h148" for="sim-b_start_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h151" for="sim-t_start_gear" aria-hidden="true"></label>
       <p class="sr">
         UW Guild · Start here · Picked for you now. Level 24, member. · Guildmates near my level · Play together · Who&#x27;s on near your level, free ones first. · Leveling helpers · Nell Brook · 22 · The Barrens · Guild · Lio Pell · 23 · Wailing Caverns · busy · Your addons · Find guildmates · Raids · Dungeon quests · Blackfathom Deeps · Leads you to a dungeon&#x27;s quests and its door. · Call a group · Calls a group for your level in guild chat. · Wear clear gear upgrades · Undo last swap · Puts on clear upgrades; asks on close calls. · Only when it&#x27;s clear: same slot and armor type, higher item level, no stat lower. Bind on Equip and other upgrades for your class and talents ask first, and say by how much. Never in combat or a loot roll. /uw gear undo swaps back. · Off: no swaps, questions or upgrade notes; upgrades stay in your bags until you put them on. · Related: · Delete and Make room in bags · New spells onto my bars · Auto-equip is off on this account. /uw gear on turns it back on. · 9 guildmates online
       </p>
@@ -1756,9 +1800,9 @@
       <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h364" for="sim-b_start_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h363" for="sim-b_start_gear" aria-hidden="true"></label>
-      <label class="sim-hot sim-h365" for="sim-b_start_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h368" for="sim-b_start_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h367" for="sim-b_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h369" for="sim-b_start_call" aria-hidden="true"></label>
       <label class="sim-hot sim-h295" for="sim-t_start_gear" aria-hidden="true"></label>
       <p class="sr">
         UW Guild · Start here · Picked for you now. Level 24, member. · Guildmates near my level · Play together · Who&#x27;s on near your level, free ones first. · Leveling helpers · Nell Brook · 22 · The Barrens · Guild · Lio Pell · 23 · Wailing Caverns · busy · Your addons · Find guildmates · Raids · Who&#x27;s online within a few levels of you, free ones first. Click a name in chat to whisper or invite. · Related: · Call a group · Dungeon quests · Meet point · Blackfathom Deeps · Leads you to a dungeon&#x27;s quests and its door. · Calls a group for your level in guild chat. · Wear clear gear upgrades · Undo last swap · Puts on clear upgrades; asks on close calls. · 9 guildmates online
@@ -1767,21 +1811,21 @@
     <div class="sim-st sim-st-o_start_prep">
       <img src="img/sim/o_start_prep.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
       <label class="sim-hot sim-h7" for="sim-o_start_near" aria-hidden="true"></label>
-      <label class="sim-hot sim-h145" for="sim-p_start" aria-hidden="true"></label>
-      <label class="sim-hot sim-h367" for="sim-o_start_call" aria-hidden="true"></label>
-      <label class="sim-hot sim-h370" for="sim-o_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h147" for="sim-p_start" aria-hidden="true"></label>
+      <label class="sim-hot sim-h371" for="sim-o_start_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h374" for="sim-o_start_gear" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
       <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h144" for="sim-b_start_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h371" for="sim-u_start_prep_Shadowfang_Keep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h368" for="sim-b_start_gear" aria-hidden="true"></label>
-      <label class="sim-hot sim-h372" for="sim-u_start_prep_Razorfen_Kraul" aria-hidden="true"></label>
-      <label class="sim-hot sim-h366" for="sim-b_start_call" aria-hidden="true"></label>
-      <label class="sim-hot sim-h369" for="sim-t_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h146" for="sim-b_start_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h375" for="sim-u_start_prep_Shadowfang_Keep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h372" for="sim-b_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h376" for="sim-u_start_prep_Razorfen_Kraul" aria-hidden="true"></label>
+      <label class="sim-hot sim-h370" for="sim-b_start_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h373" for="sim-t_start_gear" aria-hidden="true"></label>
       <p class="sr">
         UW Guild · Start here · Picked for you now. Level 24, member. · Guildmates near my level · Play together · Who&#x27;s on near your level, free ones first. · Leveling helpers · Nell Brook · 22 · The Barrens · Guild · Lio Pell · 23 · Wailing Caverns · busy · Your addons · Find guildmates · Raids · Dungeon quests · Blackfathom Deeps · Leads you to a dungeon&#x27;s quests and its door. · Before a dungeon, an arrow walks you to each of its quests you can take now, then to the entrance. Pick one near your level. · Shadowfang Keep · Razorfen Kraul · Related: · Call a group · Quest guide marker · Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it. · Calls a group for your level in guild chat. · Wear clear gear upgrades · Undo last swap · Puts on clear upgrades; asks on close calls. · 9 guildmates online
       </p>
@@ -1874,7 +1918,7 @@
       <label class="sim-hot sim-h112" for="sim-t_level_chain" aria-hidden="true"></label>
       <label class="sim-hot sim-h58" for="sim-t_level_hold" aria-hidden="true"></label>
       <label class="sim-hot sim-h127" for="sim-t_level_mail" aria-hidden="true"></label>
-      <label class="sim-hot sim-h373" for="sim-t_level_dungeons" aria-hidden="true"></label>
+      <label class="sim-hot sim-h377" for="sim-t_level_dungeons" aria-hidden="true"></label>
       <p class="sr">
         UW Guild · Leveling helpers · Start here · Wear clear gear upgrades · Play together · Undo last swap · Puts on clear upgrades; asks on close calls. · New spells onto my bars · New spells and ranks go onto your bars. · Guild · Space uses quest items · Your addons · Space uses the quest item your target needs. · Delete and Make room in bags · Raids · Delete drops your cheapest junk; Make room swaps it for loot. · Quest guide marker · A pin and marker at your quest&#x27;s next step. · Quest chain tags · List my chains · Shows each quest&#x27;s step in its chain (3/7). · Keep the quest window open · Waits a moment for the next quest after a turn-in. · Send mats to my alts · What would go · One click mails crafting mats to your alts. · Dungeon lines in chat · Dungeons as they open, and their quests in your group. · 9 guildmates online
       </p>
@@ -1887,6 +1931,7 @@
       <label class="sim-hot sim-h13" for="sim-o_play_meet" aria-hidden="true"></label>
       <label class="sim-hot sim-h15" for="sim-o_play_thanks" aria-hidden="true"></label>
       <label class="sim-hot sim-h17" for="sim-o_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h47" for="sim-o_play_alts" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
@@ -1897,8 +1942,9 @@
       <label class="sim-hot sim-h131" for="sim-b_play_prep" aria-hidden="true"></label>
       <label class="sim-hot sim-h132" for="sim-b_play_enchant" aria-hidden="true"></label>
       <label class="sim-hot sim-h130" for="sim-b_play_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h58" for="sim-t_play_alts" aria-hidden="true"></label>
       <p class="sr">
-        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Meet point · Raids · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · 9 guildmates online
+        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Meet point · Raids · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · Count my alts as me · Your characters count as one person. · 9 guildmates online
       </p>
     </div>
     <div class="sim-st sim-st-p_raids">
@@ -1911,7 +1957,7 @@
       <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h142" for="sim-b_raids_plan" aria-hidden="true"></label>
+      <label class="sim-hot sim-h144" for="sim-b_raids_plan" aria-hidden="true"></label>
       <p class="sr">
         UW Guild · Raids · Start here · Raid plan · Play together · Show my plan · Your own job in each step of the raid plan. · Leveling helpers · Raid records · Kills and loot, shared live. Want to raid? Tell any officer. · Guild · Your addons · 9 guildmates online
       </p>
@@ -1919,19 +1965,19 @@
     <div class="sim-st sim-st-p_start">
       <img src="img/sim/p_start.webp" width="984" height="923" alt="" decoding="async">
       <label class="sim-hot sim-h7" for="sim-o_start_near" aria-hidden="true"></label>
-      <label class="sim-hot sim-h145" for="sim-o_start_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h147" for="sim-o_start_call" aria-hidden="true"></label>
-      <label class="sim-hot sim-h150" for="sim-o_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h147" for="sim-o_start_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h149" for="sim-o_start_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h152" for="sim-o_start_gear" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
       <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h144" for="sim-b_start_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h148" for="sim-b_start_gear" aria-hidden="true"></label>
-      <label class="sim-hot sim-h146" for="sim-b_start_call" aria-hidden="true"></label>
-      <label class="sim-hot sim-h149" for="sim-t_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h146" for="sim-b_start_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h150" for="sim-b_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h148" for="sim-b_start_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h151" for="sim-t_start_gear" aria-hidden="true"></label>
       <p class="sr">
         UW Guild · Start here · Picked for you now. Level 24, member. · Guildmates near my level · Play together · Who&#x27;s on near your level, free ones first. · Leveling helpers · Nell Brook · 22 · The Barrens · Guild · Lio Pell · 23 · Wailing Caverns · busy · Your addons · Find guildmates · Raids · Dungeon quests · Blackfathom Deeps · Leads you to a dungeon&#x27;s quests and its door. · Call a group · Calls a group for your level in guild chat. · Wear clear gear upgrades · Undo last swap · Puts on clear upgrades; asks on close calls. · 9 guildmates online
       </p>
@@ -1943,17 +1989,17 @@
       <label class="sim-hot sim-h11" for="sim-o_addons_macros" aria-hidden="true"></label>
       <label class="sim-hot sim-h13" for="sim-o_addons_report" aria-hidden="true"></label>
       <label class="sim-hot sim-h15" for="sim-o_addons_share" aria-hidden="true"></label>
-      <label class="sim-hot sim-h375" for="sim-o_addons_fish" aria-hidden="true"></label>
-      <label class="sim-hot sim-h377" for="sim-o_addons_view" aria-hidden="true"></label>
-      <label class="sim-hot sim-h378" for="sim-o_addons_settings" aria-hidden="true"></label>
+      <label class="sim-hot sim-h379" for="sim-o_addons_fish" aria-hidden="true"></label>
+      <label class="sim-hot sim-h381" for="sim-o_addons_view" aria-hidden="true"></label>
+      <label class="sim-hot sim-h382" for="sim-o_addons_settings" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
       <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h376" for="sim-b_addons_view" aria-hidden="true"></label>
-      <label class="sim-hot sim-h374" for="sim-b_addons_fish" aria-hidden="true"></label>
+      <label class="sim-hot sim-h380" for="sim-b_addons_view" aria-hidden="true"></label>
+      <label class="sim-hot sim-h378" for="sim-b_addons_fish" aria-hidden="true"></label>
       <label class="sim-hot sim-h6" for="sim-b_addons_kit" aria-hidden="true"></label>
       <label class="sim-hot sim-h10" for="sim-b_addons_macros" aria-hidden="true"></label>
       <label class="sim-hot sim-h12" for="sim-b_addons_report" aria-hidden="true"></label>
@@ -1967,7 +2013,7 @@
       <img src="img/sim/t_guild_craft.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
       <label class="sim-hot sim-h7" for="sim-o_guild_welcome" aria-hidden="true"></label>
       <label class="sim-hot sim-h9" for="sim-o_guild_craft" aria-hidden="true"></label>
-      <label class="sim-hot sim-h381" for="sim-o_guild_events" aria-hidden="true"></label>
+      <label class="sim-hot sim-h385" for="sim-o_guild_events" aria-hidden="true"></label>
       <label class="sim-hot sim-h79" for="sim-o_guild_loot" aria-hidden="true"></label>
       <label class="sim-hot sim-h81" for="sim-o_guild_jobs" aria-hidden="true"></label>
       <label class="sim-hot sim-h83" for="sim-o_guild_likes" aria-hidden="true"></label>
@@ -1984,13 +2030,13 @@
       <label class="sim-hot sim-h78" for="sim-b_guild_loot" aria-hidden="true"></label>
       <label class="sim-hot sim-h87" for="sim-b_guild_discord" aria-hidden="true"></label>
       <label class="sim-hot sim-h49" for="sim-b_guild_welcome" aria-hidden="true"></label>
-      <label class="sim-hot sim-h379" for="sim-b_guild_events" aria-hidden="true"></label>
+      <label class="sim-hot sim-h383" for="sim-b_guild_events" aria-hidden="true"></label>
       <label class="sim-hot sim-h80" for="sim-b_guild_jobs" aria-hidden="true"></label>
       <label class="sim-hot sim-h86" for="sim-b_guild_contact" aria-hidden="true"></label>
       <label class="sim-hot sim-h84" for="sim-b_guild_rate" aria-hidden="true"></label>
       <label class="sim-hot sim-h82" for="sim-b_guild_likes" aria-hidden="true"></label>
       <label class="sim-hot sim-h51" for="sim-p_guild" aria-hidden="true"></label>
-      <label class="sim-hot sim-h380" for="sim-t_guild_events" aria-hidden="true"></label>
+      <label class="sim-hot sim-h384" for="sim-t_guild_events" aria-hidden="true"></label>
       <label class="sim-hot sim-h85" for="sim-t_guild_rate" aria-hidden="true"></label>
       <p class="sr">
         UW Guild · Guild · Start here · Welcome window · Play together · Open it · Our norms and how to get started. · Leveling helpers · Crafting · Who crafts what · Share your recipes and see guildmates&#x27; too. · Stopped sharing your professions, weapons and talents, and asked online guildmates to forget them. /uw craft on to share again. · Your addons · Raids · Rallies and group nights · What&#x27;s on · A heads-up before each Rally and group night. · Loot rules · How rolls work · Main spec before off spec, rolls only. · Guild jobs · Show jobs · Who holds each guild job; how to take one. · What you like · Pick · Pick what you enjoy, to find your people. · Rate a leader · Rate · Rate a guild group&#x27;s leader, in private. · Contact the Guild Master · Show · The Guild Master&#x27;s BattleTag. · Discord · Copy invite · Groups, events, raid nights. The invite, ready to copy. · 9 guildmates online · UW Stopped sharing your professions, weapons and talents, and asked online guildmates to forget them. /uw craft on to share again.
@@ -2014,14 +2060,14 @@
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
       <label class="sim-hot sim-h50" for="sim-b_guild_craft" aria-hidden="true"></label>
-      <label class="sim-hot sim-h382" for="sim-b_guild_loot" aria-hidden="true"></label>
+      <label class="sim-hot sim-h386" for="sim-b_guild_loot" aria-hidden="true"></label>
       <label class="sim-hot sim-h61" for="sim-b_guild_discord" aria-hidden="true"></label>
       <label class="sim-hot sim-h49" for="sim-b_guild_welcome" aria-hidden="true"></label>
       <label class="sim-hot sim-h52" for="sim-b_guild_events" aria-hidden="true"></label>
-      <label class="sim-hot sim-h383" for="sim-b_guild_jobs" aria-hidden="true"></label>
-      <label class="sim-hot sim-h386" for="sim-b_guild_contact" aria-hidden="true"></label>
-      <label class="sim-hot sim-h385" for="sim-b_guild_rate" aria-hidden="true"></label>
-      <label class="sim-hot sim-h384" for="sim-b_guild_likes" aria-hidden="true"></label>
+      <label class="sim-hot sim-h387" for="sim-b_guild_jobs" aria-hidden="true"></label>
+      <label class="sim-hot sim-h390" for="sim-b_guild_contact" aria-hidden="true"></label>
+      <label class="sim-hot sim-h389" for="sim-b_guild_rate" aria-hidden="true"></label>
+      <label class="sim-hot sim-h388" for="sim-b_guild_likes" aria-hidden="true"></label>
       <label class="sim-hot sim-h51" for="sim-t_guild_craft" aria-hidden="true"></label>
       <label class="sim-hot sim-h53" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h122" for="sim-t_guild_rate" aria-hidden="true"></label>
@@ -2052,7 +2098,7 @@
       <label class="sim-hot sim-h49" for="sim-b_guild_welcome" aria-hidden="true"></label>
       <label class="sim-hot sim-h52" for="sim-b_guild_events" aria-hidden="true"></label>
       <label class="sim-hot sim-h55" for="sim-b_guild_jobs" aria-hidden="true"></label>
-      <label class="sim-hot sim-h386" for="sim-b_guild_contact" aria-hidden="true"></label>
+      <label class="sim-hot sim-h390" for="sim-b_guild_contact" aria-hidden="true"></label>
       <label class="sim-hot sim-h57" for="sim-b_guild_rate" aria-hidden="true"></label>
       <label class="sim-hot sim-h56" for="sim-b_guild_likes" aria-hidden="true"></label>
       <label class="sim-hot sim-h51" for="sim-t_guild_craft" aria-hidden="true"></label>
@@ -2099,7 +2145,7 @@
       <img src="img/sim/t_level_bars.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
       <label class="sim-hot sim-h7" for="sim-o_level_gear" aria-hidden="true"></label>
       <label class="sim-hot sim-h9" for="sim-o_level_bars" aria-hidden="true"></label>
-      <label class="sim-hot sim-h381" for="sim-o_level_space" aria-hidden="true"></label>
+      <label class="sim-hot sim-h385" for="sim-o_level_space" aria-hidden="true"></label>
       <label class="sim-hot sim-h79" for="sim-o_level_bags" aria-hidden="true"></label>
       <label class="sim-hot sim-h81" for="sim-o_level_guide" aria-hidden="true"></label>
       <label class="sim-hot sim-h83" for="sim-o_level_chain" aria-hidden="true"></label>
@@ -2114,13 +2160,13 @@
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
       <label class="sim-hot sim-h113" for="sim-b_level_mail" aria-hidden="true"></label>
       <label class="sim-hot sim-h108" for="sim-b_level_gear" aria-hidden="true"></label>
-      <label class="sim-hot sim-h389" for="sim-b_level_chain" aria-hidden="true"></label>
+      <label class="sim-hot sim-h393" for="sim-b_level_chain" aria-hidden="true"></label>
       <label class="sim-hot sim-h109" for="sim-t_level_gear" aria-hidden="true"></label>
       <label class="sim-hot sim-h51" for="sim-p_level" aria-hidden="true"></label>
-      <label class="sim-hot sim-h380" for="sim-t_level_space" aria-hidden="true"></label>
-      <label class="sim-hot sim-h387" for="sim-t_level_bags" aria-hidden="true"></label>
-      <label class="sim-hot sim-h388" for="sim-t_level_guide" aria-hidden="true"></label>
-      <label class="sim-hot sim-h390" for="sim-t_level_chain" aria-hidden="true"></label>
+      <label class="sim-hot sim-h384" for="sim-t_level_space" aria-hidden="true"></label>
+      <label class="sim-hot sim-h391" for="sim-t_level_bags" aria-hidden="true"></label>
+      <label class="sim-hot sim-h392" for="sim-t_level_guide" aria-hidden="true"></label>
+      <label class="sim-hot sim-h394" for="sim-t_level_chain" aria-hidden="true"></label>
       <label class="sim-hot sim-h85" for="sim-t_level_hold" aria-hidden="true"></label>
       <label class="sim-hot sim-h114" for="sim-t_level_mail" aria-hidden="true"></label>
       <label class="sim-hot sim-h115" for="sim-t_level_dungeons" aria-hidden="true"></label>
@@ -2189,7 +2235,7 @@
       <label class="sim-hot sim-h112" for="sim-t_level_chain" aria-hidden="true"></label>
       <label class="sim-hot sim-h58" for="sim-t_level_hold" aria-hidden="true"></label>
       <label class="sim-hot sim-h127" for="sim-t_level_mail" aria-hidden="true"></label>
-      <label class="sim-hot sim-h373" for="sim-p_level" aria-hidden="true"></label>
+      <label class="sim-hot sim-h377" for="sim-p_level" aria-hidden="true"></label>
       <p class="sr">
         UW Guild · Leveling helpers · Start here · Wear clear gear upgrades · Play together · Undo last swap · Puts on clear upgrades; asks on close calls. · New spells onto my bars · New spells and ranks go onto your bars. · Guild · Space uses quest items · Your addons · Space uses the quest item your target needs. · Delete and Make room in bags · Raids · Delete drops your cheapest junk; Make room swaps it for loot. · Quest guide marker · A pin and marker at your quest&#x27;s next step. · Quest chain tags · List my chains · Shows each quest&#x27;s step in its chain (3/7). · Keep the quest window open · Waits a moment for the next quest after a turn-in. · Send mats to my alts · What would go · One click mails crafting mats to your alts. · Dungeon lines in chat · Dungeons as they open, and their quests in your group. · Off: no dungeon lines in chat, and no button to tell the group. /uw dungeons on brings them back. · 9 guildmates online · UW Off: no dungeon lines in chat, and no button to tell the group. /uw dungeons on brings them back.
       </p>
@@ -2197,8 +2243,8 @@
     <div class="sim-st sim-st-t_level_gear">
       <img src="img/sim/t_level_gear.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
       <label class="sim-hot sim-h7" for="sim-o_level_gear" aria-hidden="true"></label>
-      <label class="sim-hot sim-h143" for="sim-o_level_bars" aria-hidden="true"></label>
-      <label class="sim-hot sim-h381" for="sim-o_level_space" aria-hidden="true"></label>
+      <label class="sim-hot sim-h145" for="sim-o_level_bars" aria-hidden="true"></label>
+      <label class="sim-hot sim-h385" for="sim-o_level_space" aria-hidden="true"></label>
       <label class="sim-hot sim-h79" for="sim-o_level_bags" aria-hidden="true"></label>
       <label class="sim-hot sim-h81" for="sim-o_level_guide" aria-hidden="true"></label>
       <label class="sim-hot sim-h83" for="sim-o_level_chain" aria-hidden="true"></label>
@@ -2213,13 +2259,13 @@
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
       <label class="sim-hot sim-h113" for="sim-b_level_mail" aria-hidden="true"></label>
       <label class="sim-hot sim-h108" for="sim-b_level_gear" aria-hidden="true"></label>
-      <label class="sim-hot sim-h389" for="sim-b_level_chain" aria-hidden="true"></label>
+      <label class="sim-hot sim-h393" for="sim-b_level_chain" aria-hidden="true"></label>
       <label class="sim-hot sim-h109" for="sim-p_level" aria-hidden="true"></label>
-      <label class="sim-hot sim-h391" for="sim-t_level_bars" aria-hidden="true"></label>
-      <label class="sim-hot sim-h380" for="sim-t_level_space" aria-hidden="true"></label>
-      <label class="sim-hot sim-h387" for="sim-t_level_bags" aria-hidden="true"></label>
-      <label class="sim-hot sim-h388" for="sim-t_level_guide" aria-hidden="true"></label>
-      <label class="sim-hot sim-h390" for="sim-t_level_chain" aria-hidden="true"></label>
+      <label class="sim-hot sim-h395" for="sim-t_level_bars" aria-hidden="true"></label>
+      <label class="sim-hot sim-h384" for="sim-t_level_space" aria-hidden="true"></label>
+      <label class="sim-hot sim-h391" for="sim-t_level_bags" aria-hidden="true"></label>
+      <label class="sim-hot sim-h392" for="sim-t_level_guide" aria-hidden="true"></label>
+      <label class="sim-hot sim-h394" for="sim-t_level_chain" aria-hidden="true"></label>
       <label class="sim-hot sim-h85" for="sim-t_level_hold" aria-hidden="true"></label>
       <label class="sim-hot sim-h114" for="sim-t_level_mail" aria-hidden="true"></label>
       <label class="sim-hot sim-h115" for="sim-t_level_dungeons" aria-hidden="true"></label>
@@ -2359,22 +2405,46 @@
         UW Guild · Leveling helpers · Start here · Wear clear gear upgrades · Play together · Undo last swap · Puts on clear upgrades; asks on close calls. · New spells onto my bars · New spells and ranks go onto your bars. · Guild · Space uses quest items · Your addons · Space uses the quest item your target needs. · Space for quest items is off. /uw space on turns it back on. · Raids · Delete and Make room in bags · Delete drops your cheapest junk; Make room swaps it for loot. · Quest guide marker · A pin and marker at your quest&#x27;s next step. · Quest chain tags · List my chains · Shows each quest&#x27;s step in its chain (3/7). · Keep the quest window open · Waits a moment for the next quest after a turn-in. · Send mats to my alts · What would go · One click mails crafting mats to your alts. · Dungeon lines in chat · Dungeons as they open, and their quests in your group. · 9 guildmates online · UW Space for quest items is off. /uw space on turns it back on.
       </p>
     </div>
-    <div class="sim-st sim-st-t_start_gear">
-      <img src="img/sim/t_start_gear.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
-      <label class="sim-hot sim-h7" for="sim-o_start_near" aria-hidden="true"></label>
-      <label class="sim-hot sim-h145" for="sim-o_start_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h147" for="sim-o_start_call" aria-hidden="true"></label>
-      <label class="sim-hot sim-h150" for="sim-o_start_gear" aria-hidden="true"></label>
+    <div class="sim-st sim-st-t_play_alts">
+      <img src="img/sim/t_play_alts.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
+      <label class="sim-hot sim-h7" for="sim-o_play_near" aria-hidden="true"></label>
+      <label class="sim-hot sim-h9" for="sim-o_play_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h11" for="sim-o_play_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h13" for="sim-o_play_meet" aria-hidden="true"></label>
+      <label class="sim-hot sim-h15" for="sim-o_play_thanks" aria-hidden="true"></label>
+      <label class="sim-hot sim-h17" for="sim-o_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h47" for="sim-o_play_alts" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
       <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h144" for="sim-b_start_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h148" for="sim-b_start_gear" aria-hidden="true"></label>
-      <label class="sim-hot sim-h146" for="sim-b_start_call" aria-hidden="true"></label>
-      <label class="sim-hot sim-h149" for="sim-p_start" aria-hidden="true"></label>
+      <label class="sim-hot sim-h129" for="sim-b_play_near" aria-hidden="true"></label>
+      <label class="sim-hot sim-h131" for="sim-b_play_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h132" for="sim-b_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h130" for="sim-b_play_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h58" for="sim-p_play" aria-hidden="true"></label>
+      <p class="sr">
+        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Meet point · Raids · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · Count my alts as me · Your characters count as one person. · Off: your characters count as separate people. /uw alts on turns it back on. · 9 guildmates online · UW Off: your characters count as separate people. /uw alts on turns it back on.
+      </p>
+    </div>
+    <div class="sim-st sim-st-t_start_gear">
+      <img src="img/sim/t_start_gear.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
+      <label class="sim-hot sim-h7" for="sim-o_start_near" aria-hidden="true"></label>
+      <label class="sim-hot sim-h147" for="sim-o_start_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h149" for="sim-o_start_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h152" for="sim-o_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
+      <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
+      <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
+      <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
+      <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
+      <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
+      <label class="sim-hot sim-h146" for="sim-b_start_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h150" for="sim-b_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h148" for="sim-b_start_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h151" for="sim-p_start" aria-hidden="true"></label>
       <p class="sr">
         UW Guild · Start here · Picked for you now. Level 24, member. · Guildmates near my level · Play together · Who&#x27;s on near your level, free ones first. · Leveling helpers · Nell Brook · 22 · The Barrens · Guild · Lio Pell · 23 · Wailing Caverns · busy · Your addons · Find guildmates · Raids · Dungeon quests · Blackfathom Deeps · Leads you to a dungeon&#x27;s quests and its door. · Call a group · Calls a group for your level in guild chat. · Wear clear gear upgrades · Undo last swap · Puts on clear upgrades; asks on close calls. · Auto-equip is off on this account. /uw gear on turns it back on. · 9 guildmates online · UW Auto-equip is off on this account. /uw gear on turns it back on.
       </p>
@@ -2382,26 +2452,26 @@
     <div class="sim-st sim-st-u_addons_kit_Fix_my_kit">
       <img src="img/sim/u_addons_kit_Fix_my_kit.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
       <label class="sim-hot sim-h7" for="sim-o_addons_kit" aria-hidden="true"></label>
-      <label class="sim-hot sim-h393" for="sim-o_addons_layout" aria-hidden="true"></label>
-      <label class="sim-hot sim-h395" for="sim-o_addons_macros" aria-hidden="true"></label>
-      <label class="sim-hot sim-h397" for="sim-o_addons_report" aria-hidden="true"></label>
-      <label class="sim-hot sim-h399" for="sim-o_addons_share" aria-hidden="true"></label>
-      <label class="sim-hot sim-h401" for="sim-o_addons_fish" aria-hidden="true"></label>
-      <label class="sim-hot sim-h403" for="sim-o_addons_view" aria-hidden="true"></label>
-      <label class="sim-hot sim-h404" for="sim-o_addons_settings" aria-hidden="true"></label>
+      <label class="sim-hot sim-h397" for="sim-o_addons_layout" aria-hidden="true"></label>
+      <label class="sim-hot sim-h399" for="sim-o_addons_macros" aria-hidden="true"></label>
+      <label class="sim-hot sim-h401" for="sim-o_addons_report" aria-hidden="true"></label>
+      <label class="sim-hot sim-h403" for="sim-o_addons_share" aria-hidden="true"></label>
+      <label class="sim-hot sim-h405" for="sim-o_addons_fish" aria-hidden="true"></label>
+      <label class="sim-hot sim-h351" for="sim-o_addons_view" aria-hidden="true"></label>
+      <label class="sim-hot sim-h407" for="sim-o_addons_settings" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
       <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h402" for="sim-b_addons_view" aria-hidden="true"></label>
-      <label class="sim-hot sim-h400" for="sim-b_addons_fish" aria-hidden="true"></label>
+      <label class="sim-hot sim-h406" for="sim-b_addons_view" aria-hidden="true"></label>
+      <label class="sim-hot sim-h404" for="sim-b_addons_fish" aria-hidden="true"></label>
       <label class="sim-hot sim-h6" for="sim-b_addons_kit" aria-hidden="true"></label>
-      <label class="sim-hot sim-h394" for="sim-b_addons_macros" aria-hidden="true"></label>
-      <label class="sim-hot sim-h396" for="sim-b_addons_report" aria-hidden="true"></label>
-      <label class="sim-hot sim-h392" for="sim-b_addons_layout" aria-hidden="true"></label>
-      <label class="sim-hot sim-h398" for="sim-t_addons_share" aria-hidden="true"></label>
+      <label class="sim-hot sim-h398" for="sim-b_addons_macros" aria-hidden="true"></label>
+      <label class="sim-hot sim-h400" for="sim-b_addons_report" aria-hidden="true"></label>
+      <label class="sim-hot sim-h396" for="sim-b_addons_layout" aria-hidden="true"></label>
+      <label class="sim-hot sim-h402" for="sim-t_addons_share" aria-hidden="true"></label>
       <p class="sr">
         UW Guild · Your addons · Start here · Addon kit · Ready · Play together · Check my kit · The few addons the guild plays with. · Leveling helpers · The few addons the guild plays with. Shows what&#x27;s missing or doubled up; Fix turns duplicates off and kit addons on. · Guild · Fix my kit · Optional extras · Related: · Guild layout · Something broken? · Nothing to fix here: no duplicates, and every Everyone addon that&#x27;s installed is on. · Raids · Use it · The officers&#x27; raid frames, bars and meter. · Class macros · Show mine · Tested macros for your class, in one click. · Report · Report a problem, or test UW_Guild. · Share addon counts · Feature use, errors and setup, as totals with no names. · Fishing sound · Hear the splash: music off, effects up. · Outline and compass · Walkable outline · The ground you can walk on, and a compass of your quests. · All switches · Open settings · All the switches, in the game&#x27;s Settings. · 9 guildmates online · UW Nothing to fix here: no duplicates, and every Everyone addon that&#x27;s installed is on.
       </p>
@@ -2412,7 +2482,7 @@
       <label class="sim-hot sim-h137" for="sim-o_addons_layout" aria-hidden="true"></label>
       <label class="sim-hot sim-h138" for="sim-o_addons_macros" aria-hidden="true"></label>
       <label class="sim-hot sim-h140" for="sim-o_addons_report" aria-hidden="true"></label>
-      <label class="sim-hot sim-h163" for="sim-o_addons_share" aria-hidden="true"></label>
+      <label class="sim-hot sim-h142" for="sim-o_addons_share" aria-hidden="true"></label>
       <label class="sim-hot sim-h165" for="sim-o_addons_fish" aria-hidden="true"></label>
       <label class="sim-hot sim-h167" for="sim-o_addons_view" aria-hidden="true"></label>
       <label class="sim-hot sim-h168" for="sim-o_addons_settings" aria-hidden="true"></label>
@@ -2425,10 +2495,10 @@
       <label class="sim-hot sim-h166" for="sim-b_addons_view" aria-hidden="true"></label>
       <label class="sim-hot sim-h164" for="sim-b_addons_fish" aria-hidden="true"></label>
       <label class="sim-hot sim-h6" for="sim-b_addons_kit" aria-hidden="true"></label>
-      <label class="sim-hot sim-h160" for="sim-b_addons_macros" aria-hidden="true"></label>
-      <label class="sim-hot sim-h161" for="sim-b_addons_report" aria-hidden="true"></label>
-      <label class="sim-hot sim-h159" for="sim-b_addons_layout" aria-hidden="true"></label>
-      <label class="sim-hot sim-h162" for="sim-t_addons_share" aria-hidden="true"></label>
+      <label class="sim-hot sim-h162" for="sim-b_addons_macros" aria-hidden="true"></label>
+      <label class="sim-hot sim-h163" for="sim-b_addons_report" aria-hidden="true"></label>
+      <label class="sim-hot sim-h161" for="sim-b_addons_layout" aria-hidden="true"></label>
+      <label class="sim-hot sim-h141" for="sim-t_addons_share" aria-hidden="true"></label>
       <p class="sr">
         UW Guild · Your addons · Start here · Addon kit · Ready · Play together · Check my kit · The few addons the guild plays with. · Leveling helpers · The few addons the guild plays with. Shows what&#x27;s missing or doubled up; Fix turns duplicates off and kit addons on. · Guild · Fix my kit · Optional extras · Related: · Guild layout · Something broken? · Extras you have: 1 of 15. [ ] Dungeon and raid journal: ForeverDungeonJournal [ ] Finding a group when no guildmate is on: LFGForever 12 more in chat · Raids · Use it · The officers&#x27; raid frames, bars and meter. · Class macros · Show mine · Tested macros for your class, in one click. · Report · Report a problem, or test UW_Guild. · Share addon counts · Feature use, errors and setup, as totals with no names. · Fishing sound · Hear the splash: music off, effects up. · Outline and compass · Walkable outline · The ground you can walk on, and a compass of your quests. · All switches · Open settings · All the switches, in the game&#x27;s Settings. · 9 guildmates online · UW Extras you have: 1 of 15. · [ ] Dungeon and raid journal: ForeverDungeonJournal · [ ] Finding a group when no guildmate is on: LFGForever · [ ] Selling and buying: Auctionator · [ ] Rares: RareScanner · [ ] World map: Leatrix_Maps or OpenMap · [ ] Loot, ore and herb sparkles: ForeverLootSparkles · [ ] Herb, ore and fish map: GatherLite · [ ] Profession leveling: CraftersJournal or ForeverWowCraftScanner · [ ] Walking routes: ShortestPathForever · [ ] Buff back in one click: Manners · [ ] Small comforts (sounds, moving frames): EnhanceQoL · [ ] Quests read aloud (big download): Spoken · [ ] Attunements and dungeon quests: Attune · [ ] Troubleshooting (catches errors): !BugGrabber
       </p>
@@ -2437,25 +2507,25 @@
       <img src="img/sim/u_addons_layout_DialogueUI_look.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
       <label class="sim-hot sim-h7" for="sim-o_addons_kit" aria-hidden="true"></label>
       <label class="sim-hot sim-h9" for="sim-o_addons_layout" aria-hidden="true"></label>
-      <label class="sim-hot sim-h395" for="sim-o_addons_macros" aria-hidden="true"></label>
-      <label class="sim-hot sim-h397" for="sim-o_addons_report" aria-hidden="true"></label>
-      <label class="sim-hot sim-h399" for="sim-o_addons_share" aria-hidden="true"></label>
-      <label class="sim-hot sim-h401" for="sim-o_addons_fish" aria-hidden="true"></label>
-      <label class="sim-hot sim-h403" for="sim-o_addons_view" aria-hidden="true"></label>
-      <label class="sim-hot sim-h404" for="sim-o_addons_settings" aria-hidden="true"></label>
+      <label class="sim-hot sim-h399" for="sim-o_addons_macros" aria-hidden="true"></label>
+      <label class="sim-hot sim-h401" for="sim-o_addons_report" aria-hidden="true"></label>
+      <label class="sim-hot sim-h403" for="sim-o_addons_share" aria-hidden="true"></label>
+      <label class="sim-hot sim-h405" for="sim-o_addons_fish" aria-hidden="true"></label>
+      <label class="sim-hot sim-h351" for="sim-o_addons_view" aria-hidden="true"></label>
+      <label class="sim-hot sim-h407" for="sim-o_addons_settings" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
       <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h402" for="sim-b_addons_view" aria-hidden="true"></label>
-      <label class="sim-hot sim-h400" for="sim-b_addons_fish" aria-hidden="true"></label>
+      <label class="sim-hot sim-h406" for="sim-b_addons_view" aria-hidden="true"></label>
+      <label class="sim-hot sim-h404" for="sim-b_addons_fish" aria-hidden="true"></label>
       <label class="sim-hot sim-h6" for="sim-b_addons_kit" aria-hidden="true"></label>
-      <label class="sim-hot sim-h394" for="sim-b_addons_macros" aria-hidden="true"></label>
-      <label class="sim-hot sim-h396" for="sim-b_addons_report" aria-hidden="true"></label>
+      <label class="sim-hot sim-h398" for="sim-b_addons_macros" aria-hidden="true"></label>
+      <label class="sim-hot sim-h400" for="sim-b_addons_report" aria-hidden="true"></label>
       <label class="sim-hot sim-h8" for="sim-b_addons_layout" aria-hidden="true"></label>
-      <label class="sim-hot sim-h398" for="sim-t_addons_share" aria-hidden="true"></label>
+      <label class="sim-hot sim-h402" for="sim-t_addons_share" aria-hidden="true"></label>
       <p class="sr">
         UW Guild · Your addons · Start here · Addon kit · Ready · Play together · Check my kit · The few addons the guild plays with. · Leveling helpers · Guild layout · Use it · The officers&#x27; raid frames, bars and meter. · Guild · Imports the raid frames, bars and meter the officers shared, through each addon&#x27;s own import. · DialogueUI look · Related: · Class macros · Raids · The guild look is for DialogueUI, Questie, Manners, GatherLite, none of which is on here. /uw kit list shows the kit. · Show mine · Tested macros for your class, in one click. · Something broken? · Report · Report a problem, or test UW_Guild. · Share addon counts · Feature use, errors and setup, as totals with no names. · Fishing sound · Hear the splash: music off, effects up. · Outline and compass · Walkable outline · The ground you can walk on, and a compass of your quests. · All switches · Open settings · All the switches, in the game&#x27;s Settings. · 9 guildmates online · UW The guild look is for DialogueUI, Questie, Manners, GatherLite, none of which is on here. /uw kit list shows the kit.
       </p>
@@ -2466,25 +2536,25 @@
       <label class="sim-hot sim-h9" for="sim-o_addons_layout" aria-hidden="true"></label>
       <label class="sim-hot sim-h11" for="sim-o_addons_macros" aria-hidden="true"></label>
       <label class="sim-hot sim-h13" for="sim-o_addons_report" aria-hidden="true"></label>
-      <label class="sim-hot sim-h405" for="sim-o_addons_share" aria-hidden="true"></label>
-      <label class="sim-hot sim-h407" for="sim-o_addons_fish" aria-hidden="true"></label>
-      <label class="sim-hot sim-h409" for="sim-o_addons_view" aria-hidden="true"></label>
-      <label class="sim-hot sim-h410" for="sim-o_addons_settings" aria-hidden="true"></label>
+      <label class="sim-hot sim-h408" for="sim-o_addons_share" aria-hidden="true"></label>
+      <label class="sim-hot sim-h410" for="sim-o_addons_fish" aria-hidden="true"></label>
+      <label class="sim-hot sim-h412" for="sim-o_addons_view" aria-hidden="true"></label>
+      <label class="sim-hot sim-h413" for="sim-o_addons_settings" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
       <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h408" for="sim-b_addons_view" aria-hidden="true"></label>
-      <label class="sim-hot sim-h406" for="sim-b_addons_fish" aria-hidden="true"></label>
+      <label class="sim-hot sim-h411" for="sim-b_addons_view" aria-hidden="true"></label>
+      <label class="sim-hot sim-h409" for="sim-b_addons_fish" aria-hidden="true"></label>
       <label class="sim-hot sim-h6" for="sim-b_addons_kit" aria-hidden="true"></label>
       <label class="sim-hot sim-h10" for="sim-b_addons_macros" aria-hidden="true"></label>
       <label class="sim-hot sim-h12" for="sim-b_addons_report" aria-hidden="true"></label>
       <label class="sim-hot sim-h8" for="sim-b_addons_layout" aria-hidden="true"></label>
       <label class="sim-hot sim-h322" for="sim-t_addons_share" aria-hidden="true"></label>
       <p class="sr">
-        UW Guild · Your addons · Start here · Addon kit · Ready · Play together · Check my kit · The few addons the guild plays with. · Leveling helpers · Guild layout · Use it · The officers&#x27; raid frames, bars and meter. · Guild · Class macros · Show mine · Tested macros for your class, in one click. · Something broken? · Raids · Report · Report a problem, or test UW_Guild. · A short report for the officers, a self-test of UW_Guild, and your version against the newest. · Self-test · Version · Related: · Contact the Guild Master · Selftest v2026.11.23.0008-157cd9e: 10 ok, 1 warn, 0 fail. skip Enchant button: turned off (/uw enchant on) warn Quest chains: Questie&#x27;s quest data isn&#x27;t readable: no chain tags · Share addon counts · Feature use, errors and setup, as totals with no names. · Fishing sound · Hear the splash: music off, effects up. · Outline and compass · Walkable outline · The ground you can walk on, and a compass of your quests. · All switches · Open settings · All the switches, in the game&#x27;s Settings. · 9 guildmates online · UW Selftest v2026.11.23.0008-157cd9e: 10 ok, 1 warn, 0 fail. · skip Enchant button: turned off (/uw enchant on) · warn Quest chains: Questie&#x27;s quest data isn&#x27;t readable: no chain tags
+        UW Guild · Your addons · Start here · Addon kit · Ready · Play together · Check my kit · The few addons the guild plays with. · Leveling helpers · Guild layout · Use it · The officers&#x27; raid frames, bars and meter. · Guild · Class macros · Show mine · Tested macros for your class, in one click. · Something broken? · Raids · Report · Report a problem, or test UW_Guild. · A short report for the officers, a self-test of UW_Guild, and your version against the newest. · Self-test · Version · Related: · Contact the Guild Master · Selftest v2026.11.23.0222-b56eb30: 10 ok, 1 warn, 0 fail. skip Enchant button: turned off (/uw enchant on) warn Quest chains: Questie&#x27;s quest data isn&#x27;t readable: no chain tags · Share addon counts · Feature use, errors and setup, as totals with no names. · Fishing sound · Hear the splash: music off, effects up. · Outline and compass · Walkable outline · The ground you can walk on, and a compass of your quests. · All switches · Open settings · All the switches, in the game&#x27;s Settings. · 9 guildmates online · UW Selftest v2026.11.23.0222-b56eb30: 10 ok, 1 warn, 0 fail. · skip Enchant button: turned off (/uw enchant on) · warn Quest chains: Questie&#x27;s quest data isn&#x27;t readable: no chain tags
       </p>
     </div>
     <div class="sim-st sim-st-u_addons_report_Version">
@@ -2493,25 +2563,25 @@
       <label class="sim-hot sim-h9" for="sim-o_addons_layout" aria-hidden="true"></label>
       <label class="sim-hot sim-h11" for="sim-o_addons_macros" aria-hidden="true"></label>
       <label class="sim-hot sim-h13" for="sim-o_addons_report" aria-hidden="true"></label>
-      <label class="sim-hot sim-h405" for="sim-o_addons_share" aria-hidden="true"></label>
-      <label class="sim-hot sim-h407" for="sim-o_addons_fish" aria-hidden="true"></label>
-      <label class="sim-hot sim-h409" for="sim-o_addons_view" aria-hidden="true"></label>
-      <label class="sim-hot sim-h410" for="sim-o_addons_settings" aria-hidden="true"></label>
+      <label class="sim-hot sim-h408" for="sim-o_addons_share" aria-hidden="true"></label>
+      <label class="sim-hot sim-h410" for="sim-o_addons_fish" aria-hidden="true"></label>
+      <label class="sim-hot sim-h412" for="sim-o_addons_view" aria-hidden="true"></label>
+      <label class="sim-hot sim-h413" for="sim-o_addons_settings" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
       <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h408" for="sim-b_addons_view" aria-hidden="true"></label>
-      <label class="sim-hot sim-h406" for="sim-b_addons_fish" aria-hidden="true"></label>
+      <label class="sim-hot sim-h411" for="sim-b_addons_view" aria-hidden="true"></label>
+      <label class="sim-hot sim-h409" for="sim-b_addons_fish" aria-hidden="true"></label>
       <label class="sim-hot sim-h6" for="sim-b_addons_kit" aria-hidden="true"></label>
       <label class="sim-hot sim-h10" for="sim-b_addons_macros" aria-hidden="true"></label>
       <label class="sim-hot sim-h12" for="sim-b_addons_report" aria-hidden="true"></label>
       <label class="sim-hot sim-h8" for="sim-b_addons_layout" aria-hidden="true"></label>
       <label class="sim-hot sim-h322" for="sim-t_addons_share" aria-hidden="true"></label>
       <p class="sr">
-        UW Guild · Your addons · Start here · Addon kit · Ready · Play together · Check my kit · The few addons the guild plays with. · Leveling helpers · Guild layout · Use it · The officers&#x27; raid frames, bars and meter. · Guild · Class macros · Show mine · Tested macros for your class, in one click. · Something broken? · Raids · Report · Report a problem, or test UW_Guild. · A short report for the officers, a self-test of UW_Guild, and your version against the newest. · Self-test · Version · Related: · Contact the Guild Master · UW_Guild 2026.11.23.0008-157cd9e. The newest is on unbotheredwarlords.github.io/addon: if its version matches this one, you&#x27;re up to date. · Share addon counts · Feature use, errors and setup, as totals with no names. · Fishing sound · Hear the splash: music off, effects up. · Outline and compass · Walkable outline · The ground you can walk on, and a compass of your quests. · All switches · Open settings · All the switches, in the game&#x27;s Settings. · 9 guildmates online · UW UW_Guild 2026.11.23.0008-157cd9e. The newest is on unbotheredwarlords.github.io/addon: if its version matches this one, you&#x27;re up to date.
+        UW Guild · Your addons · Start here · Addon kit · Ready · Play together · Check my kit · The few addons the guild plays with. · Leveling helpers · Guild layout · Use it · The officers&#x27; raid frames, bars and meter. · Guild · Class macros · Show mine · Tested macros for your class, in one click. · Something broken? · Raids · Report · Report a problem, or test UW_Guild. · A short report for the officers, a self-test of UW_Guild, and your version against the newest. · Self-test · Version · Related: · Contact the Guild Master · UW_Guild 2026.11.23.0222-b56eb30. The newest is on unbotheredwarlords.github.io/addon: if its version matches this one, you&#x27;re up to date. · Share addon counts · Feature use, errors and setup, as totals with no names. · Fishing sound · Hear the splash: music off, effects up. · Outline and compass · Walkable outline · The ground you can walk on, and a compass of your quests. · All switches · Open settings · All the switches, in the game&#x27;s Settings. · 9 guildmates online · UW UW_Guild 2026.11.23.0222-b56eb30. The newest is on unbotheredwarlords.github.io/addon: if its version matches this one, you&#x27;re up to date.
       </p>
     </div>
     <div class="sim-st sim-st-u_addons_view_Compass">
@@ -2523,7 +2593,7 @@
       <label class="sim-hot sim-h224" for="sim-o_addons_share" aria-hidden="true"></label>
       <label class="sim-hot sim-h226" for="sim-o_addons_fish" aria-hidden="true"></label>
       <label class="sim-hot sim-h228" for="sim-o_addons_view" aria-hidden="true"></label>
-      <label class="sim-hot sim-h411" for="sim-o_addons_settings" aria-hidden="true"></label>
+      <label class="sim-hot sim-h414" for="sim-o_addons_settings" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
@@ -2549,6 +2619,7 @@
       <label class="sim-hot sim-h13" for="sim-o_play_meet" aria-hidden="true"></label>
       <label class="sim-hot sim-h15" for="sim-o_play_thanks" aria-hidden="true"></label>
       <label class="sim-hot sim-h17" for="sim-o_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h351" for="sim-o_play_alts" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
@@ -2559,8 +2630,9 @@
       <label class="sim-hot sim-h131" for="sim-b_play_prep" aria-hidden="true"></label>
       <label class="sim-hot sim-h132" for="sim-b_play_enchant" aria-hidden="true"></label>
       <label class="sim-hot sim-h130" for="sim-b_play_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h334" for="sim-t_play_alts" aria-hidden="true"></label>
       <p class="sr">
-        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Meet point · Raids · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · The icon under your wrist slot lists enchants online guildmates can make for your gear, best value for your level, gear and gold first. Click one to whisper them. A notice says when one is near you. · Show the button · Related: · Crafting · Enchant button off. /uw enchant on brings it back. · 9 guildmates online · UW Enchant button off. /uw enchant on brings it back.
+        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Meet point · Raids · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · The icon under your wrist slot lists enchants online guildmates can make for your gear, best value for your level, gear and gold first. Click one to whisper them. A notice says when one is near you. · Show the button · Related: · Crafting · Enchant button off. /uw enchant on brings it back. · Count my alts as me · Your characters count as one person. · 9 guildmates online · UW Enchant button off. /uw enchant on brings it back.
       </p>
     </div>
     <div class="sim-st sim-st-u_play_meet_Clear_it">
@@ -2571,6 +2643,7 @@
       <label class="sim-hot sim-h13" for="sim-o_play_meet" aria-hidden="true"></label>
       <label class="sim-hot sim-h176" for="sim-o_play_thanks" aria-hidden="true"></label>
       <label class="sim-hot sim-h178" for="sim-o_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h180" for="sim-o_play_alts" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
@@ -2579,10 +2652,11 @@
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
       <label class="sim-hot sim-h129" for="sim-b_play_near" aria-hidden="true"></label>
       <label class="sim-hot sim-h131" for="sim-b_play_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h412" for="sim-b_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h415" for="sim-b_play_enchant" aria-hidden="true"></label>
       <label class="sim-hot sim-h130" for="sim-b_play_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h416" for="sim-t_play_alts" aria-hidden="true"></label>
       <p class="sr">
-        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Meet point · Raids · Needs a group · Your group&#x27;s markers point at you to meet up. · In a group, your spot becomes the group&#x27;s meet point: their markers point at you until you clear it. · Clear it · Related: · Quest guide marker · No meet point to clear. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · 9 guildmates online · UW No meet point to clear.
+        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Meet point · Raids · Needs a group · Your group&#x27;s markers point at you to meet up. · In a group, your spot becomes the group&#x27;s meet point: their markers point at you until you clear it. · Clear it · Related: · Quest guide marker · No meet point to clear. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · Count my alts as me · Your characters count as one person. · 9 guildmates online · UW No meet point to clear.
       </p>
     </div>
     <div class="sim-st sim-st-u_play_prep_Razorfen_Kraul">
@@ -2590,9 +2664,10 @@
       <label class="sim-hot sim-h7" for="sim-o_play_near" aria-hidden="true"></label>
       <label class="sim-hot sim-h9" for="sim-o_play_call" aria-hidden="true"></label>
       <label class="sim-hot sim-h11" for="sim-o_play_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h356" for="sim-o_play_meet" aria-hidden="true"></label>
-      <label class="sim-hot sim-h357" for="sim-o_play_thanks" aria-hidden="true"></label>
-      <label class="sim-hot sim-h359" for="sim-o_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h358" for="sim-o_play_meet" aria-hidden="true"></label>
+      <label class="sim-hot sim-h359" for="sim-o_play_thanks" aria-hidden="true"></label>
+      <label class="sim-hot sim-h361" for="sim-o_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h363" for="sim-o_play_alts" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
@@ -2601,10 +2676,11 @@
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
       <label class="sim-hot sim-h129" for="sim-b_play_near" aria-hidden="true"></label>
       <label class="sim-hot sim-h131" for="sim-b_play_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h358" for="sim-b_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h360" for="sim-b_play_enchant" aria-hidden="true"></label>
       <label class="sim-hot sim-h130" for="sim-b_play_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h362" for="sim-t_play_alts" aria-hidden="true"></label>
       <p class="sr">
-        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Before a dungeon, an arrow walks you to each of its quests you can take now, then to the entrance. Pick one near your level. · Raids · Shadowfang Keep · Razorfen Kraul · Related: · Quest guide marker · Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it. · Meet point · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · 9 guildmates online · UW Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it.
+        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Before a dungeon, an arrow walks you to each of its quests you can take now, then to the entrance. Pick one near your level. · Raids · Shadowfang Keep · Razorfen Kraul · Related: · Quest guide marker · Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it. · Meet point · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · Count my alts as me · Your characters count as one person. · 9 guildmates online · UW Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it.
       </p>
     </div>
     <div class="sim-st sim-st-u_play_prep_Shadowfang_Keep">
@@ -2612,9 +2688,10 @@
       <label class="sim-hot sim-h7" for="sim-o_play_near" aria-hidden="true"></label>
       <label class="sim-hot sim-h9" for="sim-o_play_call" aria-hidden="true"></label>
       <label class="sim-hot sim-h11" for="sim-o_play_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h356" for="sim-o_play_meet" aria-hidden="true"></label>
-      <label class="sim-hot sim-h357" for="sim-o_play_thanks" aria-hidden="true"></label>
-      <label class="sim-hot sim-h359" for="sim-o_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h358" for="sim-o_play_meet" aria-hidden="true"></label>
+      <label class="sim-hot sim-h359" for="sim-o_play_thanks" aria-hidden="true"></label>
+      <label class="sim-hot sim-h361" for="sim-o_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h363" for="sim-o_play_alts" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
@@ -2623,28 +2700,29 @@
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
       <label class="sim-hot sim-h129" for="sim-b_play_near" aria-hidden="true"></label>
       <label class="sim-hot sim-h131" for="sim-b_play_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h358" for="sim-b_play_enchant" aria-hidden="true"></label>
+      <label class="sim-hot sim-h360" for="sim-b_play_enchant" aria-hidden="true"></label>
       <label class="sim-hot sim-h130" for="sim-b_play_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h362" for="sim-t_play_alts" aria-hidden="true"></label>
       <p class="sr">
-        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Before a dungeon, an arrow walks you to each of its quests you can take now, then to the entrance. Pick one near your level. · Raids · Shadowfang Keep · Razorfen Kraul · Related: · Quest guide marker · Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it. · Meet point · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · 9 guildmates online · UW Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it.
+        UW Guild · Play together · Start here · Guildmates near my level · Find guildmates · Who&#x27;s on near your level, free ones first. · Leveling helpers · Call a group · Calls a group for your level in guild chat. · Guild · Dungeon quests · Blackfathom Deeps · Your addons · Leads you to a dungeon&#x27;s quests and its door. · Before a dungeon, an arrow walks you to each of its quests you can take now, then to the entrance. Pick one near your level. · Raids · Shadowfang Keep · Razorfen Kraul · Related: · Quest guide marker · Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it. · Meet point · Needs a group · Your group&#x27;s markers point at you to meet up. · Thank a guildmate · Target them first · Thank someone you just grouped with. · Ask a guild enchanter · Best per slot · Ask an online guild enchanter from your character panel. · Count my alts as me · Your characters count as one person. · 9 guildmates online · UW Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it.
       </p>
     </div>
     <div class="sim-st sim-st-u_start_prep_Razorfen_Kraul">
       <img src="img/sim/u_start_prep_Razorfen_Kraul.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
       <label class="sim-hot sim-h7" for="sim-o_start_near" aria-hidden="true"></label>
-      <label class="sim-hot sim-h145" for="sim-o_start_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h367" for="sim-o_start_call" aria-hidden="true"></label>
-      <label class="sim-hot sim-h370" for="sim-o_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h147" for="sim-o_start_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h371" for="sim-o_start_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h374" for="sim-o_start_gear" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
       <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h144" for="sim-b_start_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h368" for="sim-b_start_gear" aria-hidden="true"></label>
-      <label class="sim-hot sim-h366" for="sim-b_start_call" aria-hidden="true"></label>
-      <label class="sim-hot sim-h369" for="sim-t_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h146" for="sim-b_start_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h372" for="sim-b_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h370" for="sim-b_start_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h373" for="sim-t_start_gear" aria-hidden="true"></label>
       <p class="sr">
         UW Guild · Start here · Picked for you now. Level 24, member. · Guildmates near my level · Play together · Who&#x27;s on near your level, free ones first. · Leveling helpers · Nell Brook · 22 · The Barrens · Guild · Lio Pell · 23 · Wailing Caverns · busy · Your addons · Find guildmates · Raids · Dungeon quests · Blackfathom Deeps · Leads you to a dungeon&#x27;s quests and its door. · Before a dungeon, an arrow walks you to each of its quests you can take now, then to the entrance. Pick one near your level. · Shadowfang Keep · Razorfen Kraul · Related: · Call a group · Quest guide marker · Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it. · Calls a group for your level in guild chat. · Wear clear gear upgrades · Undo last swap · Puts on clear upgrades; asks on close calls. · 9 guildmates online · UW Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it.
       </p>
@@ -2652,19 +2730,19 @@
     <div class="sim-st sim-st-u_start_prep_Shadowfang_Keep">
       <img src="img/sim/u_start_prep_Shadowfang_Keep.webp" width="984" height="923" alt="" decoding="async" loading="lazy">
       <label class="sim-hot sim-h7" for="sim-o_start_near" aria-hidden="true"></label>
-      <label class="sim-hot sim-h145" for="sim-o_start_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h367" for="sim-o_start_call" aria-hidden="true"></label>
-      <label class="sim-hot sim-h370" for="sim-o_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h147" for="sim-o_start_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h371" for="sim-o_start_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h374" for="sim-o_start_gear" aria-hidden="true"></label>
       <label class="sim-hot sim-h0" for="sim-p_start" aria-hidden="true"></label>
       <label class="sim-hot sim-h1" for="sim-p_play" aria-hidden="true"></label>
       <label class="sim-hot sim-h2" for="sim-p_level" aria-hidden="true"></label>
       <label class="sim-hot sim-h3" for="sim-p_guild" aria-hidden="true"></label>
       <label class="sim-hot sim-h4" for="sim-p_addons" aria-hidden="true"></label>
       <label class="sim-hot sim-h5" for="sim-p_raids" aria-hidden="true"></label>
-      <label class="sim-hot sim-h144" for="sim-b_start_prep" aria-hidden="true"></label>
-      <label class="sim-hot sim-h368" for="sim-b_start_gear" aria-hidden="true"></label>
-      <label class="sim-hot sim-h366" for="sim-b_start_call" aria-hidden="true"></label>
-      <label class="sim-hot sim-h369" for="sim-t_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h146" for="sim-b_start_prep" aria-hidden="true"></label>
+      <label class="sim-hot sim-h372" for="sim-b_start_gear" aria-hidden="true"></label>
+      <label class="sim-hot sim-h370" for="sim-b_start_call" aria-hidden="true"></label>
+      <label class="sim-hot sim-h373" for="sim-t_start_gear" aria-hidden="true"></label>
       <p class="sr">
         UW Guild · Start here · Picked for you now. Level 24, member. · Guildmates near my level · Play together · Who&#x27;s on near your level, free ones first. · Leveling helpers · Nell Brook · 22 · The Barrens · Guild · Lio Pell · 23 · Wailing Caverns · busy · Your addons · Find guildmates · Raids · Dungeon quests · Blackfathom Deeps · Leads you to a dungeon&#x27;s quests and its door. · Before a dungeon, an arrow walks you to each of its quests you can take now, then to the entrance. Pick one near your level. · Shadowfang Keep · Razorfen Kraul · Related: · Call a group · Quest guide marker · Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it. · Calls a group for your level in guild chat. · Wear clear gear upgrades · Undo last swap · Puts on clear upgrades; asks on close calls. · 9 guildmates online · UW Dungeon prep needs Questie (with QuestieDB): /uw kit shows where to get it.
       </p>
@@ -2761,17 +2839,17 @@
     </div>
     <div class="sim-u sim-u-b_play_enchant">
       <p class="sim-tabs"><label class="sim-chip" for="sim-p_start">Start here</label><label class="sim-chip" for="sim-p_play">Play together</label><label class="sim-chip" for="sim-p_level">Leveling helpers</label><label class="sim-chip" for="sim-p_guild">Guild</label><label class="sim-chip" for="sim-p_addons">Your addons</label><label class="sim-chip" for="sim-p_raids">Raids</label></p>
-      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label></p>
+      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-o_play_alts">Count my alts as me</label><label class="sim-chip" for="sim-t_play_alts">Count my alts as me tick box</label></p>
       <p class="sim-guide"><a href="guide.html#enchant">Ask a guild enchanter in the addon guide</a></p>
     </div>
     <div class="sim-u sim-u-b_play_near">
       <p class="sim-tabs"><label class="sim-chip" for="sim-p_start">Start here</label><label class="sim-chip" for="sim-p_play">Play together</label><label class="sim-chip" for="sim-p_level">Leveling helpers</label><label class="sim-chip" for="sim-p_guild">Guild</label><label class="sim-chip" for="sim-p_addons">Your addons</label><label class="sim-chip" for="sim-p_raids">Raids</label></p>
-      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label></p>
+      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label><label class="sim-chip" for="sim-o_play_alts">Count my alts as me</label><label class="sim-chip" for="sim-t_play_alts">Count my alts as me tick box</label></p>
       <p class="sim-guide"><a href="guide.html#near">Guildmates near my level in the addon guide</a></p>
     </div>
     <div class="sim-u sim-u-b_play_prep">
       <p class="sim-tabs"><label class="sim-chip" for="sim-p_start">Start here</label><label class="sim-chip" for="sim-p_play">Play together</label><label class="sim-chip" for="sim-p_level">Leveling helpers</label><label class="sim-chip" for="sim-p_guild">Guild</label><label class="sim-chip" for="sim-p_addons">Your addons</label><label class="sim-chip" for="sim-p_raids">Raids</label></p>
-      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label></p>
+      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label><label class="sim-chip" for="sim-o_play_alts">Count my alts as me</label><label class="sim-chip" for="sim-t_play_alts">Count my alts as me tick box</label></p>
       <p class="sim-guide"><a href="guide.html#prep">Dungeon quests in the addon guide</a></p>
     </div>
     <div class="sim-u sim-u-b_raids_plan">
@@ -2923,34 +3001,39 @@
       <p class="sim-acts"><label class="sim-chip" for="sim-o_level_gear">Wear clear gear upgrades</label><label class="sim-chip" for="sim-t_level_gear">Wear clear gear upgrades tick box</label><label class="sim-chip" for="sim-b_level_gear">Undo last swap</label><label class="sim-chip" for="sim-o_level_bars">New spells onto my bars</label><label class="sim-chip" for="sim-t_level_bars">New spells onto my bars tick box</label><label class="sim-chip" for="sim-t_level_space">Space uses quest items tick box</label><label class="sim-chip" for="sim-o_level_bags">Delete and Make room in bags</label><label class="sim-chip" for="sim-t_level_bags">Delete and Make room in bags tick box</label><label class="sim-chip" for="sim-o_level_guide">Quest guide marker</label><label class="sim-chip" for="sim-t_level_guide">Quest guide marker tick box</label><label class="sim-chip" for="sim-o_level_chain">Quest chain tags</label><label class="sim-chip" for="sim-t_level_chain">Quest chain tags tick box</label><label class="sim-chip" for="sim-b_level_chain">List my chains</label><label class="sim-chip" for="sim-o_level_hold">Keep the quest window open</label><label class="sim-chip" for="sim-t_level_hold">Keep the quest window open tick box</label><label class="sim-chip" for="sim-o_level_mail">Send mats to my alts</label><label class="sim-chip" for="sim-t_level_mail">Send mats to my alts tick box</label><label class="sim-chip" for="sim-b_level_mail">What would go</label><label class="sim-chip" for="sim-o_level_dungeons">Dungeon lines in chat</label><label class="sim-chip" for="sim-t_level_dungeons">Dungeon lines in chat tick box</label></p>
       <p class="sim-guide"><a href="guide.html#space">Space uses quest items in the addon guide</a></p>
     </div>
+    <div class="sim-u sim-u-o_play_alts">
+      <p class="sim-tabs"><label class="sim-chip" for="sim-p_start">Start here</label><label class="sim-chip" for="sim-p_play">Play together</label><label class="sim-chip" for="sim-p_level">Leveling helpers</label><label class="sim-chip" for="sim-p_guild">Guild</label><label class="sim-chip" for="sim-p_addons">Your addons</label><label class="sim-chip" for="sim-p_raids">Raids</label></p>
+      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label><label class="sim-chip" for="sim-t_play_alts">Count my alts as me tick box</label></p>
+      <p class="sim-guide"><a href="guide.html#alts">Count my alts as me in the addon guide</a></p>
+    </div>
     <div class="sim-u sim-u-o_play_call">
       <p class="sim-tabs"><label class="sim-chip" for="sim-p_start">Start here</label><label class="sim-chip" for="sim-p_play">Play together</label><label class="sim-chip" for="sim-p_level">Leveling helpers</label><label class="sim-chip" for="sim-p_guild">Guild</label><label class="sim-chip" for="sim-p_addons">Your addons</label><label class="sim-chip" for="sim-p_raids">Raids</label></p>
-      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label></p>
+      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label><label class="sim-chip" for="sim-o_play_alts">Count my alts as me</label><label class="sim-chip" for="sim-t_play_alts">Count my alts as me tick box</label></p>
       <p class="sim-guide"><a href="guide.html#call">Call a group in the addon guide</a></p>
     </div>
     <div class="sim-u sim-u-o_play_enchant">
       <p class="sim-tabs"><label class="sim-chip" for="sim-p_start">Start here</label><label class="sim-chip" for="sim-p_play">Play together</label><label class="sim-chip" for="sim-p_level">Leveling helpers</label><label class="sim-chip" for="sim-p_guild">Guild</label><label class="sim-chip" for="sim-p_addons">Your addons</label><label class="sim-chip" for="sim-p_raids">Raids</label></p>
-      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label><label class="sim-chip" for="sim-u_play_enchant_Hide_the_button">Hide the button</label></p>
+      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label><label class="sim-chip" for="sim-u_play_enchant_Hide_the_button">Hide the button</label><label class="sim-chip" for="sim-o_play_alts">Count my alts as me</label><label class="sim-chip" for="sim-t_play_alts">Count my alts as me tick box</label></p>
       <p class="sim-guide"><a href="guide.html#enchant">Ask a guild enchanter in the addon guide</a></p>
     </div>
     <div class="sim-u sim-u-o_play_meet">
       <p class="sim-tabs"><label class="sim-chip" for="sim-p_start">Start here</label><label class="sim-chip" for="sim-p_play">Play together</label><label class="sim-chip" for="sim-p_level">Leveling helpers</label><label class="sim-chip" for="sim-p_guild">Guild</label><label class="sim-chip" for="sim-p_addons">Your addons</label><label class="sim-chip" for="sim-p_raids">Raids</label></p>
-      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-u_play_meet_Clear_it">Clear it</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label></p>
+      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-u_play_meet_Clear_it">Clear it</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label><label class="sim-chip" for="sim-o_play_alts">Count my alts as me</label><label class="sim-chip" for="sim-t_play_alts">Count my alts as me tick box</label></p>
       <p class="sim-guide"><a href="guide.html#meet">Meet point in the addon guide</a></p>
     </div>
     <div class="sim-u sim-u-o_play_near">
       <p class="sim-tabs"><label class="sim-chip" for="sim-p_start">Start here</label><label class="sim-chip" for="sim-p_play">Play together</label><label class="sim-chip" for="sim-p_level">Leveling helpers</label><label class="sim-chip" for="sim-p_guild">Guild</label><label class="sim-chip" for="sim-p_addons">Your addons</label><label class="sim-chip" for="sim-p_raids">Raids</label></p>
-      <p class="sim-acts"><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label></p>
+      <p class="sim-acts"><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label><label class="sim-chip" for="sim-o_play_alts">Count my alts as me</label><label class="sim-chip" for="sim-t_play_alts">Count my alts as me tick box</label></p>
       <p class="sim-guide"><a href="guide.html#near">Guildmates near my level in the addon guide</a></p>
     </div>
     <div class="sim-u sim-u-o_play_prep">
       <p class="sim-tabs"><label class="sim-chip" for="sim-p_start">Start here</label><label class="sim-chip" for="sim-p_play">Play together</label><label class="sim-chip" for="sim-p_level">Leveling helpers</label><label class="sim-chip" for="sim-p_guild">Guild</label><label class="sim-chip" for="sim-p_addons">Your addons</label><label class="sim-chip" for="sim-p_raids">Raids</label></p>
-      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-u_play_prep_Shadowfang_Keep">Shadowfang Keep</label><label class="sim-chip" for="sim-u_play_prep_Razorfen_Kraul">Razorfen Kraul</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label></p>
+      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-u_play_prep_Shadowfang_Keep">Shadowfang Keep</label><label class="sim-chip" for="sim-u_play_prep_Razorfen_Kraul">Razorfen Kraul</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label><label class="sim-chip" for="sim-o_play_alts">Count my alts as me</label><label class="sim-chip" for="sim-t_play_alts">Count my alts as me tick box</label></p>
       <p class="sim-guide"><a href="guide.html#prep">Dungeon quests in the addon guide</a></p>
     </div>
     <div class="sim-u sim-u-o_play_thanks">
       <p class="sim-tabs"><label class="sim-chip" for="sim-p_start">Start here</label><label class="sim-chip" for="sim-p_play">Play together</label><label class="sim-chip" for="sim-p_level">Leveling helpers</label><label class="sim-chip" for="sim-p_guild">Guild</label><label class="sim-chip" for="sim-p_addons">Your addons</label><label class="sim-chip" for="sim-p_raids">Raids</label></p>
-      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label></p>
+      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label><label class="sim-chip" for="sim-o_play_alts">Count my alts as me</label><label class="sim-chip" for="sim-t_play_alts">Count my alts as me tick box</label></p>
       <p class="sim-guide"><a href="guide.html#thanks">Thank a guildmate in the addon guide</a></p>
     </div>
     <div class="sim-u sim-u-o_raids_plan">
@@ -3000,7 +3083,7 @@
     </div>
     <div class="sim-u sim-u-p_play">
       <p class="sim-tabs"><label class="sim-chip" for="sim-p_start">Start here</label><label class="sim-chip sim-on" for="sim-p_play">Play together</label><label class="sim-chip" for="sim-p_level">Leveling helpers</label><label class="sim-chip" for="sim-p_guild">Guild</label><label class="sim-chip" for="sim-p_addons">Your addons</label><label class="sim-chip" for="sim-p_raids">Raids</label></p>
-      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label></p>
+      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label><label class="sim-chip" for="sim-o_play_alts">Count my alts as me</label><label class="sim-chip" for="sim-t_play_alts">Count my alts as me tick box</label></p>
       <p class="sim-guide"><a href="guide.html#play">Play together in the addon guide</a></p>
     </div>
     <div class="sim-u sim-u-p_raids">
@@ -3077,6 +3160,11 @@
       <p class="sim-acts"><label class="sim-chip" for="sim-o_level_gear">Wear clear gear upgrades</label><label class="sim-chip" for="sim-t_level_gear">Wear clear gear upgrades tick box</label><label class="sim-chip" for="sim-b_level_gear">Undo last swap</label><label class="sim-chip" for="sim-o_level_bars">New spells onto my bars</label><label class="sim-chip" for="sim-t_level_bars">New spells onto my bars tick box</label><label class="sim-chip" for="sim-o_level_space">Space uses quest items</label><label class="sim-chip" for="sim-o_level_bags">Delete and Make room in bags</label><label class="sim-chip" for="sim-t_level_bags">Delete and Make room in bags tick box</label><label class="sim-chip" for="sim-o_level_guide">Quest guide marker</label><label class="sim-chip" for="sim-t_level_guide">Quest guide marker tick box</label><label class="sim-chip" for="sim-o_level_chain">Quest chain tags</label><label class="sim-chip" for="sim-t_level_chain">Quest chain tags tick box</label><label class="sim-chip" for="sim-b_level_chain">List my chains</label><label class="sim-chip" for="sim-o_level_hold">Keep the quest window open</label><label class="sim-chip" for="sim-t_level_hold">Keep the quest window open tick box</label><label class="sim-chip" for="sim-o_level_mail">Send mats to my alts</label><label class="sim-chip" for="sim-t_level_mail">Send mats to my alts tick box</label><label class="sim-chip" for="sim-b_level_mail">What would go</label><label class="sim-chip" for="sim-o_level_dungeons">Dungeon lines in chat</label><label class="sim-chip" for="sim-t_level_dungeons">Dungeon lines in chat tick box</label></p>
       <p class="sim-guide"><a href="guide.html#space">Space uses quest items in the addon guide</a></p>
     </div>
+    <div class="sim-u sim-u-t_play_alts">
+      <p class="sim-tabs"><label class="sim-chip" for="sim-p_start">Start here</label><label class="sim-chip" for="sim-p_play">Play together</label><label class="sim-chip" for="sim-p_level">Leveling helpers</label><label class="sim-chip" for="sim-p_guild">Guild</label><label class="sim-chip" for="sim-p_addons">Your addons</label><label class="sim-chip" for="sim-p_raids">Raids</label></p>
+      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label><label class="sim-chip" for="sim-o_play_alts">Count my alts as me</label></p>
+      <p class="sim-guide"><a href="guide.html#alts">Count my alts as me in the addon guide</a></p>
+    </div>
     <div class="sim-u sim-u-t_start_gear">
       <p class="sim-tabs"><label class="sim-chip" for="sim-p_start">Start here</label><label class="sim-chip" for="sim-p_play">Play together</label><label class="sim-chip" for="sim-p_level">Leveling helpers</label><label class="sim-chip" for="sim-p_guild">Guild</label><label class="sim-chip" for="sim-p_addons">Your addons</label><label class="sim-chip" for="sim-p_raids">Raids</label></p>
       <p class="sim-acts"><label class="sim-chip" for="sim-o_start_near">Guildmates near my level</label><label class="sim-chip" for="sim-o_start_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_start_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-b_start_call">Call a group</label><label class="sim-chip" for="sim-o_start_gear">Wear clear gear upgrades</label><label class="sim-chip" for="sim-b_start_gear">Undo last swap</label></p>
@@ -3114,22 +3202,22 @@
     </div>
     <div class="sim-u sim-u-u_play_enchant_Hide_the_button">
       <p class="sim-tabs"><label class="sim-chip" for="sim-p_start">Start here</label><label class="sim-chip" for="sim-p_play">Play together</label><label class="sim-chip" for="sim-p_level">Leveling helpers</label><label class="sim-chip" for="sim-p_guild">Guild</label><label class="sim-chip" for="sim-p_addons">Your addons</label><label class="sim-chip" for="sim-p_raids">Raids</label></p>
-      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label></p>
+      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label><label class="sim-chip" for="sim-o_play_alts">Count my alts as me</label><label class="sim-chip" for="sim-t_play_alts">Count my alts as me tick box</label></p>
       <p class="sim-guide"><a href="guide.html#enchant">Ask a guild enchanter in the addon guide</a></p>
     </div>
     <div class="sim-u sim-u-u_play_meet_Clear_it">
       <p class="sim-tabs"><label class="sim-chip" for="sim-p_start">Start here</label><label class="sim-chip" for="sim-p_play">Play together</label><label class="sim-chip" for="sim-p_level">Leveling helpers</label><label class="sim-chip" for="sim-p_guild">Guild</label><label class="sim-chip" for="sim-p_addons">Your addons</label><label class="sim-chip" for="sim-p_raids">Raids</label></p>
-      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label></p>
+      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label><label class="sim-chip" for="sim-o_play_alts">Count my alts as me</label><label class="sim-chip" for="sim-t_play_alts">Count my alts as me tick box</label></p>
       <p class="sim-guide"><a href="guide.html#meet">Meet point in the addon guide</a></p>
     </div>
     <div class="sim-u sim-u-u_play_prep_Razorfen_Kraul">
       <p class="sim-tabs"><label class="sim-chip" for="sim-p_start">Start here</label><label class="sim-chip" for="sim-p_play">Play together</label><label class="sim-chip" for="sim-p_level">Leveling helpers</label><label class="sim-chip" for="sim-p_guild">Guild</label><label class="sim-chip" for="sim-p_addons">Your addons</label><label class="sim-chip" for="sim-p_raids">Raids</label></p>
-      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label></p>
+      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label><label class="sim-chip" for="sim-o_play_alts">Count my alts as me</label><label class="sim-chip" for="sim-t_play_alts">Count my alts as me tick box</label></p>
       <p class="sim-guide"><a href="guide.html#prep">Dungeon quests in the addon guide</a></p>
     </div>
     <div class="sim-u sim-u-u_play_prep_Shadowfang_Keep">
       <p class="sim-tabs"><label class="sim-chip" for="sim-p_start">Start here</label><label class="sim-chip" for="sim-p_play">Play together</label><label class="sim-chip" for="sim-p_level">Leveling helpers</label><label class="sim-chip" for="sim-p_guild">Guild</label><label class="sim-chip" for="sim-p_addons">Your addons</label><label class="sim-chip" for="sim-p_raids">Raids</label></p>
-      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label></p>
+      <p class="sim-acts"><label class="sim-chip" for="sim-o_play_near">Guildmates near my level</label><label class="sim-chip" for="sim-b_play_near">Find guildmates</label><label class="sim-chip" for="sim-b_play_call">Call a group</label><label class="sim-chip" for="sim-o_play_prep">Dungeon quests</label><label class="sim-chip" for="sim-b_play_prep">Blackfathom Deeps</label><label class="sim-chip" for="sim-o_play_meet">Meet point</label><label class="sim-chip" for="sim-o_play_thanks">Thank a guildmate</label><label class="sim-chip" for="sim-o_play_enchant">Ask a guild enchanter</label><label class="sim-chip" for="sim-b_play_enchant">Best per slot</label><label class="sim-chip" for="sim-o_play_alts">Count my alts as me</label><label class="sim-chip" for="sim-t_play_alts">Count my alts as me tick box</label></p>
       <p class="sim-guide"><a href="guide.html#prep">Dungeon quests in the addon guide</a></p>
     </div>
     <div class="sim-u sim-u-u_start_prep_Razorfen_Kraul">
@@ -3225,7 +3313,7 @@
       <details id="errors"><summary>Red error text, or something looks wrong</summary><p>Type <code class="nowrap">/uw selftest</code>. It checks the addon and tells you what's off. Still stuck? Whisper any officer in game.</p></details>
       <details id="remove"><summary>Stop automatic updates, or remove the addon</summary><p>Start menu, <strong>UW Guild addon</strong>, <strong>Stop automatic updates</strong>. The addon stays. Or in a command prompt: <code>schtasks /Delete /TN "UW_Guild updater" /F</code>. On Linux: app menu, <strong>Stop UW Guild addon automatic updates</strong>. To remove the addon too, delete the <strong>UW_Guild</strong> folder in AddOns.</p></details>
       <details id="start-fresh"><summary>Start fresh</summary><p>Close WoW, open the <span class="nowrap">_forever_ › WTF</span> folder and search it for <strong>UW_Guild.lua</strong>. Delete every one it finds. UW Guild then starts like a first install on this PC. Your guild rank and Discord link aren't in that file, so they stay. Officers: your copy may hold guild records, so ask in #officer-chat first.</p></details>
-      <details id="verify"><summary>Check the download is ours (optional)</summary><p>The zip's SHA-256 is <code class="hash">7e9069821acca0f1f2a25a2d299f5122253e8787a1f7e075cb0508765e6ec85c</code>. On Windows, in PowerShell: <code>Get-FileHash UW_Guild.zip</code>. On a Mac, in Terminal: <code>shasum -a 256 UW_Guild.zip</code>. On Linux: <code>sha256sum UW_Guild.zip</code>. The two should match. This page's build is 85e7a56 (<a href="version.json">version.json</a>).</p></details>
+      <details id="verify"><summary>Check the download is ours (optional)</summary><p>The zip's SHA-256 is <code class="hash">7e9069821acca0f1f2a25a2d299f5122253e8787a1f7e075cb0508765e6ec85c</code>. On Windows, in PowerShell: <code>Get-FileHash UW_Guild.zip</code>. On a Mac, in Terminal: <code>shasum -a 256 UW_Guild.zip</code>. On Linux: <code>sha256sum UW_Guild.zip</code>. The two should match. This page's build is 4669d65 (<a href="version.json">version.json</a>).</p></details>
     </div>
   </section>
 </main>
