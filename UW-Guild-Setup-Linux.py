@@ -748,7 +748,7 @@ def main(argv: list[str] | None = None) -> None:
             say("Also recommended for the guild's kit (pick the Forever file on each page):")
             for name in missing:
                 say("  " + name + ", " + KIT_PAGES[name][0] + ": " + KIT_PAGES[name][1])
-    # Last on every path a person sees (Louis 22 Nov: all roads lead to Discord, never required).
+    # Last on every path a person sees (Louis 22 Nov: all roads lead to Discord; 23 Nov: raids need it).
     if not args.quiet:
         say()
         say("Groups and events: our Discord, https://discord.gg/D5EZm3gAcZ")
