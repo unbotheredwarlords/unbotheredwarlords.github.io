@@ -530,6 +530,19 @@ footer a { padding-block: .35rem; }
 /* The UW Guild window to click through on /addon: the addon's own window, drawn from its code a state at a time
    (scripts/site_window.py). A radio button a state; each clickable part of a picture is a label for the state it
    leads to. Over the Barrens' ground, as in game. */
+.join { max-width: 46rem; margin: 0 auto; }
+.join-links { list-style: none; padding: 0; margin: var(--s-4) 0 var(--s-6); display: grid; gap: var(--s-3); }
+.join-card { display: flex; flex-direction: column; gap: .2rem; min-height: 4.5rem; justify-content: center; padding: var(--s-3) var(--s-4);
+  border: 1px solid var(--line-hi); border-radius: var(--radius); background: var(--glow-1); color: var(--text); text-decoration: none; }
+.join-card strong { font-size: var(--fs-h3); color: var(--gold); }
+.join-card span { color: var(--muted); }
+.join-card:hover, .join-card:focus-visible { border-color: var(--ember); }
+.join-main { background: linear-gradient(180deg, var(--ember-200), var(--ember) 55%, var(--ember-600)); border-color: var(--ember); }
+.join-main strong, .join-main span { color: var(--ember-ink); }
+.join-who h2 { font-size: var(--fs-h3); margin-bottom: var(--s-2); }
+.join-cmds { list-style: none; padding: 0; margin: 0; }
+.join-cmds li { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2); }
+.join .section, .section.join { padding-top: var(--s-6); }
 .sim-lead { margin: var(--s-6) auto var(--s-3); }
 .sim { max-width: 62rem; margin: 0 auto var(--s-6); border-radius: var(--radius); overflow: hidden; }
 .sim-radio { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
