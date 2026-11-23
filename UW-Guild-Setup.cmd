@@ -562,7 +562,6 @@ if ($result -eq "updated" -and -not $Quiet) {
   Say ""
   Say "Next: start WoW. A welcome window opens when you log in."
   Say "Not there? On the character screen, click AddOns, tick UW Guild (and Load out of date AddOns if it asks)."
-  Say "Groups and events: our Discord, https://discord.gg/D5EZm3gAcZ"
 }
 if (-not $Quiet -and $result -ne "newer") {
   $script:KitMissing = @(MissingKit $dir)
@@ -571,5 +570,10 @@ if (-not $Quiet -and $result -ne "newer") {
     Say "Also recommended for the guild's kit:"
     foreach ($name in $script:KitMissing) { Say ("  " + $name + ", " + $KIT_PAGES[$name][0] + ": " + $KIT_PAGES[$name][1]) }
   }
+}
+# Last on every path a person sees (Louis 22 Nov: all roads lead to Discord, never required).
+if (-not $Quiet) {
+  Say ""
+  Say "Groups and events: our Discord, https://discord.gg/D5EZm3gAcZ"
 }
 Done 0

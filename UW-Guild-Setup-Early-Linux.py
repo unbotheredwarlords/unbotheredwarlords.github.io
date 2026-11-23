@@ -741,7 +741,6 @@ def main(argv: list[str] | None = None) -> None:
         say()
         say("Next: start WoW. A welcome window opens when you log in.")
         say("Not there? On the character screen, click AddOns, tick UW Guild (and Load out of date AddOns if it asks).")
-        say("Groups and events: our Discord, https://discord.gg/D5EZm3gAcZ")
     if not args.quiet and result != "newer":
         missing = missing_kit(addons)
         if missing:
@@ -749,6 +748,10 @@ def main(argv: list[str] | None = None) -> None:
             say("Also recommended for the guild's kit (pick the Forever file on each page):")
             for name in missing:
                 say("  " + name + ", " + KIT_PAGES[name][0] + ": " + KIT_PAGES[name][1])
+    # Last on every path a person sees (Louis 22 Nov: all roads lead to Discord, never required).
+    if not args.quiet:
+        say()
+        say("Groups and events: our Discord, https://discord.gg/D5EZm3gAcZ")
     done(0)
 
 
