@@ -754,12 +754,12 @@ footer a { padding-block: .35rem; }
 .sim-st-u_start_prep_Razorfen_Kraul { background-image: url(img/sim/p_start.webp); }
 #sim-u_start_prep_Shadowfang_Keep:checked ~ .sim-view .sim-st-u_start_prep_Shadowfang_Keep { visibility: visible; } #sim-u_start_prep_Shadowfang_Keep:checked ~ .sim-under .sim-u-u_start_prep_Shadowfang_Keep { display: block; }
 .sim-st-u_start_prep_Shadowfang_Keep { background-image: url(img/sim/p_start.webp); }
-.sim-h0 { left: 2.74%; top: 7.37%; width: 22.05%; height: 3.68%; }
-.sim-h1 { left: 2.74%; top: 11.59%; width: 22.05%; height: 3.68%; }
-.sim-h2 { left: 2.74%; top: 15.93%; width: 22.05%; height: 3.68%; }
-.sim-h3 { left: 2.74%; top: 20.15%; width: 22.05%; height: 3.68%; }
-.sim-h4 { left: 2.74%; top: 24.38%; width: 22.05%; height: 3.68%; }
-.sim-h5 { left: 2.74%; top: 28.71%; width: 22.05%; height: 3.68%; }
+.sim-h0 { left: 2.74%; top: 11.59%; width: 22.05%; height: 3.68%; }
+.sim-h1 { left: 2.74%; top: 15.93%; width: 22.05%; height: 3.68%; }
+.sim-h2 { left: 2.74%; top: 20.15%; width: 22.05%; height: 3.68%; }
+.sim-h3 { left: 2.74%; top: 24.38%; width: 22.05%; height: 3.68%; }
+.sim-h4 { left: 2.74%; top: 28.71%; width: 22.05%; height: 3.68%; }
+.sim-h5 { left: 2.74%; top: 32.94%; width: 22.05%; height: 3.68%; }
 .sim-h6 { left: 81.81%; top: 12.35%; width: 14.02%; height: 3.03%; }
 .sim-h7 { left: 27.13%; top: 11.05%; width: 69.21%; height: 5.74%; }
 .sim-h8 { left: 88.11%; top: 18.2%; width: 7.72%; height: 3.03%; }
