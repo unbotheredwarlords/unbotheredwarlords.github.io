@@ -484,7 +484,7 @@ footer a { padding-block: .35rem; }
 .feature .path-icon { margin: 0; float: none; }
 .path-icon.game { overflow: hidden; background: var(--bg-deep); border-color: var(--line-hi); border-radius: var(--radius-sm); }
 .path-icon.game img { display: block; width: 100%; height: 100%; }
-.feature h3 { margin: .15rem 0 .3rem; color: var(--gold); }
+.feature h3 { margin: .15rem 0 .3rem; color: var(--text); }
 .feature h3 a { color: inherit; text-decoration: none; }
 .feature h3 a:hover { text-decoration: underline; }
 .feature p { color: var(--muted); }
