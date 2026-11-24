@@ -399,6 +399,7 @@ footer a { padding-block: .35rem; }
 .rank .path-icon { margin: 0; float: none; }
 .rank h3 { margin: .1rem 0 .35rem; }
 .rank p { color: var(--muted); }
+.rank p + p { margin-top: .6rem; }
 /* The rail. Phone: a short drop from Trial to Member under the icons, then a branch down Member's left edge. */
 .ladder > .rank + .rank::before { content: ""; position: absolute; left: 2.45rem; bottom: 100%; height: var(--gap); border-left: 2px solid var(--rail); }
 .ladder-fork { position: relative; }
