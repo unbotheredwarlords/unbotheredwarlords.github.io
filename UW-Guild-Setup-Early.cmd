@@ -316,6 +316,8 @@ function MarkToc([string]$addonsDir, [bool]$on) {
 # --- Download and check ---------------------------------------------------------------------------------------
 
 function Fetch([string]$name, [string]$dest) {
+  # Remove any stale file from an earlier run first so a failed fetch can never leave it behind to be read.
+  if (Test-Path -LiteralPath $dest) { Remove-Item -LiteralPath $dest -Force -ErrorAction SilentlyContinue }
   # From the site (https only), or from a folder (tests). No cache: a fresh deploy shows up at once.
   if ($Source -match '^https://') {
     $url = $Source.TrimEnd('/') + "/" + $name + "?t=" + [DateTime]::UtcNow.Ticks
@@ -371,67 +373,72 @@ function Update([string]$addonsDir) {
   # Returns "updated", "current" or "newer". Throws with a reason when it can't.
   if (-not (Test-Path -LiteralPath $StateDir)) { New-Item -ItemType Directory -Path $StateDir -Force | Out-Null }
   $vfile = Join-Path $StateDir "version.json"
-  Fetch "version.json" $vfile
-  $raw = [IO.File]::ReadAllBytes($vfile)
-  if ($PUBKEY) {
-    $sfile = Join-Path $StateDir "version.json.sig"
-    try { Fetch "version.json.sig" $sfile } catch { throw "the site's version.json has no signature" }
-    $ok = $false
-    try {
-      $sig = [Convert]::FromBase64String(([IO.File]::ReadAllText($sfile)).Trim())
-      $rsa = New-Object Security.Cryptography.RSACryptoServiceProvider
-      try { $rsa.FromXmlString($PUBKEY); $ok = $rsa.VerifyData($raw, "SHA256", $sig) } finally { $rsa.Dispose() }
-    } catch { $ok = $false }
-    if (-not $ok) { throw "the site's version.json signature doesn't match the guild's key" }
-  }
-  $info = [Text.Encoding]::UTF8.GetString($raw) | ConvertFrom-Json
-  $want = [string]$info.version
-  if (-not [regex]::IsMatch($want, $VERSION_RX)) { throw "version.json has no valid version" }
-  if ([string]$info.zip -ne "$ADDON.zip") { throw "version.json names an unexpected file" }
-  $sha = ([string]$info.zip_sha256).ToLowerInvariant()
-  if ($sha -notmatch '^[0-9a-f]{64}$') { throw "version.json has no valid SHA-256" }
-  $bytes = [int64]$info.zip_bytes
-  if ($bytes -le 0 -or $bytes -gt $MAX_ZIP) { throw "version.json has an unexpected size" }
-
-  $here = Join-Path $addonsDir $ADDON
-  $have = TocVersion (Join-Path $here "$ADDON.toc")
-  $haveKey = VersionKey $have
-  $wantKey = VersionKey $want
-  if ($have -eq $want) { return "current" }
-  if ($haveKey -gt $wantKey) { return "newer" }
-
+  $sfile = Join-Path $StateDir "version.json.sig"
   $zipFile = Join-Path $StateDir "$ADDON.zip"
-  Fetch "$ADDON.zip" $zipFile
-  $len = (Get-Item -LiteralPath $zipFile).Length
-  if ($len -ne $bytes) { throw "the download is $len bytes, version.json says $bytes" }
-  $got = (Get-FileHash -LiteralPath $zipFile -Algorithm SHA256).Hash.ToLowerInvariant()
-  if ($got -ne $sha) { throw "the download's SHA-256 doesn't match version.json" }
+  try {
+    Fetch "version.json" $vfile
+    $raw = [IO.File]::ReadAllBytes($vfile)
+    if ($PUBKEY) {
+      try { Fetch "version.json.sig" $sfile } catch { throw "the site's version.json has no signature" }
+      $ok = $false
+      try {
+        $sig = [Convert]::FromBase64String(([IO.File]::ReadAllText($sfile)).Trim())
+        $rsa = New-Object Security.Cryptography.RSACryptoServiceProvider
+        try { $rsa.FromXmlString($PUBKEY); $ok = $rsa.VerifyData($raw, "SHA256", $sig) } finally { $rsa.Dispose() }
+      } catch { $ok = $false }
+      if (-not $ok) { throw "the site's version.json signature doesn't match the guild's key" }
+    }
+    $info = [Text.Encoding]::UTF8.GetString($raw) | ConvertFrom-Json
+    $want = [string]$info.version
+    if (-not [regex]::IsMatch($want, $VERSION_RX)) { throw "version.json has no valid version" }
+    if ([string]$info.zip -ne "$ADDON.zip") { throw "version.json names an unexpected file" }
+    $sha = ([string]$info.zip_sha256).ToLowerInvariant()
+    if ($sha -notmatch '^[0-9a-f]{64}$') { throw "version.json has no valid SHA-256" }
+    $bytes = [int64]$info.zip_bytes
+    if ($bytes -le 0 -or $bytes -gt $MAX_ZIP) { throw "version.json has an unexpected size" }
 
-  Add-Type -AssemblyName System.IO.Compression.FileSystem
-  $interface = Split-Path -Parent $addonsDir
-  $stage = Join-Path $interface "$ADDON.uw-new"     # outside AddOns, same drive: the swap is two renames
-  $backup = Join-Path $interface "$ADDON.uw-old"
-  if (IsLink $here) { throw "AddOns\$ADDON is a link to another folder; replace it by hand" }
-  foreach ($d in @($stage, $backup)) { SafeRemove $d }
-  $zip = [IO.Compression.ZipFile]::OpenRead($zipFile)
-  try {
-    CheckEntries $zip $want
-    New-Item -ItemType Directory -Path $stage -Force | Out-Null
-    Unpack $zip $stage
-  } finally { $zip.Dispose() }
-  if (-not (Test-Path -LiteralPath $addonsDir)) { New-Item -ItemType Directory -Path $addonsDir -Force | Out-Null }
-  $moved = $false
-  try {
-    if (Test-Path -LiteralPath $here) { Move-Item -LiteralPath $here -Destination $backup; $moved = $true }
-    Move-Item -LiteralPath $stage -Destination $here
-  } catch {
-    if ($moved -and -not (Test-Path -LiteralPath $here)) { Move-Item -LiteralPath $backup -Destination $here }
-    SafeRemove $stage
-    throw "couldn't swap the addon folder (is a file in it open?): $($_.Exception.Message)"
+    $here = Join-Path $addonsDir $ADDON
+    $have = TocVersion (Join-Path $here "$ADDON.toc")
+    $haveKey = VersionKey $have
+    $wantKey = VersionKey $want
+    if ($have -eq $want) { return "current" }
+    if ($haveKey -gt $wantKey) { return "newer" }
+
+    Fetch "$ADDON.zip" $zipFile
+    $len = (Get-Item -LiteralPath $zipFile).Length
+    if ($len -ne $bytes) { throw "the download is $len bytes, version.json says $bytes" }
+    $got = (Get-FileHash -LiteralPath $zipFile -Algorithm SHA256).Hash.ToLowerInvariant()
+    if ($got -ne $sha) { throw "the download's SHA-256 doesn't match version.json" }
+
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+    $interface = Split-Path -Parent $addonsDir
+    $stage = Join-Path $interface "$ADDON.uw-new"     # outside AddOns, same drive: the swap is two renames
+    $backup = Join-Path $interface "$ADDON.uw-old"
+    if (IsLink $here) { throw "AddOns\$ADDON is a link to another folder; replace it by hand" }
+    foreach ($d in @($stage, $backup)) { SafeRemove $d }
+    $zip = [IO.Compression.ZipFile]::OpenRead($zipFile)
+    try {
+      CheckEntries $zip $want
+      New-Item -ItemType Directory -Path $stage -Force | Out-Null
+      Unpack $zip $stage
+    } finally { $zip.Dispose() }
+    if (-not (Test-Path -LiteralPath $addonsDir)) { New-Item -ItemType Directory -Path $addonsDir -Force | Out-Null }
+    $moved = $false
+    try {
+      if (Test-Path -LiteralPath $here) { Move-Item -LiteralPath $here -Destination $backup; $moved = $true }
+      Move-Item -LiteralPath $stage -Destination $here
+    } catch {
+      if ($moved -and -not (Test-Path -LiteralPath $here)) { Move-Item -LiteralPath $backup -Destination $here }
+      SafeRemove $stage
+      throw "couldn't swap the addon folder (is a file in it open?): $($_.Exception.Message)"
+    }
+    try { SafeRemove $backup } catch { }
+    return "updated"
+  } finally {
+    foreach ($tmpFile in @($vfile, $sfile, $zipFile)) {
+      if (Test-Path -LiteralPath $tmpFile) { Remove-Item -LiteralPath $tmpFile -Force -ErrorAction SilentlyContinue }
+    }
   }
-  try { SafeRemove $backup } catch { }
-  Remove-Item -LiteralPath $zipFile -Force -ErrorAction SilentlyContinue
-  return "updated"
 }
 
 # --- Automatic updates ------------------------------------------------------------------------------------------
@@ -491,7 +498,7 @@ if ($Remove) {
   $cfg = ReadConfig
   if ($cfg -and $cfg.addons) { try { MarkToc ([string]$cfg.addons) $false } catch { } }
   Unschedule
-  foreach ($f in @($SCRIPT_COPY, $CONFIG, (Join-Path $StateDir "version.json"), (Join-Path $StateDir "$ADDON.zip"))) {
+  foreach ($f in @($SCRIPT_COPY, $CONFIG, (Join-Path $StateDir "version.json"), (Join-Path $StateDir "version.json.sig"), (Join-Path $StateDir "$ADDON.zip"))) {
     if (Test-Path -LiteralPath $f) { Remove-Item -LiteralPath $f -Force -ErrorAction SilentlyContinue }
   }
   Log "automatic updates removed"
