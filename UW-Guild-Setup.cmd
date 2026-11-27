@@ -519,8 +519,9 @@ if (-not $TestRun -and (IsOfficerPc $dir)) {
 }
 Say "WoW Forever: $(Split-Path -Parent (Split-Path -Parent $dir))"
 
-if ($Quiet -and (GameRunning $dir)) { Log "WoW is running: checked later"; exit 0 }
-if (-not $Quiet -and (GameRunning $dir)) {
+$fresh = -not (Test-Path -LiteralPath (Join-Path $dir $ADDON))
+if ($Quiet -and (GameRunning $dir) -and -not $fresh) { Log "WoW is running: checked later"; exit 0 }
+if (-not $Quiet -and (GameRunning $dir) -and -not $fresh) {
   Say "WoW Forever is open. Close it first (an update while it runs would load half of it), then run this again."
   Done 1
 }
@@ -529,7 +530,12 @@ try { $result = Update $dir } catch { Fail ("Couldn't update UW_Guild: " + $_.Ex
 $now = TocVersion (Join-Path $dir "$ADDON\$ADDON.toc")
 Log "$result $now ($dir)"
 switch ($result) {
-  "updated" { Say "UW_Guild $now is installed." }
+  "updated" {
+    Say "UW_Guild $now is installed."
+    if ($fresh -and (GameRunning $dir)) {
+      Say "WoW Forever is open: restart WoW to load UW_Guild."
+    }
+  }
   "current" { Say "UW_Guild $now is already the newest." }
   "newer"   { Say "This PC has a newer UW_Guild ($now) than the site. Nothing changed." }
 }

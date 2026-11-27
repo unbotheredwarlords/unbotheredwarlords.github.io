@@ -688,7 +688,8 @@ def main(argv: list[str] | None = None) -> None:
         done(0)
     say("WoW Forever: " + str(addons.parent.parent))
 
-    if game_running():
+    fresh = not (addons / ADDON).exists()
+    if game_running() and not fresh:
         if args.quiet:
             log("WoW is running: checked later")
             sys.exit(0)
@@ -703,6 +704,8 @@ def main(argv: list[str] | None = None) -> None:
     say({"updated": "UW_Guild " + now + " is installed.",
          "current": "UW_Guild " + now + " is already the newest.",
          "newer": "This PC has a newer UW_Guild (" + now + ") than the site. Nothing changed."}[result])
+    if result == "updated" and fresh and game_running():
+        say("WoW Forever is open: restart WoW to load UW_Guild.")
 
     # Automatic updates, on by default (Louis, 8 Nov 2026: one button, zero clicks for updates), said in plain words
     # before the timer is set up. Only from the downloaded setup: the menu's "Update now" runs the installed copy and
